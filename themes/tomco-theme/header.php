@@ -25,11 +25,15 @@
 					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				</div><!-- .site-branding -->
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="c-hamburger c-hamburger--htx menu-toggle" aria-controls="primary-menu" >
-  						<span>toggle menu</span>
-					</button>
+					<div class="nav-hamburger">
+    				    <span class="hamburger-container">
+          					<span class="hamburger-bar menu-bar-top"></span>
+          					<span class="hamburger-bar menu-bar-middle"></span>
+         					 <span class="hamburger-bar menu-bar-bottom"></span>
+        				</span>
+     				 </div>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav><!-- #site-navigation -->
+				</nav>
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">

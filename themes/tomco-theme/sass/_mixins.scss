@@ -11,3 +11,8 @@
 	margin-right: auto;
 }
 
+@mixin desktop {
+	@media (min-width: $desktop) {
+		@content;
+	}
+}

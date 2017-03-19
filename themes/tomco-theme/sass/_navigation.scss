@@ -5,160 +5,110 @@
 /* Links */
 
 
-/* Menus */
+
+//hamburger animation
+
+.nav-hamburger {
+    position: absolute;
+    width: 54px;
+    height: 100%;
+    margin: 0;
+    transition: .25s;
+    z-index: 25;
+    padding: 14px 10px;
+}
+.hamburger-container {
+    position: relative;
+    display: block;
+}
+.nav-bar-menu-container {
+    display: block;
+    background-color: #E87722; 
+}
+.nav-hamburger:hover {
+    cursor: pointer;
+}
+.hamburger-bar {
+    position: absolute;
+    width: 100%;
+    transition: .5s;
+}
+.nav-hamburger .menu-bar-top {
+    border: 4px solid black;
+    border-bottom: none;
+    top: 0;
+}
+.nav-hamburger .menu-bar-middle {
+    height: 4px;
+    background-color: black;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    top: 4px;
+}
+.nav-hamburger .menu-bar-bottom {
+    border: 4px solid black;
+    border-top: none;
+    top: 22px;
+}
+.button-open .menu-bar-top {
+       -webkit-transform:rotate(45deg) translate(8px, 8px);
+   -ms-transform:rotate(45deg) translate(8px, 8px);
+   -o-transform:rotate(45deg) translate(8px, 8px);
+   transform:rotate(45deg) translate(8px, 8px);
+    transition: .5s;
+    border: 2px solid black;
+}
+.button-open .menu-bar-middle {
+    -webkit-transform:translate(230px);
+   -ms-transform:translate(230px);
+   -o-transform:translate(230px);
+   transform:translate(230px);
+    transition: .1s ease-in;
+    opacity: 0;
+    border: 2px solid white;
+}
+.button-open .menu-bar-bottom {
+       -webkit-transform:rotate(-45deg) translate(8px, -7px);
+   -ms-transform:rotate(-45deg) translate(8px, -7px);
+   -o-transform:rotate(-45deg) translate(8px, -7px);
+   transform:rotate(-45deg) translate(8px, -7px);
+    transition: .5s;
+    border: 2px solid black;
+}
 
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
-	width: 100%;
-
 	ul {
-		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
 	}
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
+}
+
+.menu-main-menu-container{
+	background:green;
+	top:0;
+	height:100%;
+	margin-left:-334px;
+	width:334px;
+	overflow:auto;
+	transition: .25s;
+	z-index: 40;
+	@include desktop{
+		background:yellow;
+		margin-left:0;
+		width:100%;
 	}
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+.menu-show{
+	margin-left:0;
 }
 
-@media screen and (min-width: 768px) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
+.nav-hamburger{
+	@include desktop{
+	display:none;
 	}
 }
-
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-	.site-main & {
-		margin: 0 0 $base__space-unit;
-		overflow: hidden;
-	}
-
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
-
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
-}
-
-//actual code
-
-.c-hamburger {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  width: 96px;
-  height: 96px;
-  font-size: 0;
-  text-indent: -9999px;
-  appearance: none;
-  box-shadow: none;
-  border-radius: none;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.c-hamburger:focus {
-  outline: none;
-}
-
-.c-hamburger span {
-  display: block;
-  position: absolute;
-  top: 44px;
-  left: 18px;
-  right: 18px;
-  height: 8px;
-  background: black;
-}
-
-.c-hamburger span::before,
-.c-hamburger span::after {
-  position: absolute;
-  display: block;
-  left: 0;
-  width: 100%;
-  height: 8px;
-  background-color: black;
-  content: "";
-}
-
-.c-hamburger span::before {
-  top: -20px;
-}
-
-.c-hamburger span::after {
-  bottom: -20px;
-}
-
-.c-hamburger--htx {
-  background-color: transparent;
-}
-
-.c-hamburger--htx span {
-  transition: background 0s 0.3s;
-}
-
-.c-hamburger--htx span::before,
-.c-hamburger--htx span::after {
-  transition-duration: 0.3s, 0.3s;
-  transition-delay: 0.3s, 0s;
-}
-
-.c-hamburger--htx span::before {
-  transition-property: top, transform;
-}
-
-.c-hamburger--htx span::after {
-  transition-property: bottom, transform;
-}
-
-/* active state, i.e. menu open */
-.c-hamburger--htx.is-active {
-  background-color: #cb0032;
-}
-
-.c-hamburger--htx.is-active span {
-  background: none;
-}
-
-.c-hamburger--htx.is-active span::before {
-  top: 0;
-  transform: rotate(45deg);
-}
-
-.c-hamburger--htx.is-active span::after {
-  bottom: 0;
-  transform: rotate(-45deg);
-}
-
-.c-hamburger--htx.is-active span::before,
-.c-hamburger--htx.is-active span::after {
-  transition-delay: 0s, 0.3s;
-}
-
-//navigation thickness
