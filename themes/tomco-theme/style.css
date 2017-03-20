@@ -617,3 +617,30 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+@media (min-width: 1000px) {
+  .site-content {
+    margin-left: 300px;
+    overflow: hidden; } }
+
+.skillset-overview {
+  padding: 20px; }
+
+.contact-banner {
+  text-align: center;
+  background: yellow;
+  padding: 20px; }
+
+.banner-link {
+  text-decoration: none;
+  color: black;
+  border: 1px black solid;
+  padding: 20px;
+  width: 100%;
+  display: block;
+  background: green;
+  border-radius: 5px;
+  text-transform: uppercase; }
+
+.banner-link:hover {
+  color: yellow;
+  background: white; }
