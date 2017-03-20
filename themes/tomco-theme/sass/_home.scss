@@ -1,0 +1,43 @@
+.home-product-page{
+    font-family:$font__m;
+    max-width: 1400px;
+    margin:auto;
+    h4{
+        font-weight:400;
+        font-size:30px;
+        margin:0;
+        text-transform:uppercase;
+        text-align:center;
+    }
+    h6{
+        font-size:25px;
+        font-weight:400;
+        margin:0;
+    }
+    p{
+        font-family:$font__r;
+        font-size:15px;
+    }
+    .home-products{
+        border:1px solid black;
+        margin-top:20px;
+        text-align:center;
+        padding-bottom:20px;
+        @include tablet{
+            width: 48%;
+        }
+        @include desktop{
+            width:31.3333%;
+        }
+    }
+    .home-container{
+        display:flex;
+        flex-direction:column;
+        @include tablet{
+            flex-direction:row;
+            justify-content: space-between;
+            flex-wrap:wrap;
+
+        }
+    }
+}

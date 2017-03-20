@@ -782,3 +782,46 @@ object {
     font-size: 25px;
     margin: 0;
     text-transform: uppercase; }
+
+.home {
+  font-family: "montserrat", arial, sans-serif;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto; }
+  .home h4 {
+    font-weight: 400;
+    font-size: 30px;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center; }
+  .home h6 {
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0; }
+  .home p {
+    font-family: "robotoslab", helvetica, serif;
+    font-size: 15px; }
+  .home .home-products {
+    border: 1px solid black;
+    margin-top: 20px;
+    text-align: center;
+    padding-bottom: 20px; }
+    @media (min-width: 700px) {
+      .home .home-products {
+        width: 48%; } }
+    @media (min-width: 1000px) {
+      .home .home-products {
+        width: 31.3333%; } }
+  .home .home-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column; }
+    @media (min-width: 700px) {
+      .home .home-container {
+        -ms-flex-direction: row;
+            flex-direction: row;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; } }

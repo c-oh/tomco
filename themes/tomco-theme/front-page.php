@@ -9,7 +9,7 @@ get_header(); ?>
     <div class= "carousel">   
     
     
-    <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/logo.jpg">
+    <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/LOGO.jpg">
     
     </div>
 
