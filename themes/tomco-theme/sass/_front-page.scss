@@ -5,8 +5,18 @@
 } 
 }
 
-.skillset-overview{
+.information-counter, .skillset-overview{
     padding:20px;
+}
+
+.information-counter{
+    text-align:center;
+    .counter-title{
+        font-size:30px;
+    }
+    .count{
+        font-size:20px;
+    }
 }
 .contact-banner{
     text-align:center;

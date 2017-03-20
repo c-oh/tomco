@@ -222,6 +222,20 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'montserrat';
+  src: url("../../resources/fonts/montserrat/montserrat-regular-webfont.eot");
+  src: url("../../resources/fonts/montserrat/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../resources/fonts/montserrat/montserrat-regular-webfont.woff") format("woff"), url("../../resources/fonts/montserrat/montserrat-regular-webfont.ttf") format("truetype"), url("../../resources/fonts/montserrat/montserrat-regular-webfont.svg#montserratregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'montserrat';
+  src: url("../../resources/fonts/montserrat/montserrat-bold-webfont.eot");
+  src: url("../../resources/fonts/montserrat/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../resources/fonts/montserrat/montserrat-bold-webfont.woff") format("woff"), url("../../resources/fonts/montserrat/montserrat-bold-webfont.ttf") format("truetype"), url("../../resources/fonts/montserrat/montserrat-bold-webfont.svg#montserratbold") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -622,8 +636,15 @@ object {
     margin-left: 300px;
     overflow: hidden; } }
 
-.skillset-overview {
+.information-counter, .skillset-overview {
   padding: 20px; }
+
+.information-counter {
+  text-align: center; }
+  .information-counter .counter-title {
+    font-size: 30px; }
+  .information-counter .count {
+    font-size: 20px; }
 
 .contact-banner {
   text-align: center;
