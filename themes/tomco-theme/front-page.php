@@ -16,15 +16,15 @@ get_header(); ?>
     <div class="information-counter">
         <h4 class="counter-title"> We can offer:</h4>
         <div class="counter-1"
-            <h1 class= "count">31</h1>
+            <span class= "count">31</span>
             <h5>years of experience</h5>
         </div>
          <div class="counter-2"
-            <h1 class= "count">250</h1>
+            <span class= "count">250</span>
             <h5>companies to chose from</h5>
         </div>
          <div class="counter-3"
-            <h1 class= "count">32</h1>
+            <span class= "count">32</span>
             <h5>shipping ports worldwide</h5>
         </div>
     </div>
