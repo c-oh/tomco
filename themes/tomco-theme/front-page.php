@@ -17,15 +17,15 @@ get_header(); ?>
         <h4 class="counter-title"> We can offer:</h4>
         <div class="counter-1">
            <h2 class="count"> 31</span>
-            <h5>years of experience</h5>
+            <h5 class="count-description">years of experience</h5>
         </div>
          <div class="counter-2">
             <h2 class= "count">250</h2>
-            <h5>companies to chose from</h5>
+            <h5 class="count-description">companies to chose from</h5>
         </div>
          <div class="counter-3">
             <h2 class= "count">32</h2>
-            <h5>shipping ports worldwide</h5>
+            <h5 class="count-description">shipping ports worldwide</h5>
         </div>
     </div>
 
@@ -36,29 +36,37 @@ get_header(); ?>
 
     <div class= "skillset-overview">
         <div class= "skillset1"> 
-        <h5>shipment consolidation</h5>
-        <p>Phasellus in facilisis ligula, a dictum tortor. Morbi et quam ut neque luctus eleifend.</p>
+            <img class="skillset-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/pig.png">
+            <div class="skillset-container"> 
+                <h5 class="skillset-title">shipment consolidation</h5>
+                <p class="skillset-description">Phasellus in facilisis ligula, a dictum tortor. Morbi et quam ut neque luctus eleifend.</p>
+            </div>
         </div>
         <div class= "skillset2"> 
-        <h5>reliable quality</h5>
-        <p>Phasellus in facilisis ligula, a dictum tortor. Morbi et quam ut neque luctus eleifend.</p>
+            <img class="skillset-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/hand.png">
+            <div class="skillset-container"> 
+                <h5 class="skillset-title">reliable quality</h5>
+                <p class="skillset-description">Phasellus in facilisis ligula, a dictum tortor. Morbi et quam ut neque luctus eleifend.</p>
+            </div>
         </div>
         <div class= "skillset3"> 
-        <h5>efficient service</h5>
-        <p>Phasellus in facilisis ligula, a dictum tortor. Morbi et quam ut neque luctus eleifend.</p>
+            <img class="skillset-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/security.png">
+            <div class="skillset-container"> 
+                <h5 class="skillset-title">efficient service</h5>
+                <p class="skillset-description">Phasellus in facilisis ligula, a dictum tortor. Morbi et quam ut neque luctus eleifend.</p>
+            </div>
         </div>
         <div class= "skillset4"> 
-        <h5>large networks</h5>
-        <p>Phasellus in facilisis ligula, a dictum tortor. Morbi et quam ut neque luctus eleifend.</p>
+            <img class="skillset-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/human.png">
+           <div class="skillset-container"> 
+                <h5 class="skillset-title">large networks</h5>
+                <p class="skillset-description">Phasellus in facilisis ligula, a dictum tortor. Morbi et quam ut neque luctus eleifend.</p>
         </div>
-        <div class= "skillset5"> 
-        <h5>reliable quality</h5>
-        <p>Phasellus in facilisis ligula, a dictum tortor. Morbi et quam ut neque luctus eleifend.</p>
         </div>
     </div>
 
     <div class= "product-preview">
-
+        <h1 class= "product-preview-title"> Products we carry</h1>
     </div>
     <?php wp_footer(); ?>
         </body>

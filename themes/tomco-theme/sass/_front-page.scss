@@ -5,23 +5,31 @@
 } 
 }
 
-.information-counter, .skillset-overview{
+.information-counter, .skillset-overview, .product-preview{
     padding:20px;
 }
 
 .information-counter{
+    background-image: url("../../resources/graphics/waves.png");
     text-align:center;
+    font-family: $font__m;
     .counter-title{
         font-size:30px;
+        font-weight:400;
+        text-transform: uppercase;
     }
     .count{
-        font-size:20px;
+        font-size:25px;
+    }
+    .count-description{
+        font-weight:200;
     }
 }
 .contact-banner{
     text-align:center;
     background:yellow;
     padding:20px;
+    font-family: $font__m;
 }
 
 .banner-link{
@@ -34,9 +42,40 @@
     background:green;
     border-radius:5px;
     text-transform:uppercase;
+    letter-spacing:2px;
 }
 
 .banner-link:hover{
     color:yellow;
     background:white;
+}
+
+.skillset-overview{
+    font-family:$font__m;
+    background:darkgrey;
+    .skillset1, .skillset2, .skillset3, .skillset4{
+        display:flex;
+    }
+    .skillset-icon{
+        width: 14%;
+    height: 100%;
+    margin-right: 13px;
+    margin-top: 25px;
+    }
+    .skillset-title{
+        font-size:20px;
+        text-transform: uppercase;
+    }
+    .skillset-description{
+        font-size:15px;
+    }
+}
+
+.product-preview{
+    font-family: $font__m;
+    .product-preview-title{
+        text-transform:uppercase;
+        font-weight:400;
+        text-align:center;
+    }
 }

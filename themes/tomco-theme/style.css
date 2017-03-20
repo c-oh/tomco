@@ -236,6 +236,13 @@ th {
   font-weight: 700;
   font-style: normal; }
 
+@font-face {
+  font-family: 'robotoslab';
+  src: url("../../resources/fonts/robotoslab/robotoslab-regular-webfont.eot");
+  src: url("../../resources/fonts/robotoslab/robotoslab-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../resources/fonts/robotoslab/robotoslab-regular-webfont.woff") format("woff"), url("../../resources/fonts/robotoslab/robotoslab-regular-webfont.ttf") format("truetype"), url("../../resources/fonts/robotoslab/robotoslab-regular-webfont.svg#roboto_slabregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -636,20 +643,27 @@ object {
     margin-left: 300px;
     overflow: hidden; } }
 
-.information-counter, .skillset-overview {
+.information-counter, .skillset-overview, .product-preview {
   padding: 20px; }
 
 .information-counter {
-  text-align: center; }
+  background-image: url("../../resources/graphics/waves.png");
+  text-align: center;
+  font-family: "montserrat", arial, sans-serif; }
   .information-counter .counter-title {
-    font-size: 30px; }
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase; }
   .information-counter .count {
-    font-size: 20px; }
+    font-size: 25px; }
+  .information-counter .count-description {
+    font-weight: 200; }
 
 .contact-banner {
   text-align: center;
   background: yellow;
-  padding: 20px; }
+  padding: 20px;
+  font-family: "montserrat", arial, sans-serif; }
 
 .banner-link {
   text-decoration: none;
@@ -660,8 +674,33 @@ object {
   display: block;
   background: green;
   border-radius: 5px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 2px; }
 
 .banner-link:hover {
   color: yellow;
   background: white; }
+
+.skillset-overview {
+  font-family: "montserrat", arial, sans-serif;
+  background: darkgrey; }
+  .skillset-overview .skillset1, .skillset-overview .skillset2, .skillset-overview .skillset3, .skillset-overview .skillset4 {
+    display: -ms-flexbox;
+    display: flex; }
+  .skillset-overview .skillset-icon {
+    width: 14%;
+    height: 100%;
+    margin-right: 13px;
+    margin-top: 25px; }
+  .skillset-overview .skillset-title {
+    font-size: 20px;
+    text-transform: uppercase; }
+  .skillset-overview .skillset-description {
+    font-size: 15px; }
+
+.product-preview {
+  font-family: "montserrat", arial, sans-serif; }
+  .product-preview .product-preview-title {
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center; }
