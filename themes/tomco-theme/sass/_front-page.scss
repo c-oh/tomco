@@ -13,11 +13,21 @@
     background-image: url("../../resources/graphics/waves.png");
     text-align:center;
     font-family: $font__m;
+    max-width:800px;
+    margin:auto;
     .counter-title{
         font-size:30px;
         font-weight:400;
         text-transform: uppercase;
     }
+    .counter-container{
+        display:flex;
+        flex-direction:column;
+        margin:auto;
+        @include tablet{
+            flex-direction:row;
+            justify-content:space-between;
+        }
     .count{
         font-size:25px;
     }
@@ -25,6 +35,8 @@
         font-weight:200;
     }
 }
+}
+
 .contact-banner{
     text-align:center;
     background:yellow;
@@ -73,9 +85,42 @@
 
 .product-preview{
     font-family: $font__m;
+    padding:20px;
     .product-preview-title{
         text-transform:uppercase;
         font-weight:400;
         text-align:center;
     }
+    .product-container{
+        display:flex;
+        flex-direction:column;
+        @include tablet{
+            flex-direction:row;
+            justify-content:space-between;
+            flex-wrap:wrap;
+        }
+    }
+    .product-grid{
+        border:1px solid black;
+        margin-top:10px;
+        text-align:center;
+        padding:20px;
+        @include tablet{
+            width:33.11111%;
+        }
+        @include desktop{
+            width:48%;
+        }
+        h6{
+            font-size:25px;
+            text-transform:uppercase;
+            font-weight:300;
+            text-decoration:none;
+        }
+    }
+    .product-grid:hover{
+        color:yellow;
+        background:green;
+    }
 }
+

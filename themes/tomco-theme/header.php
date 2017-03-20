@@ -33,7 +33,9 @@
          					 <span class="hamburger-bar menu-bar-bottom"></span>
         				</span>
      				 </div>
+					 
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+
 				</nav>
 				</section>
 			</header><!-- #masthead -->

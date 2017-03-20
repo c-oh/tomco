@@ -3,7 +3,7 @@
 
 
    <section class="about-hero">
-    <h6> about </h6>
+    <h3> about </h3>
    </section>
 
    <div class= "about-section">

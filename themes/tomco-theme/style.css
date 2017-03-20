@@ -460,11 +460,14 @@ table {
 .menu-show {
   margin-left: 0; }
   .menu-show .menu {
-    margin: 64px 0 0 30px; }
+    margin: 116px 0 0 48px; }
 
 @media (min-width: 1000px) {
   .nav-hamburger {
     display: none; } }
+
+.main-navigation .sub-menu {
+  margin-left: 20px; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -649,15 +652,29 @@ object {
 .information-counter {
   background-image: url("../../resources/graphics/waves.png");
   text-align: center;
-  font-family: "montserrat", arial, sans-serif; }
+  font-family: "montserrat", arial, sans-serif;
+  max-width: 800px;
+  margin: auto; }
   .information-counter .counter-title {
     font-size: 30px;
     font-weight: 400;
     text-transform: uppercase; }
-  .information-counter .count {
-    font-size: 25px; }
-  .information-counter .count-description {
-    font-weight: 200; }
+  .information-counter .counter-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    margin: auto; }
+    @media (min-width: 700px) {
+      .information-counter .counter-container {
+        -ms-flex-direction: row;
+            flex-direction: row;
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
+    .information-counter .counter-container .count {
+      font-size: 25px; }
+    .information-counter .counter-container .count-description {
+      font-weight: 200; }
 
 .contact-banner {
   text-align: center;
@@ -699,8 +716,69 @@ object {
     font-size: 15px; }
 
 .product-preview {
-  font-family: "montserrat", arial, sans-serif; }
+  font-family: "montserrat", arial, sans-serif;
+  padding: 20px; }
   .product-preview .product-preview-title {
     text-transform: uppercase;
     font-weight: 400;
     text-align: center; }
+  .product-preview .product-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column; }
+    @media (min-width: 700px) {
+      .product-preview .product-container {
+        -ms-flex-direction: row;
+            flex-direction: row;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; } }
+  .product-preview .product-grid {
+    border: 1px solid black;
+    margin-top: 10px;
+    text-align: center;
+    padding: 20px; }
+    @media (min-width: 700px) {
+      .product-preview .product-grid {
+        width: 33.11111%; } }
+    @media (min-width: 1000px) {
+      .product-preview .product-grid {
+        width: 48%; } }
+    .product-preview .product-grid h6 {
+      font-size: 25px;
+      text-transform: uppercase;
+      font-weight: 300;
+      text-decoration: none; }
+  .product-preview .product-grid:hover {
+    color: yellow;
+    background: green; }
+
+.about-hero {
+  font-family: "montserrat", arial, sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 20px;
+  margin: 0px;
+  padding-bottom: 0px;
+  text-decoration: underline; }
+
+.about-hero h3 {
+  margin: 0px; }
+
+.about-section {
+  font-family: "robotoslab", helvetica, serif;
+  font-size: 15px;
+  padding: 20px;
+  margin: 0px; }
+
+.site-footer {
+  padding: 20px;
+  background: grey;
+  font-family: "montserrat", arial, sans-serif; }
+  .site-footer h5 {
+    font-weight: 400;
+    font-size: 25px;
+    margin: 0;
+    text-transform: uppercase; }
