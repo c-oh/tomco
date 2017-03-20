@@ -31,7 +31,7 @@ get_header(); ?>
 
     <div class= "contact-banner">
         <h4 class= "banner-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris  eget eros malesuada lacus cursus blandit eget a est. Mauris eget lorem ipsum.</h4>
-        <a class= "banner-link" href= # > Contact us <a>
+        <a class= "banner-link" href= "/about" > About us <a>
     </div>
 
     <div class= "skillset-overview">
