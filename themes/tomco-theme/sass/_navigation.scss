@@ -2,13 +2,29 @@
 # Navigation
 --------------------------------------------------------------*/
 
+.nav-container{
+	height:100%;
+    z-index:20;
+    margin-top: 182px;
+	a{
+		text-decoration:none;
+	}
+	@include desktop{
+		margin-left:0;
+		width:300px;
+		height:100%;
+		padding:10px;
+		left:0;
+		overflow:hidden;
+		text-align:center;
+	}
+}
 /* Links */
-
 .main-navigation {
 	clear: both;
 	display: block;
 	height:54px;
-	background:red;
+	background:white;
 	ul {
 		list-style: none;
 		margin: 0;
@@ -16,6 +32,9 @@
 	}
 	@include desktop{
 		background:transparent;
+        height: 100%;
+        padding: 0;
+        margin:0;
 	}
 }
 
@@ -108,7 +127,7 @@
 		text-decoration:none;
 	}
 	@include desktop{
-		background:yellow;
+		background:transparent;
 		margin-left:0;
 		width:300px;
 		height:100%;
@@ -116,6 +135,9 @@
 		left:0;
 		overflow:hidden;
 		text-align:center;
+        z-index:0;
+        position: initial;
+       
 	}
 }
 
@@ -135,5 +157,23 @@
 
 .main-navigation .sub-menu {
     margin-left:20px;
+}
+
+.navigation-image-desktop{
+    display:none;
+    @include desktop{
+        display:block;
+    }
+}
+.navigation-image{
+        float: right;
+    height: auto;
+    max-width: 110px;
+    @include desktop{
+        display:none;
+    }
+}
+.flickity-viewport{
+    width: 100% !important;
 }
 //site banner 

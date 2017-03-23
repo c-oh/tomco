@@ -27,6 +27,18 @@
 }
 
 @font-face {
+    font-family: 'montserrat';
+    src: url('../../resources/fonts/montserrat/montserrat-light-webfont.eot');
+    src: url('../../resources/fonts/montserrat/montserrat-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../resources/fonts/montserrat/montserrat-light-webfont.woff') format('woff'),
+         url('../../resources/fonts/montserrat/montserrat-light-webfont.ttf') format('truetype'),
+         url('../../resources/fonts/montserrat/montserrat-light-webfont.svg#montserratbold') format('svg');
+    font-weight: 100;
+    font-style: normal;
+
+}
+
+@font-face {
     font-family: 'robotoslab';
     src: url('../../resources/fonts/robotoslab/robotoslab-regular-webfont.eot');
     src: url('../../resources/fonts/robotoslab/robotoslab-regular-webfont.eot?#iefix') format('embedded-opentype'),

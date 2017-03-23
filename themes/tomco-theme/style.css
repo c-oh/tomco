@@ -237,6 +237,13 @@ th {
   font-style: normal; }
 
 @font-face {
+  font-family: 'montserrat';
+  src: url("../../resources/fonts/montserrat/montserrat-light-webfont.eot");
+  src: url("../../resources/fonts/montserrat/montserrat-light-webfont.eot?#iefix") format("embedded-opentype"), url("../../resources/fonts/montserrat/montserrat-light-webfont.woff") format("woff"), url("../../resources/fonts/montserrat/montserrat-light-webfont.ttf") format("truetype"), url("../../resources/fonts/montserrat/montserrat-light-webfont.svg#montserratbold") format("svg");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
   font-family: 'robotoslab';
   src: url("../../resources/fonts/robotoslab/robotoslab-regular-webfont.eot");
   src: url("../../resources/fonts/robotoslab/robotoslab-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../resources/fonts/robotoslab/robotoslab-regular-webfont.woff") format("woff"), url("../../resources/fonts/robotoslab/robotoslab-regular-webfont.ttf") format("truetype"), url("../../resources/fonts/robotoslab/robotoslab-regular-webfont.svg#roboto_slabregular") format("svg");
@@ -367,19 +374,38 @@ table {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+.nav-container {
+  height: 100%;
+  z-index: 20;
+  margin-top: 182px; }
+  .nav-container a {
+    text-decoration: none; }
+  @media (min-width: 1000px) {
+    .nav-container {
+      margin-left: 0;
+      width: 300px;
+      height: 100%;
+      padding: 10px;
+      left: 0;
+      overflow: hidden;
+      text-align: center; } }
+
 /* Links */
 .main-navigation {
   clear: both;
   display: block;
   height: 54px;
-  background: red; }
+  background: white; }
   .main-navigation ul {
     list-style: none;
     margin: 0;
     padding-left: 0; }
   @media (min-width: 1000px) {
     .main-navigation {
-      background: transparent; } }
+      background: transparent;
+      height: 100%;
+      padding: 0;
+      margin: 0; } }
 
 .nav-hamburger {
   position: absolute;
@@ -448,14 +474,16 @@ table {
     text-decoration: none; }
   @media (min-width: 1000px) {
     .menu-main-menu-container {
-      background: yellow;
+      background: transparent;
       margin-left: 0;
       width: 300px;
       height: 100%;
       padding: 10px;
       left: 0;
       overflow: hidden;
-      text-align: center; } }
+      text-align: center;
+      z-index: 0;
+      position: initial; } }
 
 .menu-show {
   margin-left: 0; }
@@ -468,6 +496,23 @@ table {
 
 .main-navigation .sub-menu {
   margin-left: 20px; }
+
+.navigation-image-desktop {
+  display: none; }
+  @media (min-width: 1000px) {
+    .navigation-image-desktop {
+      display: block; } }
+
+.navigation-image {
+  float: right;
+  height: auto;
+  max-width: 110px; }
+  @media (min-width: 1000px) {
+    .navigation-image {
+      display: none; } }
+
+.flickity-viewport {
+  width: 100% !important; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -642,30 +687,49 @@ object {
 --------------------------------------------------------------*/
 /* Front page */
 @media (min-width: 1000px) {
-  .site-content {
+  .site-content, .site-footer {
     margin-left: 300px;
     overflow: hidden; } }
 
 .information-counter, .skillset-overview, .product-preview {
-  padding: 20px; }
+  padding: 20px 38px; }
 
 .information-counter {
-  background-image: url("../../resources/graphics/waves.png");
-  text-align: center;
+  background-image: url(../../resources/graphics/parallax.jpg);
   font-family: "montserrat", arial, sans-serif;
-  max-width: 800px;
-  margin: auto; }
-  .information-counter .counter-title {
-    font-size: 30px;
-    font-weight: 400;
-    text-transform: uppercase; }
+  margin: auto;
+  color: #00305B; }
+  @media (min-width: 600px) {
+    .information-counter {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white; } }
+  .information-counter .title-container {
+    text-transform: uppercase;
+    font-family: "montserrat", arial, sans-serif; }
+    .information-counter .title-container h3, .information-counter .title-container h1 {
+      margin-top: 0;
+      margin-bottom: 0; }
+    .information-counter .title-container h3 {
+      font-weight: 100; }
+    @media (min-width: 600px) {
+      .information-counter .title-container {
+        text-align: center; }
+        .information-counter .title-container h3 {
+          display: inline; }
+        .information-counter .title-container h1 {
+          display: inline;
+          padding-left: 3px; } }
   .information-counter .counter-container {
+    text-align: center;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column;
     margin: auto; }
-    @media (min-width: 700px) {
+    @media (min-width: 600px) {
       .information-counter .counter-container {
         -ms-flex-direction: row;
             flex-direction: row;
@@ -674,60 +738,160 @@ object {
     .information-counter .counter-container .count {
       font-size: 25px; }
     .information-counter .counter-container .count-description {
-      font-weight: 200; }
+      font-weight: 400; }
+      @media (min-width: 600px) {
+        .information-counter .counter-container .count-description {
+          font-size: 22px; } }
 
-.contact-banner {
-  text-align: center;
-  background: yellow;
-  padding: 20px;
-  font-family: "montserrat", arial, sans-serif; }
+.about-banner {
+  color: white;
+  font-family: "montserrat", arial, sans-serif;
+  padding: 20px 38px;
+  background-color: #00305B; }
+  .about-banner .title-container {
+    text-transform: uppercase;
+    font-family: "montserrat", arial, sans-serif; }
+    .about-banner .title-container h3, .about-banner .title-container h1 {
+      margin-top: 0;
+      margin-bottom: 0; }
+    .about-banner .title-container h3 {
+      font-weight: 100; }
+    @media (min-width: 600px) {
+      .about-banner .title-container {
+        text-align: center; }
+        .about-banner .title-container h3 {
+          display: inline; }
+        .about-banner .title-container h1 {
+          display: inline;
+          padding-left: 3px; } }
+  .about-banner p {
+    font-weight: 100;
+    font-size: 18px; }
+    @media (min-width: 600px) {
+      .about-banner p {
+        font-size: 20px; } }
 
 .banner-link {
   text-decoration: none;
-  color: black;
-  border: 1px black solid;
+  color: #00305B;
+  border: 1px white solid;
   padding: 20px;
   width: 100%;
   display: block;
-  background: green;
+  background-color: white;
   border-radius: 5px;
   text-transform: uppercase;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  text-align: center; }
+  @media (min-width: 600px) {
+    .banner-link {
+      width: auto;
+      display: inline-block; } }
+
+.banner-text {
+  font-size: 15px !important; }
 
 .banner-link:hover {
-  color: yellow;
-  background: white; }
+  color: white;
+  background: lightskyblue; }
+
+.skillsets .title-container {
+  padding: 20px 38px;
+  background: #EAF4F6;
+  color: #00305B;
+  text-transform: uppercase;
+  font-family: "montserrat", arial, sans-serif; }
+  .skillsets .title-container h3, .skillsets .title-container h1 {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .skillsets .title-container h3 {
+    font-weight: 100; }
+  @media (min-width: 600px) {
+    .skillsets .title-container {
+      text-align: center; }
+      .skillsets .title-container h3 {
+        display: inline; }
+      .skillsets .title-container h1 {
+        display: inline;
+        padding-left: 3px; } }
 
 .skillset-overview {
   font-family: "montserrat", arial, sans-serif;
-  background: darkgrey; }
+  color: #00305B; }
+  .skillset-overview .skill-description {
+    font-weight: 200;
+    font-size: 25px; }
+  .skillset-overview span {
+    font-weight: 700;
+    font-size: 25px; }
+  @media (min-width: 600px) {
+    .skillset-overview {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
   .skillset-overview .skillset1, .skillset-overview .skillset2, .skillset-overview .skillset3, .skillset-overview .skillset4 {
     display: -ms-flexbox;
     display: flex; }
-  .skillset-overview .skillset-icon {
-    width: 14%;
-    height: 100%;
-    margin-right: 13px;
-    margin-top: 25px; }
+    @media (min-width: 600px) {
+      .skillset-overview .skillset1, .skillset-overview .skillset2, .skillset-overview .skillset3, .skillset-overview .skillset4 {
+        width: 48%; } }
+    @media (min-width: 1000px) {
+      .skillset-overview .skillset1, .skillset-overview .skillset2, .skillset-overview .skillset3, .skillset-overview .skillset4 {
+        -ms-flex-direction: column;
+            flex-direction: column;
+        text-align: center;
+        width: 23%; } }
+  .skillset-overview .square {
+    background-color: lightskyblue;
+    width: 10px;
+    height: 10px;
+    margin-top: 30px; }
+    @media (min-width: 600px) {
+      .skillset-overview .square {
+        margin-top: 29px; } }
   .skillset-overview .skillset-title {
     font-size: 20px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-top: 0;
+    margin-bottom: 10px; }
   .skillset-overview .skillset-description {
-    font-size: 15px; }
+    font-size: 15px;
+    margin: 0; }
+  .skillset-overview .skillset-container {
+    margin-left: 15px;
+    margin-top: 20px; }
 
 .product-preview {
   font-family: "montserrat", arial, sans-serif;
-  padding: 20px; }
-  .product-preview .product-preview-title {
+  padding: 20px 38px;
+  background-color: #EAF4F6; }
+  .product-preview .title-container {
     text-transform: uppercase;
-    font-weight: 400;
-    text-align: center; }
+    font-family: "montserrat", arial, sans-serif;
+    color: #00305B; }
+    .product-preview .title-container h3, .product-preview .title-container h1 {
+      margin-top: 0;
+      margin-bottom: 0; }
+    .product-preview .title-container h3 {
+      font-weight: 100; }
+    @media (min-width: 600px) {
+      .product-preview .title-container {
+        text-align: center; }
+        .product-preview .title-container h3 {
+          display: inline; }
+        .product-preview .title-container h1 {
+          display: inline;
+          padding-left: 3px; } }
   .product-preview .product-container {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column; }
-    @media (min-width: 700px) {
+    @media (min-width: 600px) {
       .product-preview .product-container {
         -ms-flex-direction: row;
             flex-direction: row;
@@ -735,25 +899,52 @@ object {
             justify-content: space-between;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; } }
-  .product-preview .product-grid {
+  .product-preview .product-link {
     border: 1px solid black;
     margin-top: 10px;
     text-align: center;
-    padding: 20px; }
-    @media (min-width: 700px) {
-      .product-preview .product-grid {
-        width: 33.11111%; } }
+    padding: 20px;
+    text-decoration: none; }
+    @media (min-width: 600px) {
+      .product-preview .product-link {
+        width: 31.333%; } }
     @media (min-width: 1000px) {
-      .product-preview .product-grid {
-        width: 48%; } }
-    .product-preview .product-grid h6 {
+      .product-preview .product-link {
+        margin-top: 35px; } }
+    .product-preview .product-link h6 {
       font-size: 25px;
       text-transform: uppercase;
       font-weight: 300;
       text-decoration: none; }
-  .product-preview .product-grid:hover {
+    .product-preview .product-link p {
+      font-family: "robotoslab", helvetica, serif; }
+  .product-preview .product-link:hover {
     color: yellow;
     background: green; }
+
+.contact-section {
+  font-family: "montserrat", arial, sans-serif;
+  padding: 20px 38px;
+  color: white;
+  background-color: #00305B; }
+  .contact-section .title-container {
+    text-transform: uppercase;
+    font-family: "montserrat", arial, sans-serif; }
+    .contact-section .title-container h3, .contact-section .title-container h1 {
+      margin-top: 0;
+      margin-bottom: 0; }
+    .contact-section .title-container h3 {
+      font-weight: 100; }
+    @media (min-width: 600px) {
+      .contact-section .title-container {
+        text-align: center; }
+        .contact-section .title-container h3 {
+          display: inline; }
+        .contact-section .title-container h1 {
+          display: inline;
+          padding-left: 3px; } }
+  .contact-section p {
+    font-weight: 100; }
 
 .about-hero {
   font-family: "montserrat", arial, sans-serif;
@@ -775,53 +966,56 @@ object {
 
 .site-footer {
   padding: 20px;
-  background: grey;
-  font-family: "montserrat", arial, sans-serif; }
+  font-family: "montserrat", arial, sans-serif;
+  background: lightgrey; }
   .site-footer h5 {
     font-weight: 400;
     font-size: 25px;
     margin: 0;
     text-transform: uppercase; }
 
-.home {
+.hp-page {
   font-family: "montserrat", arial, sans-serif;
-  padding: 30px;
-  max-width: 1200px;
-  margin: auto; }
-  .home h4 {
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px; }
+  .hp-page h4 {
     font-weight: 400;
     font-size: 30px;
     margin: 0;
     text-transform: uppercase;
     text-align: center; }
-  .home h6 {
+  .hp-page h6 {
     font-size: 25px;
     font-weight: 400;
     margin: 0; }
-  .home p {
+  .hp-page p {
     font-family: "robotoslab", helvetica, serif;
     font-size: 15px; }
-  .home .home-products {
+  .hp-page .home-products {
     border: 1px solid black;
     margin-top: 20px;
     text-align: center;
     padding-bottom: 20px; }
-    @media (min-width: 700px) {
-      .home .home-products {
+    @media (min-width: 600px) {
+      .hp-page .home-products {
         width: 48%; } }
     @media (min-width: 1000px) {
-      .home .home-products {
+      .hp-page .home-products {
         width: 31.3333%; } }
-  .home .home-container {
+  .hp-page .home-container {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column; }
-    @media (min-width: 700px) {
-      .home .home-container {
+    @media (min-width: 600px) {
+      .hp-page .home-container {
         -ms-flex-direction: row;
             flex-direction: row;
         -ms-flex-pack: justify;
             justify-content: space-between;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; } }
+
+.gallery {
+  margin-bottom: 0; }

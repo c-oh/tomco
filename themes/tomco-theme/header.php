@@ -25,7 +25,7 @@
 					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				</div><!-- .site-branding -->
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<section class= "nav-container"> 
+					<div class= "nav-container"> 
 					<div class="nav-hamburger">
     				    <span class="hamburger-container">
           					<span class="hamburger-bar menu-bar-top"></span>
@@ -33,11 +33,12 @@
          					 <span class="hamburger-bar menu-bar-bottom"></span>
         				</span>
      				 </div>
-					 
+					  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="navigation-image-desktop" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/logo.jpg"></a>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="navigation-image" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/logo.jpg"></a>
 				</nav>
-				</section>
+
+				</div>
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">

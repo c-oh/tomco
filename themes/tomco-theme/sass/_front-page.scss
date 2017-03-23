@@ -1,4 +1,4 @@
-.site-content{
+.site-content, .site-footer{
     @include desktop{
     margin-left:300px;
     overflow:hidden;
@@ -6,21 +6,26 @@
 }
 
 .information-counter, .skillset-overview, .product-preview{
-    padding:20px;
+        padding: 20px 38px;
 }
 
 .information-counter{
-    background-image: url("../../resources/graphics/waves.png");
-    text-align:center;
+    background-image: url(../../resources/graphics/parallax.jpg);
     font-family: $font__m;
-    max-width:800px;
     margin:auto;
-    .counter-title{
-        font-size:30px;
-        font-weight:400;
-        text-transform: uppercase;
+     color: #00305B;
+    @include tablet{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   color: white;
+    }
+    .title-container{
+        @include titles;
     }
     .counter-container{
+        text-align:center;
         display:flex;
         flex-direction:column;
         margin:auto;
@@ -32,64 +37,125 @@
         font-size:25px;
     }
     .count-description{
-        font-weight:200;
+        font-weight:400;
+    @include tablet{
+        font-size:22px;
+    }
     }
 }
 }
 
-.contact-banner{
-    text-align:center;
-    background:yellow;
-    padding:20px;
+.about-banner{
+    color:white;
     font-family: $font__m;
+        padding: 20px 38px;
+    background-color:#00305B;
+    .title-container{
+        @include titles;
+    }
+    p{
+        font-weight:100;
+        font-size:18px;
+    
+    @include tablet{
+        font-size:20px;
+    }
 }
+}
+
 
 .banner-link{
     text-decoration: none;
-    color:black;
-    border:1px black solid;
+    color:#00305B;
+    border:1px white solid;
     padding:20px;
     width:100%;
     display:block;
-    background:green;
+    background-color:white;;
     border-radius:5px;
     text-transform:uppercase;
     letter-spacing:2px;
+    text-align:center;
+    @include tablet{
+           width:auto;
+           display:inline-block;
+    }
 }
 
+.banner-text{
+    font-size:15px !important;
+}
 .banner-link:hover{
-    color:yellow;
-    background:white;
+    color:white;
+    background:lightskyblue;
 }
 
+.skillsets .title-container{
+        padding: 20px 38px;
+    background:#EAF4F6;
+    color: #00305B;
+    @include titles;
+}
 .skillset-overview{
     font-family:$font__m;
-    background:darkgrey;
+    color:#00305B;
+    .skill-description{
+        font-weight:200; 
+        font-size:25px;
+    }
+    span{
+        font-weight:700;
+        font-size:25px;
+    }
+    @include tablet{
+        display:flex;
+        justify-content:space-between;
+        flex-wrap:wrap;
+    }
     .skillset1, .skillset2, .skillset3, .skillset4{
         display:flex;
+        @include tablet{
+            width:48%;
+        }
+        @include desktop{
+            flex-direction:column;
+            text-align: center;
+        width: 23%;
+        }
     }
-    .skillset-icon{
-        width: 14%;
-    height: 100%;
-    margin-right: 13px;
-    margin-top: 25px;
+   .square{
+       background-color: lightskyblue;
+       width: 10px;
+	height: 10px;
+    margin-top:30px;
+    @include tablet{
+        margin-top:29px;
+    }
     }
     .skillset-title{
         font-size:20px;
         text-transform: uppercase;
+        font-weight: 100;
+        margin-top:0;
+        margin-bottom:10px;
     }
     .skillset-description{
         font-size:15px;
+        margin:0;
+    }
+    .skillset-container{
+        margin-left:15px;
+        margin-top:20px;
     }
 }
 
 .product-preview{
     font-family: $font__m;
-    padding:20px;
-    .product-preview-title{
-        text-transform:uppercase;
-        font-weight:400;
-        text-align:center;
+    padding: 20px 38px;
+    background-color:#EAF4F6;
+    .title-container{
+        @include titles;
+        color: #00305B;
     }
     .product-container{
         display:flex;
@@ -100,16 +166,17 @@
             flex-wrap:wrap;
         }
     }
-    .product-grid{
+    .product-link{
         border:1px solid black;
         margin-top:10px;
         text-align:center;
         padding:20px;
+        text-decoration: none;
         @include tablet{
-            width:33.11111%;
+            width:31.333%;
         }
         @include desktop{
-            width:48%;
+            margin-top: 35px;
         }
         h6{
             font-size:25px;
@@ -117,10 +184,25 @@
             font-weight:300;
             text-decoration:none;
         }
+        p{
+            font-family:$font__r;
+        }
     }
-    .product-grid:hover{
+    .product-link:hover{
         color:yellow;
         background:green;
     }
 }
 
+.contact-section{
+    font-family: $font__m;
+    padding: 20px 38px;
+    color:white;
+    background-color:#00305B;
+    .title-container{
+        @include titles;
+    }
+    p{
+        font-weight:100;
+    }
+}

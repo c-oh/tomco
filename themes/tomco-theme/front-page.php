@@ -8,49 +8,62 @@ get_header(); ?>
     
     <div class= "carousel">   
     
-    
-    <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/LOGO.jpg">
+    <?php echo do_shortcode( '[wp_flickity id="1"] ' ); ?>
     
     </div>
 
-<div class= "skillset-overview">
+<div class= "skillsets">
+    <div class= "title-container">    
+    <h3 class="skill-description">we can </h3> 
+    <h1 class="skill-span">provide</h1>
+    </div>
+    <div class="skillset-overview"> 
         <div class= "skillset1"> 
-            <img class="skillset-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/pig.png">
+            <div class="square"></div>
             <div class="skillset-container"> 
-                <h5 class="skillset-title">shipment consolidation</h5>
-                <p class="skillset-description">Phasellus in facilisis ligula, a dictum tortor. Morbi et quam ut neque luctus eleifend.</p>
+                <h5 class="skillset-title"><?php echo CFS()->get( 'skillset1' ) ?></h5>
+                <p class="skillset-description"><?php echo CFS()->get( 'description1' ) ?></p>
             </div>
         </div>
         <div class= "skillset2"> 
-            <img class="skillset-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/hand.png">
+           <div class="square"></div>
             <div class="skillset-container"> 
-                <h5 class="skillset-title">reliable quality</h5>
-                <p class="skillset-description">Phasellus in facilisis ligula, a dictum tortor. Morbi et quam ut neque luctus eleifend.</p>
+                <h5 class="skillset-title"><?php echo CFS()->get( 'skillset2' ) ?></h5>
+                <p class="skillset-description"><?php echo CFS()->get( 'description2' ) ?></p>
             </div>
         </div>
         <div class= "skillset3"> 
-            <img class="skillset-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/security.png">
+            <div class="square"></div>
             <div class="skillset-container"> 
-                <h5 class="skillset-title">efficient service</h5>
-                <p class="skillset-description">Phasellus in facilisis ligula, a dictum tortor. Morbi et quam ut neque luctus eleifend.</p>
+                <h5 class="skillset-title"><?php echo CFS()->get( 'skillset3' ) ?></h5>
+                <p class="skillset-description"><?php echo CFS()->get( 'description3' ) ?></p>
             </div>
         </div>
         <div class= "skillset4"> 
-            <img class="skillset-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/human.png">
+            <div class="square"></div>
            <div class="skillset-container"> 
-                <h5 class="skillset-title">large networks</h5>
-                <p class="skillset-description">Phasellus in facilisis ligula, a dictum tortor. Morbi et quam ut neque luctus eleifend.</p>
+                <h5 class="skillset-title"><?php echo CFS()->get( 'skillset4' ) ?></h5>
+                <p class="skillset-description"><?php echo CFS()->get( 'description4' ) ?></p>
+        </div>
         </div>
         </div>
     </div>
 
-    <div class= "contact-banner">
-        <h4 class= "banner-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris  eget eros malesuada lacus cursus blandit eget a est. Mauris eget lorem ipsum.</h4>
-        <a class= "banner-link" href= "/about" > About us <a>
+    <div class= "about-banner">
+        <div class= "title-container">    
+    <h3 class="skill-description">About </h3> 
+    <h1 class="skill-span">Us</h1>
+    </div>
+      <?php echo CFS()->get( 'about_us' ) ?>
+      <a class="banner-link" href= "/about"> read more</a>
+
     </div>
 
        <div class="information-counter">
-        <h4 class="counter-title"> We can offer:</h4>
+         <div class= "title-container">    
+    <h3 class="skill-description">We can </h3> 
+    <h1 class="skill-span">Offer</h1>
+    </div>
         <div class= "counter-container"> 
         <div class="counter-1">
            <h2 class="count"> 31</span>
@@ -70,55 +83,66 @@ get_header(); ?>
     
     
 
-    <div class= "product-preview">
-        <h1 class= "product-preview-title"> Products we carry</h1>
+    <div class= "product-preview" id="contact">
+        <div class= "title-container">    
+    <h3 class="skill-description">products we </h3> 
+    <h1 class="skill-span">carry</h1>
+    </div>
         <div class= "product-container">
 
-        <a href=# class= "grid-link">    
+            <a href=/household class="product-link">
         <div class="product-grid household">
             <h6> household</h6>
-            <a> learn more</a>
+            <p> view more</p>
+        </div>
+        </a>
+        
+           <a href=/household class="product-link">
+        <div class="product-grid home-decor">
+            <h6> home decor</h6>
+            <p> view more</p>
+        </div>
+        </a>
+        
+           <a href=/household class="product-link">
+        <div class="product-grid furniture">
+            <h6> furniture</h6>
+            <p> view more</p>
+        </div>
+        </a>
+        
+           <a href=/household class="product-link">
+        <div class="product-grid seasonal">
+            <h6> seasonal</h6>
+            <p> view more</p>
         </div>
         </a>
 
-        <a href=# class= "grid-link">
-         <div class="product-grid furniture">
-             <h6>furniture</h6>
-            <p> learn more</a>
+           <a href=/household class="product-link">
+        <div class="product-grid garden">
+            <h6> garden</h6>
+            <p> view more</p>
         </div>
         </a>
-
-        <a href=# class= "grid-link">
-  <div class="product-grid home-decor">
-             <h6>home-decor</h6>
-            <a> learn more</a>
+        
+           <a href=/household class="product-link">
+        <div class="product-grid paper">
+            <h6> paper</h6>
+            <p> view more</p>
         </div>
         </a>
-
-        <a href=# class= "grid-link">
-          <div class="product-grid seasonal">
-             <h6>seasonal</h6>
-            <a>learn more</a>
-        </div>
-        </a>
-        <a href=# class= "grid-link">
-          <div class="product-grid floral">
-             <h6>floral</h6>
-            <a> learn more</a>
-        </div>
-        </a>
-
-        <a href=# class= "grid-link">
-           <div class="product-grid paper">
-             <h6>paper</h6>
-            <a href=> learn more</a>
-        </div>
-        </a>
-        </div>
-        <a> view all products</a>
     </div>
    
-
+</div>
+<div class="contact-section">
+ <div class= "title-container">    
+    <h3 class="skill-description">contact </h3> 
+    <h1 class="skill-span">creative tomco</h1>
+    </div>
+    <p class="address"> <i class="fa fa-map-marker" aria-hidden="true"></i> 601 Po Lung Centre, 11 Wang Chiu Road, Kowloon Bay, Hong Kong</p>
+    <p class="phone"> <i class="fa fa-phone" aria-hidden="true"></i> +852 2755 0971</p>
+    <p class= "email"> <i class="fa fa-envelope" aria-hidden="true"></i> tomco@tomco.hk</p>
+</div>
 <?php get_footer();?>
         
      

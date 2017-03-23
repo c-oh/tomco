@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 
 
-   <div class= "home-product-page">
+   <div class= "hp-page">
        <h4> home </h4>
 <div class= "home-container">
 <div class="home-products product-1">
