@@ -77,9 +77,9 @@ get_header(); ?>
 
     <div class= "about-banner">   
     <h3 class="title-container">About  <span class"smaller-text">us</span></h3> 
-      <p class= "about-summary"> <?php echo CFS()->get( 'about_us' ) ?> </p>
-      <p class="readmore-button"> read more</p>
-      <p class= "about-desc"> Established in 1986, Creative Tomco is a company that offers wide range of products with exceptional service. With head office in Hong Kong and a branch office in Shenzhen, this allows us to establish and maintain strong and convenient relationships with our product partners scattered throughout China.</p>
+      <p class= "about-p1"> <?php echo CFS()->get( 'about_us' ) ?> </p>
+      <h6 class="readmore-button"> read more</h6>
+      <p class= "about-readmore"> Established in 1986, Creative Tomco is a company that offers wide range of products with exceptional service. With head office in Hong Kong and a branch office in Shenzhen, this allows us to establish and maintain strong and convenient relationships with our product partners scattered throughout China.</p>
 
     </div>
 
@@ -88,15 +88,15 @@ get_header(); ?>
     <h3 class="skill-description">We can <span class"smaller-text">offer</span></h3> 
     </div>
         <div class= "counter-container"> 
-        <div class="counter-1">
+        <div class="counter">
            <h2 class="count"> 31</span>
             <h5 class="count-description">years of experience</h5>
         </div>
-         <div class="counter-2">
+         <div class="counter">
             <h2 class= "count">250</h2>
             <h5 class="count-description">companies to chose from</h5>
         </div>
-         <div class="counter-3">
+         <div class="counter">
             <h2 class= "count">32</h2>
             <h5 class="count-description">shipping ports worldwide</h5>
         </div>

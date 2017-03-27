@@ -51,9 +51,6 @@
     font-family: $font__m;
     padding: 20px 38px;
     background-color: $color__blue;
-    .about-desc {
-        display: none;
-    }
     .readmore-button {
         margin: 0;
         text-decoration: none;
@@ -68,6 +65,8 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         text-align: center;
+        font-size:16px;
+        font-weight:400;
         &:hover {
             color: white;
             background: lightskyblue;
@@ -77,20 +76,33 @@
             display: inline-block;
         }
     }
+    p{
+        font-weight: 100;
+        font-size: 18px;
+        @include tablet{
+            font-size:20px;
+        }
+    }
+    .about-readmore{
+    display:none;
+    }
+    .about-readmore.show{
+        display:block;
+    }
 }
 
-.about-desc.show {
-    display: block;
-}
 
-.about-summary {
-    font-weight: 200;
-    font-size: 18px;
-}
+
+
+
+
 
 //skills
-.skillsets .title-container {
+.skillsets {
+    @include desktopalign;
+    .title-container {
     margin-bottom: 20px;
+}
 }
 
 .skillset-container {
@@ -117,5 +129,27 @@
                 width: 70px;
             }
         }
+    }
+}
+
+//counter
+
+.information-counter{
+   @include desktopalign;
+    .counter-container{
+    .count{
+        font-size:30px;
+    }
+    .count-description{
+        font-weight:200;
+        font-size: 18px;
+        margin:0;
+    }
+    @include tablet{
+        @include flexrow;
+        .counter{
+            width:31.3333%;
+        }
+    }
     }
 }

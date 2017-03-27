@@ -23,6 +23,6 @@ jQuery('.count').each(function () {
 jQuery(document).ready(function(){
     jQuery('.readmore-button').click(function(){
         jQuery(this).hide();
-        jQuery('.about-desc').slideDown().addClass('.show');
+        jQuery('.about-readmore').slideDown().addClass('.show');
     })
 })

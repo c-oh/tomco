@@ -763,8 +763,6 @@ object {
   font-family: "montserrat", arial, sans-serif;
   padding: 20px 38px;
   background-color: #00305B; }
-  .about-banner .about-desc {
-    display: none; }
   .about-banner .readmore-button {
     margin: 0;
     text-decoration: none;
@@ -778,7 +776,9 @@ object {
     border-radius: 5px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-align: center; }
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400; }
     .about-banner .readmore-button:hover {
       color: white;
       background: lightskyblue; }
@@ -786,16 +786,22 @@ object {
       .about-banner .readmore-button {
         width: auto;
         display: inline-block; } }
+  .about-banner p {
+    font-weight: 100;
+    font-size: 18px; }
+    @media (min-width: 600px) {
+      .about-banner p {
+        font-size: 20px; } }
+  .about-banner .about-readmore {
+    display: none; }
+  .about-banner .about-readmore.show {
+    display: block; }
 
-.about-desc.show {
-  display: block; }
-
-.about-summary {
-  font-weight: 200;
-  font-size: 18px; }
-
-.skillsets .title-container {
-  margin-bottom: 20px; }
+.skillsets {
+  max-width: 1200px;
+  margin: auto; }
+  .skillsets .title-container {
+    margin-bottom: 20px; }
 
 .skillset-container .skill-img {
   width: 50px; }
@@ -821,3 +827,23 @@ object {
       width: 31.33333%; }
       .skillsets .square .skill-img {
         width: 70px; } }
+
+.information-counter {
+  max-width: 1200px;
+  margin: auto; }
+  .information-counter .counter-container .count {
+    font-size: 30px; }
+  .information-counter .counter-container .count-description {
+    font-weight: 200;
+    font-size: 18px;
+    margin: 0; }
+  @media (min-width: 600px) {
+    .information-counter .counter-container {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      .information-counter .counter-container .counter {
+        width: 31.3333%; } }
