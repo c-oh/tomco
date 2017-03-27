@@ -26,3 +26,16 @@ jQuery(document).ready(function(){
         jQuery('.about-readmore').slideDown().addClass('.show');
     })
 })
+
+(function( jQuery ) {
+  //shows the search input field on click 
+  jQuery('.icon-search').on('click', function(event){
+    event.preventDefault();
+    jQuery('.header-search .search-field').toggleClass('show').focus();
+  });
+  //hides the search input field when not in focus
+  jQuery('.header-search .search-field').on('focusout', function(){
+    jQuery(this).removeClass('show');
+  });
+       
+})( jQuery );

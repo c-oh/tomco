@@ -434,6 +434,30 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+.header-search fieldset {
+  border: none; }
+  .header-search fieldset .icon-search {
+    display: inline; }
+  .header-search fieldset button {
+    background: transparent;
+    border: none;
+    box-shadow: none; }
+  .header-search fieldset .fa-search {
+    color: #00305B;
+    font-size: 1.5rem; }
+    .header-search fieldset .fa-search:hover {
+      color: #eeb013; }
+  .header-search fieldset .search-field {
+    border: none;
+    width: 0px;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 1rem; }
+    .header-search fieldset .search-field:focus {
+      outline: none; }
+  .header-search fieldset .search-field.show {
+    width: 200px; }
+
 /* Menus */
 .main-navigation {
   clear: both;

@@ -2,7 +2,38 @@
 # Navigation
 --------------------------------------------------------------*/
 
-
+.header-search fieldset {
+	border: none;
+	$font-family:$font__m;
+	.icon-search {
+		display: inline;
+	}
+	button {
+		background:transparent;
+		border:none;
+		box-shadow: none;
+	}
+	.fa-search{
+		color: $color__blue;
+		font-size:1.5rem;
+		&:hover{
+			color: $color__yellow;
+		}
+	}
+	.search-field {
+		border: none;
+		width: 0px;
+		padding: 0;
+		text-transform: uppercase;
+		font-size: 1rem;
+		&:focus {
+			outline: none;
+		}
+	}
+	.search-field.show{
+		width:200px;
+	}
+}
 
 /* Menus */
 
@@ -111,4 +142,3 @@
 	}
 }
 
-///
