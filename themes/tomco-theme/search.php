@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package tomco_theme_Theme
+ * @package RED_Starter_Theme
  */
 
 get_header(); ?>
@@ -23,7 +23,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php tomco_theme_numbered_pagination(); ?>
+			<?php red_starter_numbered_pagination(); ?>
 
 		<?php else : ?>
 

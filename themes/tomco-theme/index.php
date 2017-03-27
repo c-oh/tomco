@@ -2,7 +2,7 @@
 /**
  * The main template file.
  *
- * @package tomco_theme_Theme
+ * @package RED_Starter_Theme
  */
 
 get_header(); ?>

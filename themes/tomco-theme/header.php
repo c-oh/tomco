@@ -33,9 +33,7 @@
          					 <span class="hamburger-bar menu-bar-bottom"></span>
         				</span>
      				 </div>
-					  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="navigation-image-desktop" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/logo.jpg"></a>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="navigation-image" src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/logo.jpg"></a>
 				</nav>
 
 				</div>

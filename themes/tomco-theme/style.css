@@ -1,5 +1,5 @@
 /*!
-Theme Name: Tomco Theme
+Theme Name: RED Starter Theme
 Theme URI: http://underscores.me/
 Author: RED Academy
 Author URI: http://www.redacademy.com
@@ -12,7 +12,7 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Tomco Theme is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+RED Starter Theme is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -371,148 +371,134 @@ table {
 # Forms
 --------------------------------------------------------------*/
 /* Buttons */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 1px solid;
+  border-color: #ccc #ccc #bbb;
+  border-radius: 3px;
+  background: #e6e6e6;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: .6rem 1rem .4rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+  button:hover,
+  input[type="button"]:hover,
+  input[type="reset"]:hover,
+  input[type="submit"]:hover {
+    border-color: #ccc #bbb #aaa;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
+  button:active, button:focus,
+  input[type="button"]:active,
+  input[type="button"]:focus,
+  input[type="reset"]:active,
+  input[type="reset"]:focus,
+  input[type="submit"]:active,
+  input[type="submit"]:focus {
+    border-color: #aaa #bbb #bbb;
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
+
+/* Fields */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px; }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus,
+  input[type="search"]:focus,
+  textarea:focus {
+    color: #111; }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+  padding: 3px; }
+
+textarea {
+  padding-left: 3px;
+  width: 100%; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-.nav-container {
-  height: 100%;
-  z-index: 20;
-  margin-top: 182px; }
-  .nav-container a {
-    text-decoration: none; }
-  @media (min-width: 1000px) {
-    .nav-container {
-      margin-left: 0;
-      width: 300px;
-      height: 100%;
-      padding: 10px;
-      left: 0;
-      overflow: hidden;
-      text-align: center; } }
-
-/* Links */
+/* Menus */
 .main-navigation {
   clear: both;
   display: block;
-  height: 54px;
-  background: white; }
+  float: left;
+  width: 100%; }
   .main-navigation ul {
+    display: none;
     list-style: none;
     margin: 0;
     padding-left: 0; }
-  @media (min-width: 1000px) {
-    .main-navigation {
-      background: transparent;
-      height: 100%;
-      padding: 0;
-      margin: 0; } }
+    .main-navigation ul ul {
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      float: left;
+      position: absolute;
+      top: 1.5rem;
+      left: -999rem;
+      z-index: 99999; }
+      .main-navigation ul ul ul {
+        left: -999rem;
+        top: 0; }
+      .main-navigation ul ul li:hover > ul,
+      .main-navigation ul ul li.focus > ul {
+        left: 100%; }
+      .main-navigation ul ul a {
+        width: 200px; }
+    .main-navigation ul li:hover > ul,
+    .main-navigation ul li.focus > ul {
+      left: auto; }
+  .main-navigation li {
+    float: left;
+    position: relative; }
+  .main-navigation a {
+    display: block;
+    text-decoration: none; }
 
-.nav-hamburger {
-  position: absolute;
-  width: 54px;
-  height: 54px;
-  margin: 0;
-  transition: .25s;
-  z-index: 40;
-  padding: 14px 10px; }
-
-.hamburger-container {
-  position: relative;
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
   display: block; }
 
-.nav-hamburger:hover {
-  cursor: pointer; }
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none; }
+  .main-navigation ul {
+    display: block; } }
 
-.hamburger-bar {
-  position: absolute;
-  width: 100%;
-  transition: .5s; }
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+  margin: 0 0 1.5rem;
+  overflow: hidden; }
 
-.nav-hamburger .menu-bar-top {
-  border: 4px solid black;
-  border-bottom: none;
-  top: 0; }
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: left;
+  width: 50%; }
 
-.nav-hamburger .menu-bar-middle {
-  height: 4px;
-  background-color: black;
-  margin-top: 7px;
-  margin-bottom: 7px;
-  top: 4px; }
-
-.nav-hamburger .menu-bar-bottom {
-  border: 4px solid black;
-  border-top: none;
-  top: 22px; }
-
-.button-open .menu-bar-top {
-  transform: rotate(45deg) translate(8px, 8px);
-  transition: .5s;
-  border: 2px solid black; }
-
-.button-open .menu-bar-middle {
-  transform: translate(230px);
-  transition: .1s ease-in;
-  opacity: 0;
-  border: 2px solid white; }
-
-.button-open .menu-bar-bottom {
-  transform: rotate(-45deg) translate(8px, -7px);
-  transition: .5s;
-  border: 2px solid black; }
-
-.menu-main-menu-container {
-  background: green;
-  top: 0;
-  margin-left: -334px;
-  width: 334px;
-  transition: .25s;
-  z-index: 20;
-  height: 100%;
-  position: fixed; }
-  .menu-main-menu-container a {
-    text-decoration: none; }
-  @media (min-width: 1000px) {
-    .menu-main-menu-container {
-      background: transparent;
-      margin-left: 0;
-      width: 300px;
-      height: 100%;
-      padding: 10px;
-      left: 0;
-      overflow: hidden;
-      text-align: center;
-      z-index: 0;
-      position: initial; } }
-
-.menu-show {
-  margin-left: 0; }
-  .menu-show .menu {
-    margin: 116px 0 0 48px; }
-
-@media (min-width: 1000px) {
-  .nav-hamburger {
-    display: none; } }
-
-.main-navigation .sub-menu {
-  margin-left: 20px; }
-
-.navigation-image-desktop {
-  display: none; }
-  @media (min-width: 1000px) {
-    .navigation-image-desktop {
-      display: block; } }
-
-.navigation-image {
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
   float: right;
-  height: auto;
-  max-width: 110px; }
-  @media (min-width: 1000px) {
-    .navigation-image {
-      display: none; } }
-
-.flickity-viewport {
-  width: 100% !important; }
+  text-align: right;
+  width: 50%; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -686,336 +672,152 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
-@media (min-width: 1000px) {
-  .site-content, .site-footer {
-    margin-left: 300px;
-    overflow: hidden; } }
-
-.information-counter, .skillset-overview, .product-preview {
-  padding: 20px 38px; }
-
-.information-counter {
-  background-image: url(../../resources/graphics/parallax.jpg);
+.product-preview,
+.skillsets,
+.about-banner,
+.information-counter,
+.contact-section {
+  padding: 20px;
   font-family: "montserrat", arial, sans-serif;
-  margin: auto;
-  color: #00305B; }
-  @media (min-width: 600px) {
-    .information-counter {
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      color: white; } }
-  .information-counter .title-container {
-    text-transform: uppercase;
-    font-family: "montserrat", arial, sans-serif; }
-    .information-counter .title-container h3, .information-counter .title-container h1 {
+  text-align: center; }
+  .product-preview .title-container,
+  .skillsets .title-container,
+  .about-banner .title-container,
+  .information-counter .title-container,
+  .contact-section .title-container {
+    text-transform: uppercase; }
+    .product-preview .title-container h3,
+    .skillsets .title-container h3,
+    .about-banner .title-container h3,
+    .information-counter .title-container h3,
+    .contact-section .title-container h3 {
       margin-top: 0;
-      margin-bottom: 0; }
-    .information-counter .title-container h3 {
-      font-weight: 100; }
+      margin-bottom: 0;
+      font-size: 1.5rem;
+      font-weight: 200; }
+    .product-preview .title-container span,
+    .skillsets .title-container span,
+    .about-banner .title-container span,
+    .information-counter .title-container span,
+    .contact-section .title-container span {
+      font-weight: 700;
+      font-size: 30px; }
     @media (min-width: 600px) {
-      .information-counter .title-container {
-        text-align: center; }
-        .information-counter .title-container h3 {
-          display: inline; }
-        .information-counter .title-container h1 {
-          display: inline;
-          padding-left: 3px; } }
-  .information-counter .counter-container {
-    text-align: center;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    margin: auto; }
-    @media (min-width: 600px) {
-      .information-counter .counter-container {
-        -ms-flex-direction: row;
-            flex-direction: row;
-        -ms-flex-pack: justify;
-            justify-content: space-between; } }
-    .information-counter .counter-container .count {
-      font-size: 25px; }
-    .information-counter .counter-container .count-description {
-      font-weight: 400; }
-      @media (min-width: 600px) {
-        .information-counter .counter-container .count-description {
-          font-size: 22px; } }
+      .product-preview .title-container h3,
+      .skillsets .title-container h3,
+      .about-banner .title-container h3,
+      .information-counter .title-container h3,
+      .contact-section .title-container h3 {
+        font-size: 2rem; }
+      .product-preview .title-container span,
+      .skillsets .title-container span,
+      .about-banner .title-container span,
+      .information-counter .title-container span,
+      .contact-section .title-container span {
+        font-size: 35px; } }
+
+.product-preview a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  text-align: center; }
+
+.product-preview .household {
+  background-image: url("../../resources/graphics/household.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+.product-preview .home-decor {
+  background-image: url("../../resources/graphics/homedecor.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+.product-preview .furniture {
+  background-image: url("../../resources/graphics/furniture.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+.product-preview .seasonal {
+  background-image: url("../../resources/graphics/seasonal.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+.product-preview .garden {
+  background-image: url("../../resources/graphics/garden.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+.product-preview .paper {
+  background-image: url("../../resources/graphics/paper.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
 
 .about-banner {
   color: white;
   font-family: "montserrat", arial, sans-serif;
   padding: 20px 38px;
   background-color: #00305B; }
-  .about-banner .title-container {
+  .about-banner .about-desc {
+    display: none; }
+  .about-banner .readmore-button {
+    margin: 0;
+    text-decoration: none;
+    color: #00305B;
+    border: 1px white solid;
+    padding: 20px;
+    width: 100%;
+    display: block;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 5px;
     text-transform: uppercase;
-    font-family: "montserrat", arial, sans-serif; }
-    .about-banner .title-container h3, .about-banner .title-container h1 {
-      margin-top: 0;
-      margin-bottom: 0; }
-    .about-banner .title-container h3 {
-      font-weight: 100; }
+    letter-spacing: 2px;
+    text-align: center; }
+    .about-banner .readmore-button:hover {
+      color: white;
+      background: lightskyblue; }
     @media (min-width: 600px) {
-      .about-banner .title-container {
-        text-align: center; }
-        .about-banner .title-container h3 {
-          display: inline; }
-        .about-banner .title-container h1 {
-          display: inline;
-          padding-left: 3px; } }
-  .about-banner p {
-    font-weight: 100;
-    font-size: 18px; }
-    @media (min-width: 600px) {
-      .about-banner p {
-        font-size: 20px; } }
+      .about-banner .readmore-button {
+        width: auto;
+        display: inline-block; } }
 
-.banner-link {
-  text-decoration: none;
-  color: #00305B;
-  border: 1px white solid;
-  padding: 20px;
-  width: 100%;
-  display: block;
-  background-color: white;
-  border-radius: 5px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-align: center; }
-  @media (min-width: 600px) {
-    .banner-link {
-      width: auto;
-      display: inline-block; } }
+.about-desc.show {
+  display: block; }
 
-.banner-text {
-  font-size: 15px !important; }
-
-.banner-link:hover {
-  color: white;
-  background: lightskyblue; }
+.about-summary {
+  font-weight: 200;
+  font-size: 18px; }
 
 .skillsets .title-container {
-  padding: 20px 38px;
-  background: #EAF4F6;
-  color: #00305B;
-  text-transform: uppercase;
-  font-family: "montserrat", arial, sans-serif; }
-  .skillsets .title-container h3, .skillsets .title-container h1 {
-    margin-top: 0;
-    margin-bottom: 0; }
-  .skillsets .title-container h3 {
-    font-weight: 100; }
-  @media (min-width: 600px) {
-    .skillsets .title-container {
-      text-align: center; }
-      .skillsets .title-container h3 {
-        display: inline; }
-      .skillsets .title-container h1 {
-        display: inline;
-        padding-left: 3px; } }
+  margin-bottom: 20px; }
 
-.skillset-overview {
-  font-family: "montserrat", arial, sans-serif;
-  color: #00305B; }
-  .skillset-overview .skill-description {
-    font-weight: 200;
-    font-size: 25px; }
-  .skillset-overview span {
-    font-weight: 700;
-    font-size: 25px; }
-  @media (min-width: 600px) {
-    .skillset-overview {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; } }
-  .skillset-overview .skillset1, .skillset-overview .skillset2, .skillset-overview .skillset3, .skillset-overview .skillset4 {
-    display: -ms-flexbox;
-    display: flex; }
-    @media (min-width: 600px) {
-      .skillset-overview .skillset1, .skillset-overview .skillset2, .skillset-overview .skillset3, .skillset-overview .skillset4 {
-        width: 48%; } }
-    @media (min-width: 1000px) {
-      .skillset-overview .skillset1, .skillset-overview .skillset2, .skillset-overview .skillset3, .skillset-overview .skillset4 {
-        -ms-flex-direction: column;
-            flex-direction: column;
-        text-align: center;
-        width: 23%; } }
-  .skillset-overview .square {
-    background-color: lightskyblue;
-    width: 10px;
-    height: 10px;
-    margin-top: 30px; }
-    @media (min-width: 600px) {
-      .skillset-overview .square {
-        margin-top: 29px; } }
-  .skillset-overview .skillset-title {
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: 100;
-    margin-top: 0;
-    margin-bottom: 10px; }
-  .skillset-overview .skillset-description {
-    font-size: 15px;
-    margin: 0; }
-  .skillset-overview .skillset-container {
-    margin-left: 15px;
-    margin-top: 20px; }
+.skillset-container .skill-img {
+  width: 50px; }
 
-.product-preview {
-  font-family: "montserrat", arial, sans-serif;
-  padding: 20px 38px;
-  background-color: #EAF4F6; }
-  .product-preview .title-container {
-    text-transform: uppercase;
-    font-family: "montserrat", arial, sans-serif;
-    color: #00305B; }
-    .product-preview .title-container h3, .product-preview .title-container h1 {
-      margin-top: 0;
-      margin-bottom: 0; }
-    .product-preview .title-container h3 {
-      font-weight: 100; }
-    @media (min-width: 600px) {
-      .product-preview .title-container {
-        text-align: center; }
-        .product-preview .title-container h3 {
-          display: inline; }
-        .product-preview .title-container h1 {
-          display: inline;
-          padding-left: 3px; } }
-  .product-preview .product-container {
+.skillset-container .skillset-title {
+  font-weight: 400;
+  margin: 0;
+  font-size: 20px; }
+
+.skillset-container .skillset-description {
+  font-weight: 200;
+  font-size: 18px; }
+
+@media (min-width: 600px) {
+  .skillsets {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column; }
-    @media (min-width: 600px) {
-      .product-preview .product-container {
-        -ms-flex-direction: row;
-            flex-direction: row;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; } }
-  .product-preview .product-link {
-    border: 1px solid black;
-    margin-top: 10px;
-    text-align: center;
-    padding: 20px;
-    text-decoration: none; }
-    @media (min-width: 600px) {
-      .product-preview .product-link {
-        width: 31.333%; } }
-    @media (min-width: 1000px) {
-      .product-preview .product-link {
-        margin-top: 35px; } }
-    .product-preview .product-link h6 {
-      font-size: 25px;
-      text-transform: uppercase;
-      font-weight: 300;
-      text-decoration: none; }
-    .product-preview .product-link p {
-      font-family: "robotoslab", helvetica, serif; }
-  .product-preview .product-link:hover {
-    color: yellow;
-    background: green; }
-
-.contact-section {
-  font-family: "montserrat", arial, sans-serif;
-  padding: 20px 38px;
-  color: white;
-  background-color: #00305B; }
-  .contact-section .title-container {
-    text-transform: uppercase;
-    font-family: "montserrat", arial, sans-serif; }
-    .contact-section .title-container h3, .contact-section .title-container h1 {
-      margin-top: 0;
-      margin-bottom: 0; }
-    .contact-section .title-container h3 {
-      font-weight: 100; }
-    @media (min-width: 600px) {
-      .contact-section .title-container {
-        text-align: center; }
-        .contact-section .title-container h3 {
-          display: inline; }
-        .contact-section .title-container h1 {
-          display: inline;
-          padding-left: 3px; } }
-  .contact-section p {
-    font-weight: 100; }
-
-.about-hero {
-  font-family: "montserrat", arial, sans-serif;
-  font-size: 30px;
-  text-transform: uppercase;
-  padding: 20px;
-  margin: 0px;
-  padding-bottom: 0px;
-  text-decoration: underline; }
-
-.about-hero h3 {
-  margin: 0px; }
-
-.about-section {
-  font-family: "robotoslab", helvetica, serif;
-  font-size: 15px;
-  padding: 20px;
-  margin: 0px; }
-
-.site-footer {
-  padding: 20px;
-  font-family: "montserrat", arial, sans-serif;
-  background: lightgrey; }
-  .site-footer h5 {
-    font-weight: 400;
-    font-size: 25px;
-    margin: 0;
-    text-transform: uppercase; }
-
-.hp-page {
-  font-family: "montserrat", arial, sans-serif;
-  max-width: 1400px;
-  margin: auto;
-  padding: 20px; }
-  .hp-page h4 {
-    font-weight: 400;
-    font-size: 30px;
-    margin: 0;
-    text-transform: uppercase;
-    text-align: center; }
-  .hp-page h6 {
-    font-size: 25px;
-    font-weight: 400;
-    margin: 0; }
-  .hp-page p {
-    font-family: "robotoslab", helvetica, serif;
-    font-size: 15px; }
-  .hp-page .home-products {
-    border: 1px solid black;
-    margin-top: 20px;
-    text-align: center;
-    padding-bottom: 20px; }
-    @media (min-width: 600px) {
-      .hp-page .home-products {
-        width: 48%; } }
-    @media (min-width: 1000px) {
-      .hp-page .home-products {
-        width: 31.3333%; } }
-  .hp-page .home-container {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column; }
-    @media (min-width: 600px) {
-      .hp-page .home-container {
-        -ms-flex-direction: row;
-            flex-direction: row;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; } }
-
-.gallery {
-  margin-bottom: 0; }
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .skillsets .square {
+      width: 31.33333%; }
+      .skillsets .square .skill-img {
+        width: 70px; } }

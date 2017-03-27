@@ -2,7 +2,7 @@
 /**
  * Template part for displaying a message that posts cannot be found.
  *
- * @package tomco_theme_Theme
+ * @package RED_Starter_Theme
  */
 
 ?>

@@ -13,24 +13,36 @@
 
 @mixin titles{
 	text-transform:uppercase;
-    font-family: $font__m;
-   h3, h1{
+   h3{
        margin-top:0;
        margin-bottom:0;
+       font-size:1.5rem;
+       font-weight: 200;
    }
-   h3{
-       font-weight:100;
-   }
+  span{
+        font-weight:700;
+        font-size:30px;
+  }
    @include tablet{
-       text-align:center;
 	   h3{
-            display:inline;
+            font-size: 2rem;
         }
-        h1{
-            display:inline;
-            padding-left:3px;
+        span{
+            font-size:35px;
         }
    }
+}
+
+
+@mixin flexrow{
+     display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+@mixin images{
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size:cover;
 }
 @mixin desktop {
 	@media (min-width: $desktop) {

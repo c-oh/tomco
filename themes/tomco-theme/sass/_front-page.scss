@@ -1,208 +1,121 @@
-.site-content, .site-footer{
-    @include desktop{
-    margin-left:300px;
-    overflow:hidden;
-} 
-}
-
-.information-counter, .skillset-overview, .product-preview{
-        padding: 20px 38px;
-}
-
-.information-counter{
-    background-image: url(../../resources/graphics/parallax.jpg);
+.product-preview,
+.skillsets,
+.about-banner,
+.information-counter,
+.contact-section {
+    padding: 20px;
     font-family: $font__m;
-    margin:auto;
-     color: #00305B;
-    @include tablet{
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-   color: white;
-    }
-    .title-container{
+    text-align: center;
+    .title-container {
         @include titles;
     }
-    .counter-container{
-        text-align:center;
-        display:flex;
-        flex-direction:column;
-        margin:auto;
-        @include tablet{
-            flex-direction:row;
-            justify-content:space-between;
-        }
-    .count{
-        font-size:25px;
-    }
-    .count-description{
-        font-weight:400;
-    @include tablet{
-        font-size:22px;
-    }
-    }
-}
 }
 
-.about-banner{
-    color:white;
-    font-family: $font__m;
-        padding: 20px 38px;
-    background-color:#00305B;
-    .title-container{
-        @include titles;
-    }
-    p{
-        font-weight:100;
-        font-size:18px;
-    
-    @include tablet{
-        font-size:20px;
-    }
-}
-}
-
-
-.banner-link{
-    text-decoration: none;
-    color:#00305B;
-    border:1px white solid;
-    padding:20px;
-    width:100%;
-    display:block;
-    background-color:white;;
-    border-radius:5px;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    text-align:center;
-    @include tablet{
-           width:auto;
-           display:inline-block;
-    }
-}
-
-.banner-text{
-    font-size:15px !important;
-}
-.banner-link:hover{
-    color:white;
-    background:lightskyblue;
-}
-
-.skillsets .title-container{
-        padding: 20px 38px;
-    background:#EAF4F6;
-    color: #00305B;
-    @include titles;
-}
-.skillset-overview{
-    font-family:$font__m;
-    color:#00305B;
-    .skill-description{
-        font-weight:200; 
-        font-size:25px;
-    }
-    span{
-        font-weight:700;
-        font-size:25px;
-    }
-    @include tablet{
-        display:flex;
-        justify-content:space-between;
-        flex-wrap:wrap;
-    }
-    .skillset1, .skillset2, .skillset3, .skillset4{
-        display:flex;
-        @include tablet{
-            width:48%;
-        }
-        @include desktop{
-            flex-direction:column;
-            text-align: center;
-        width: 23%;
-        }
-    }
-   .square{
-       background-color: lightskyblue;
-       width: 10px;
-	height: 10px;
-    margin-top:30px;
-    @include tablet{
-        margin-top:29px;
-    }
-    }
-    .skillset-title{
-        font-size:20px;
-        text-transform: uppercase;
-        font-weight: 100;
-        margin-top:0;
-        margin-bottom:10px;
-    }
-    .skillset-description{
-        font-size:15px;
-        margin:0;
-    }
-    .skillset-container{
-        margin-left:15px;
-        margin-top:20px;
-    }
-}
-
-.product-preview{
-    font-family: $font__m;
-    padding: 20px 38px;
-    background-color:#EAF4F6;
-    .title-container{
-        @include titles;
-        color: #00305B;
-    }
-    .product-container{
-        display:flex;
-        flex-direction:column;
-        @include tablet{
-            flex-direction:row;
-            justify-content:space-between;
-            flex-wrap:wrap;
-        }
-    }
-    .product-link{
-        border:1px solid black;
-        margin-top:10px;
-        text-align:center;
-        padding:20px;
+//product-preview
+.product-preview {
+    a {
         text-decoration: none;
-        @include tablet{
-            width:31.333%;
-        }
-        @include desktop{
-            margin-top: 35px;
-        }
-        h6{
-            font-size:25px;
-            text-transform:uppercase;
-            font-weight:300;
-            text-decoration:none;
-        }
-        p{
-            font-family:$font__r;
-        }
+        text-transform: uppercase;
+        font-size: 1.5em;
+        text-align: center;
     }
-    .product-link:hover{
-        color:yellow;
-        background:green;
+    .household {
+        background-image: url("../../resources/graphics/household.jpg");
+        @include images;
+    }
+    .home-decor {
+        background-image: url("../../resources/graphics/homedecor.jpeg");
+        @include images;
+    }
+    .furniture {
+        background-image: url("../../resources/graphics/furniture.jpeg");
+        @include images;
+    }
+    .seasonal {
+        background-image: url("../../resources/graphics/seasonal.jpeg");
+        @include images;
+    }
+    .garden {
+        background-image: url("../../resources/graphics/garden.jpg");
+        @include images;
+    }
+    .paper {
+        background-image: url("../../resources/graphics/paper.jpeg");
+        @include images;
     }
 }
 
-.contact-section{
+//about
+.about-banner {
+    color: white;
     font-family: $font__m;
     padding: 20px 38px;
-    color:white;
-    background-color:#00305B;
-    .title-container{
-        @include titles;
+    background-color: $color__blue;
+    .about-desc {
+        display: none;
     }
-    p{
-        font-weight:100;
+    .readmore-button {
+        margin: 0;
+        text-decoration: none;
+        color: #00305B;
+        border: 1px white solid;
+        padding: 20px;
+        width: 100%;
+        display: block;
+        background-color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        &:hover {
+            color: white;
+            background: lightskyblue;
+        }
+        @include tablet {
+            width: auto;
+            display: inline-block;
+        }
+    }
+}
+
+.about-desc.show {
+    display: block;
+}
+
+.about-summary {
+    font-weight: 200;
+    font-size: 18px;
+}
+
+//skills
+.skillsets .title-container {
+    margin-bottom: 20px;
+}
+
+.skillset-container {
+    .skill-img {
+        width: 50px;
+    }
+    .skillset-title {
+        font-weight: 400;
+        margin: 0;
+        font-size: 20px;
+    }
+    .skillset-description {
+        font-weight: 200;
+        font-size: 18px;
+    }
+}
+
+.skillsets {
+    @include tablet {
+        @include flexrow;
+        .square {
+            width: 31.33333%;
+            .skill-img {
+                width: 70px;
+            }
+        }
     }
 }

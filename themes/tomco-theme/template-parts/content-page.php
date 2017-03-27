@@ -2,7 +2,7 @@
 /**
  * Template part for displaying page content in page.php.
  *
- * @package tomco_theme_Theme
+ * @package RED_Starter_Theme
  */
 
 ?>

@@ -12,10 +12,17 @@ jQuery('.count').each(function () {
     jQuery(this).prop('Counter',0).animate({
         Counter: jQuery(this).text()
     }, {
-        duration: 2000,
+        duration: 2000, 
         easing: 'swing',
         step: function (now) {
             jQuery(this).text(Math.ceil(now));
         }
     });
 }); 
+
+jQuery(document).ready(function(){
+    jQuery('.readmore-button').click(function(){
+        jQuery(this).hide();
+        jQuery('.about-desc').slideDown().addClass('.show');
+    })
+})

@@ -2,7 +2,7 @@
 /**
  * Template part for displaying single posts.
  *
- * @package tomco_theme_Theme
+ * @package RED_Starter_Theme
  */
 
 ?>
@@ -16,7 +16,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
-			<?php tomco_theme_posted_on(); ?> / <?php tomco_theme_comment_count(); ?> / <?php tomco_theme_posted_by(); ?>
+			<?php red_starter_posted_on(); ?> / <?php red_starter_comment_count(); ?> / <?php red_starter_posted_by(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
@@ -31,6 +31,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php tomco_theme_entry_footer(); ?>
+		<?php red_starter_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
