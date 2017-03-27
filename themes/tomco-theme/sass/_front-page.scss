@@ -2,46 +2,129 @@
 .skillsets,
 .about-banner,
 .information-counter,
-.contact-section {
+.contact-section,
+.journal {
     padding: 20px;
     font-family: $font__m;
     text-align: center;
-    .title-container {
+    .title-header {
         @include titles;
+    }
+}
+
+//testing
+.ParallaxVideo {
+    height: 300px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.ParallaxVideo video {
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -999;
+}
+
+
+
+///video bg
+.fullscreen-video {
+    max-height: 400px;
+    .fullscreen-text {
+        font-family: $font__m;
+        position: absolute;
+        text-align: center;
+        color: white;
+        width: 100%;
+        text-transform: uppercase;
+        h3 {
+            font-size: 40px;
+            font-weight: 700;
+            margin: 0;
+        }
+        h4 {
+            margin: 0;
+            font-size: 35px;
+            font-weight: 200;
+        }
+        p {
+            @include button;
+        }
+        @include tablet {
+            margin-top: 250px;
+        }
+    }
+    video {
+        width: 100%;
+        z-index: -100;
+        overflow: hidden;
+    }
+}
+
+@media (min-aspect-ratio: 16/9) {
+    video {
+        height: 300%;
+        top: -100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    video {
+        width: 300%;
+        left: -100%;
     }
 }
 
 //product-preview
 .product-preview {
-    a {
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 1.5em;
-        text-align: center;
-    }
-    .household {
-        background-image: url("../../resources/graphics/household.jpg");
-        @include images;
-    }
-    .home-decor {
-        background-image: url("../../resources/graphics/homedecor.jpeg");
-        @include images;
-    }
-    .furniture {
-        background-image: url("../../resources/graphics/furniture.jpeg");
-        @include images;
-    }
-    .seasonal {
-        background-image: url("../../resources/graphics/seasonal.jpeg");
-        @include images;
-    }
-    .garden {
-        background-image: url("../../resources/graphics/garden.jpg");
-        @include images;
-    }
-    .paper {
-        background-image: url("../../resources/graphics/paper.jpeg");
-        @include images;
+    .product-container {
+        @include tablet {
+            @include flexrow;
+        }
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1.5em;
+            text-align: center;
+            @include tablet {
+                width: 48%;
+            }
+            @include desktop {
+                width: 31.33333%;
+            }
+            .product-grid {
+                height: 242px;
+                h6 {
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+            }
+        }
+        .household {
+            background-image: url("../../resources/graphics/household.jpg");
+            @include images;
+        }
+        .home-decor {
+            background-image: url("../../resources/graphics/homedecor.jpeg");
+            @include images;
+        }
+        .furniture {
+            background-image: url("../../resources/graphics/furniture.jpeg");
+            @include images;
+        }
+        .seasonal {
+            background-image: url("../../resources/graphics/seasonal.jpeg");
+            @include images;
+        }
+        .garden {
+            background-image: url("../../resources/graphics/garden.jpg");
+            @include images;
+        }
+        .paper {
+            background-image: url("../../resources/graphics/paper.jpeg");
+            @include images;
+        }
     }
 }
 
@@ -52,57 +135,29 @@
     padding: 20px 38px;
     background-color: $color__blue;
     .readmore-button {
-        margin: 0;
-        text-decoration: none;
-        color: #00305B;
-        border: 1px white solid;
-        padding: 20px;
-        width: 100%;
-        display: block;
-        background-color: white;
-        cursor: pointer;
-        border-radius: 5px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        text-align: center;
-        font-size:16px;
-        font-weight:400;
-        &:hover {
-            color: white;
-            background: lightskyblue;
-        }
-        @include tablet {
-            width: auto;
-            display: inline-block;
-        }
+        @include button;
     }
-    p{
+    p {
         font-weight: 100;
         font-size: 18px;
-        @include tablet{
-            font-size:20px;
+        @include tablet {
+            font-size: 20px;
         }
     }
-    .about-readmore{
-    display:none;
+    .about-readmore {
+        display: none;
     }
-    .about-readmore.show{
-        display:block;
+    .about-readmore.show {
+        display: block;
     }
 }
-
-
-
-
-
-
 
 //skills
 .skillsets {
     @include desktopalign;
     .title-container {
-    margin-bottom: 20px;
-}
+        margin-bottom: 20px;
+    }
 }
 
 .skillset-container {
@@ -133,23 +188,82 @@
 }
 
 //counter
-
-.information-counter{
-   @include desktopalign;
-    .counter-container{
-    .count{
-        font-size:30px;
-    }
-    .count-description{
-        font-weight:200;
-        font-size: 18px;
-        margin:0;
-    }
-    @include tablet{
-        @include flexrow;
-        .counter{
-            width:31.3333%;
+.information-counter {
+    @include desktopalign;
+    .counter-container {
+        .count {
+            font-size: 30px;
+        }
+        .count-description {
+            font-weight: 200;
+            font-size: 18px;
+            margin: 0;
+        }
+        @include tablet {
+            @include flexrow;
+            .counter {
+                width: 31.3333%;
+            }
         }
     }
+}
+
+//blog
+.journal {
+    @include tablet {
+        padding: 0;
+    }
+    .post-list-info {
+        background-color: #F8F8F8;
+        @include tablet {
+            display: flex;
+            .img-container,
+            .info-area {
+                width: 49%;
+            }
+        }
+        .img-container {
+            background-color: white;
+            img {
+                @include desktop {
+                    max-width: 60%;
+                }
+            }
+        }
+        .info-area {
+            padding: 10px;
+            .title,
+            .read-entry-btn {
+                text-decoration: none;
+            }
+            .title {
+                font-size: 20px;
+                font-weight: 400;
+                text-transform: uppercase;
+                @include tablet {
+                    font-size: 25px;
+                }
+                @include desktop {
+                    font-size: 30px
+                }
+            }
+            .date {
+                margin: 0;
+            }
+            .content {
+                font-size: 18px;
+                font-weight: 100;
+                margin: 9px 0;
+                @include desktop {
+                    padding: 0 90px;
+                    font-size: 20px;
+                }
+            }
+            .read-entry-btn {
+                @include button;
+                background-color: $color__blue;
+                color: white;
+            }
+        }
     }
 }

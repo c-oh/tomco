@@ -48,6 +48,39 @@
     background-position: center; 
     background-size:cover;
 }
+
+@mixin button{
+     margin: 0;
+        text-decoration: none;
+        color: #00305B;
+        border: 1px white solid;
+        padding: 20px;
+        width: 100%;
+        display: block;
+        background-color: white;
+        cursor: pointer;
+        border-radius: 3px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        font-size:16px;
+        font-weight:400;
+        &:hover {
+            color: white;
+            background: lightskyblue;
+        }
+        @include tablet {
+            width: auto;
+            display: inline-block;
+            padding: 15px 68px;
+        }
+}
+
+@mixin larger{
+    @media (min-width: $larger){
+        @content;
+    }
+}
 @mixin desktop {
 	@media (min-width: $desktop) {
 		@content;
