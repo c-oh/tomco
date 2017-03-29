@@ -12,25 +12,30 @@
     }
 }
 
-//testing
-.ParallaxVideo {
-    height: 300px;
-    padding-bottom: 50px;
-    padding-top: 50px;
-}
-
-.ParallaxVideo video {
-    min-width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: -999;
-}
-
-
-
 ///video bg
 .fullscreen-video {
-    max-height: 400px;
+    max-height: 60vh;
+    height: 60vh;
+    overflow:hidden;
+    video {
+        display: none;
+    }
+    .fullscreen-img {
+        object-fit: fill;
+        height: 60vh;
+    }
+    .fullscreen-text{
+        margin: 16vh 0;
+    }
+    @include tablet {
+        width: 100%;
+        .fullscreen-img {
+            display: none;
+        }
+        video {
+            display: block;
+        }
+    }
     .fullscreen-text {
         font-family: $font__m;
         position: absolute;
@@ -39,17 +44,46 @@
         width: 100%;
         text-transform: uppercase;
         h3 {
-            font-size: 40px;
             font-weight: 700;
             margin: 0;
+            color:black;
+            font-size: 28px;
+            @include tablet {
+                font-size: 35px;
+                color:white;
+            }
+            @include desktop {
+                font-size: 40px;
+                font-weight: 700;
+                margin: 0;
+                text-shadow: 1px 3px black;
+            }
         }
         h4 {
             margin: 0;
-            font-size: 35px;
-            font-weight: 200;
+            font-size: 22px;
+            font-weight: 500;
+          color: $color__blue;
+          text-shadow: 2px 2px white;
+            @include tablet {
+                font-size: 30px;
+                text-shadow:none;
+                color:white;
+                font-weight:300;
+            }
+            @include desktop {
+                font-size: 35px;
+            }
         }
-        p {
+        a {
+            margin-top: 15px;
             @include button;
+            width: 50%;
+            margin: 15px auto 0;
+            padding: 10px;
+            font-weight: 600;
+            @include tablet {}
+            @include desktop {}
         }
         @include tablet {
             margin-top: 250px;
@@ -82,25 +116,6 @@
         @include tablet {
             @include flexrow;
         }
-        a {
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 1.5em;
-            text-align: center;
-            @include tablet {
-                width: 48%;
-            }
-            @include desktop {
-                width: 31.33333%;
-            }
-            .product-grid {
-                height: 242px;
-                h6 {
-                    font-size: 20px;
-                    font-weight: 400;
-                }
-            }
-        }
         .household {
             background-image: url("../../resources/graphics/household.jpg");
             @include images;
@@ -124,6 +139,47 @@
         .paper {
             background-image: url("../../resources/graphics/paper.jpeg");
             @include images;
+        }
+        .product-link:hover {
+            opacity: 0.5;
+            filter: alpha(opacity=50);
+            /* For IE8 and earlier */
+        }
+        .product-link {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1.5em;
+            text-align: center;
+            display: block;
+            width: 100%;
+            height: 186px;
+            padding: 20px;
+            margin-top: 20px;
+            @include tablet {
+                width: 48%;
+                height: 250px;
+                margin-top: 40px;
+            }
+            @include desktop {
+                width: 31.33333%;
+                margin-top: 50px;
+            }
+            h6 {
+                font-size: 20px;
+                text-transform: uppercase;
+                font-weight: 400;
+                text-decoration: none;
+                background-color: #00305B;
+                color: white;
+                padding: 6px 0;
+                margin: 41px 0;
+                @include tablet {
+                    margin: 90px 0;
+                }
+                @include desktop {
+                    font-size: 25px;
+                }
+            }
         }
     }
 }
@@ -153,29 +209,21 @@
 }
 
 //skills
-.skillsets {
-    @include desktopalign;
-    .title-container {
-        margin-bottom: 20px;
+.skillsets-container {
+    &:before,
+    &:after {
+        content: ' ';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #F2F2F2;
     }
-}
-
-.skillset-container {
-    .skill-img {
-        width: 50px;
+    .sq1 {
+        margin-top: 33px;
     }
-    .skillset-title {
-        font-weight: 400;
-        margin: 0;
-        font-size: 20px;
+    .sq3 {
+        margin-bottom: 33px;
     }
-    .skillset-description {
-        font-weight: 200;
-        font-size: 18px;
-    }
-}
-
-.skillsets {
     @include tablet {
         @include flexrow;
         .square {
@@ -183,6 +231,28 @@
             .skill-img {
                 width: 70px;
             }
+            margin:33px 0;
+            .skillset-container {
+                padding: 0 40px;
+            }
+        }
+    }
+    @include desktopalign;
+    .title-container {
+        margin-bottom: 20px;
+    }
+    .skillset-container {
+        .skill-img {
+            width: 50px;
+        }
+        .skillset-title {
+            font-weight: 400;
+            margin: 0;
+            font-size: 20px;
+        }
+        .skillset-description {
+            font-weight: 200;
+            font-size: 18px;
         }
     }
 }
@@ -264,6 +334,20 @@
                 background-color: $color__blue;
                 color: white;
             }
+        }
+    }
+}
+
+.contact-section{
+    background-color: #00305b;
+    color: white;
+    .address, .phone, .email{
+        font-weight: 200;
+    }
+    .contact-container, .map-section{
+        @include desktop{
+            width:49%;
+            display:inline-block;
         }
     }
 }

@@ -60,3 +60,39 @@ textarea {
 	padding-left: 3px;
 	width: 100%;
 }
+
+
+//contact7 form
+.wpcf7-form{
+	@include tablet{
+		display:flex;
+		justify-content:space-between;
+		flex-wrap:wrap;
+	}
+input[type="text"],
+input[type="email"]{
+	width:100%;
+}
+input[type="submit"]{
+	@include button;
+	box-shadow:none;
+}
+.name, .email{
+	@include tablet{
+		width: 48%;
+		margin:0;
+	}
+}
+.subject, .message{
+	@include tablet{
+		width: 100%;
+		margin-top: 20px;
+		margin-bottom: 0;
+	}
+}
+.submit-btn{
+	@include tablet{
+	    margin: 24px auto 0;
+	}
+}
+}

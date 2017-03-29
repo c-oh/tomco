@@ -31,7 +31,7 @@ function my_login_logo_url() {
 }
 add_filter( 'login_headerurl', 'my_login_logo_url' );
 function my_login_logo_url_title() {
-    return 'Inhabitent';
+    return 'Tomco';
 }
 add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 function get_all_product_posts( $query ) {

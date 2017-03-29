@@ -12,7 +12,12 @@ jQuery(function(){
         jQuery(this).hide();
         jQuery('.about-readmore').slideDown().addClass('.show');
     })
-
+    
+jQuery("#explore-button").click(function() {
+    jQuery('html, body').animate({
+        scrollTop: jQuery("#products-preview").offset().top
+    }, 2000);
+});
 
 jQuery('.count').each(function () {
     jQuery(this).prop('Counter',0).animate({
