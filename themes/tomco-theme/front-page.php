@@ -146,15 +146,16 @@ get_header(); ?>
  <div class= "title-header">    
     <h3 class="skill-description">contact  <span class"smaller-text">creative tomco</span></h3> 
     </div>
-    <p class="address"> <i class="fa fa-map-marker" aria-hidden="true"></i> 601 Po Lung Centre, 11 Wang Chiu Road, Kowloon Bay, Hong Kong</p>
+    <p class="address"> <i class="fa fa-map-marker" aria-hidden="true"></i> Unit 601 - Po Lung Centre, 11 Wang Chiu Road, Kowloon Bay, Hong Kong</p>
     <p class="phone"> <i class="fa fa-phone" aria-hidden="true"></i> +852 2755 0971</p>
     <p class= "email"> <i class="fa fa-envelope" aria-hidden="true"></i> tomco@tomco.hk</p>
     <?php echo do_shortcode( '[contact-form-7 id="46" title="Contact form 1"]' ); ?>
 </div>
-<div class "map-section"> 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.757862129452!2d114.20686286414804!3d22.324995497641407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404013354eaabe1%3A0x4ef179fd625aef54!2sPo+Lung+Centre%2C+11+Wang+Chiu+Rd%2C+Kowloon+Bay%2C+Hong+Kong!5e0!3m2!1sen!2sca!4v1490783393503" width="600" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
 
+<div id "map-section"> 
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.757862129452!2d114.20686286414804!3d22.324995497641407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404013354eaabe1%3A0x4ef179fd625aef54!2sPo+Lung+Centre%2C+11+Wang+Chiu+Rd%2C+Kowloon+Bay%2C+Hong+Kong!5e0!3m2!1sen!2sca!4v1490783393503"  width="600" height="700" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
+
 </div>
 
 <?php get_footer();?>

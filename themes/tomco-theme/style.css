@@ -874,21 +874,24 @@ object {
   max-height: 60vh;
   height: 60vh;
   overflow: hidden; }
+  @media (min-width: 600px) {
+    .fullscreen-video {
+      max-height: 90vh;
+      height: auto; } }
   .fullscreen-video video {
     display: none; }
+    @media (min-width: 600px) {
+      .fullscreen-video video {
+        display: block;
+        width: 100%; } }
   .fullscreen-video .fullscreen-img {
     object-fit: fill;
     height: 60vh; }
-  .fullscreen-video .fullscreen-text {
-    margin: 16vh 0; }
-  @media (min-width: 600px) {
-    .fullscreen-video {
-      width: 100%; }
+    @media (min-width: 600px) {
       .fullscreen-video .fullscreen-img {
-        display: none; }
-      .fullscreen-video video {
-        display: block; } }
+        display: none; } }
   .fullscreen-video .fullscreen-text {
+    margin: 16vh 0;
     font-family: "montserrat", arial, sans-serif;
     position: absolute;
     text-align: center;
@@ -954,9 +957,6 @@ object {
           width: auto;
           display: inline-block;
           padding: 15px 68px; } }
-    @media (min-width: 600px) {
-      .fullscreen-video .fullscreen-text {
-        margin-top: 250px; } }
   .fullscreen-video video {
     width: 100%;
     z-index: -100;
@@ -1060,8 +1060,11 @@ object {
 .about-banner {
   color: white;
   font-family: "montserrat", arial, sans-serif;
-  padding: 20px 38px;
+  padding: 20px 38px 50px;
   background-color: #00305B; }
+  @media (min-width: 600px) {
+    .about-banner {
+      margin: 20px auto 0; } }
   .about-banner .readmore-button {
     margin: 0;
     text-decoration: none;
@@ -1120,7 +1123,7 @@ object {
           flex-wrap: wrap; }
       .skillsets-container .square {
         width: 31.33333%;
-        margin: 33px 0; }
+        margin: 78px 0 33px; }
         .skillsets-container .square .skill-img {
           width: 70px; }
         .skillsets-container .square .skillset-container {
@@ -1230,12 +1233,21 @@ object {
 .contact-section {
   background-color: #00305b;
   color: white; }
-  .contact-section .address, .contact-section .phone, .contact-section .email {
+  @media (min-width: 1000px) {
+    .contact-section {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+      padding: 50px 20px 50px; } }
+  .contact-section .address,
+  .contact-section .phone,
+  .contact-section .email {
     font-weight: 200; }
   @media (min-width: 1000px) {
-    .contact-section .contact-container, .contact-section .map-section {
-      width: 49%;
-      display: inline-block; } }
+    .contact-section .contact-container,
+    .contact-section #map-section {
+      width: 48%; } }
 
 .site-footer {
   font-family: "montserrat", arial, sans-serif;

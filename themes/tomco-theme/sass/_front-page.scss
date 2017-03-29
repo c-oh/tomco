@@ -16,27 +16,27 @@
 .fullscreen-video {
     max-height: 60vh;
     height: 60vh;
-    overflow:hidden;
+    overflow: hidden;
+    @include tablet {
+        max-height: 90vh;
+        height: auto;
+    }
     video {
         display: none;
+        @include tablet {
+            display: block;
+            width: 100%;
+        }
     }
     .fullscreen-img {
         object-fit: fill;
         height: 60vh;
-    }
-    .fullscreen-text{
-        margin: 16vh 0;
-    }
-    @include tablet {
-        width: 100%;
-        .fullscreen-img {
+        @include tablet {
             display: none;
-        }
-        video {
-            display: block;
         }
     }
     .fullscreen-text {
+        margin: 16vh 0;
         font-family: $font__m;
         position: absolute;
         text-align: center;
@@ -46,11 +46,11 @@
         h3 {
             font-weight: 700;
             margin: 0;
-            color:black;
+            color: black;
             font-size: 28px;
             @include tablet {
                 font-size: 35px;
-                color:white;
+                color: white;
             }
             @include desktop {
                 font-size: 40px;
@@ -63,13 +63,13 @@
             margin: 0;
             font-size: 22px;
             font-weight: 500;
-          color: $color__blue;
-          text-shadow: 2px 2px white;
+            color: $color__blue;
+            text-shadow: 2px 2px white;
             @include tablet {
                 font-size: 30px;
-                text-shadow:none;
-                color:white;
-                font-weight:300;
+                text-shadow: none;
+                color: white;
+                font-weight: 300;
             }
             @include desktop {
                 font-size: 35px;
@@ -82,11 +82,6 @@
             margin: 15px auto 0;
             padding: 10px;
             font-weight: 600;
-            @include tablet {}
-            @include desktop {}
-        }
-        @include tablet {
-            margin-top: 250px;
         }
     }
     video {
@@ -188,8 +183,11 @@
 .about-banner {
     color: white;
     font-family: $font__m;
-    padding: 20px 38px;
+    padding: 20px 38px 50px;
     background-color: $color__blue;
+    @include tablet {
+        margin: 20px auto 0;
+    }
     .readmore-button {
         @include button;
     }
@@ -231,7 +229,7 @@
             .skill-img {
                 width: 70px;
             }
-            margin:33px 0;
+            margin: 78px 0 33px;
             .skillset-container {
                 padding: 0 40px;
             }
@@ -338,16 +336,23 @@
     }
 }
 
-.contact-section{
+.contact-section {
     background-color: #00305b;
     color: white;
-    .address, .phone, .email{
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 20px 50px;
+    }
+    .address,
+    .phone,
+    .email {
         font-weight: 200;
     }
-    .contact-container, .map-section{
-        @include desktop{
-            width:49%;
-            display:inline-block;
+    .contact-container,
+    #map-section {
+        @include desktop {
+            width: 48%;
         }
     }
 }
