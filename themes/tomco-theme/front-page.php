@@ -98,21 +98,21 @@ get_header(); ?>
 
     </div>
 
-<div class="information-counter">
+<div class="information-counter" id= "counter">
          <div class= "title-header">    
     <h3 class="skill-description">We can <span class"smaller-text">offer</span></h3> 
     </div>
         <div class= "counter-container"> 
         <div class="counter">
-           <h2 class="count"> 31</span>
+           <h2 class="count counter-value" data-count= "31" > 0</span>
             <h5 class="count-description">years of experience</h5>
         </div>
          <div class="counter">
-            <h2 class= "count">250</h2>
+            <h2 class= "count counter-value" data-count= "500" >0</h2>
             <h5 class="count-description">companies to chose from</h5>
         </div>
          <div class="counter">
-            <h2 class= "count">32</h2>
+            <h2 class= "count counter-value" data-count= "32" >0</h2>
             <h5 class="count-description">shipping ports worldwide</h5>
         </div>
         </div>
