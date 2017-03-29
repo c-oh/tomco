@@ -6,16 +6,7 @@
  */
 get_header(); ?>
     
- <div class="fullscreen-video">
-         <div class= "fullscreen-text">
-    <h3 class= "title"> Creative Tomco</h3>
-    <h4> Your gateway to <br>  worldwide trading</h4>
-    <p class= "text-button">  explore</p>
-    </div>
-    <video loop muted autoplay poster="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/parallax.jpg" class="video-bg">
-        <source src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/vid_bg.mp4" type="video/mp4">
-    </video>
-</div>
+ 
 
 
  <div class= "product-preview" id="contact">

@@ -1,144 +1,142 @@
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-
-.header-search fieldset {
-	border: none;
-	$font-family:$font__m;
-	.icon-search {
-		display: inline;
-	}
-	button {
-		background:transparent;
-		border:none;
-		box-shadow: none;
-	}
-	.fa-search{
-		color: $color__blue;
-		font-size:1.5rem;
-		&:hover{
-			color: $color__yellow;
-		}
-	}
-	.search-field {
-		border: none;
-		width: 0px;
-		padding: 0;
-		text-transform: uppercase;
-		font-size: 1rem;
-		&:focus {
-			outline: none;
-		}
-	}
-	.search-field.show{
-		width:200px;
-	}
-}
-
-/* Menus */
-
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-
+#site-navigation {
+	display: flex;
+	justify-content: space-between;
 	ul {
-		display: none;
 		list-style: none;
-		margin: 0;
-		padding-left: 0;
-
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: $base__space-unit;
-			left: -999rem;
-			z-index: 99999;
-
-			ul {
-				left: -999rem;
-				top: 0;
-			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
+		font-family: $font__m;
+		li a {
+			text-decoration: none;
 		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-	li {
-		float: left;
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
-	}
-	a {
-		display: block;
-		text-decoration: none;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
 	}
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+.home-nav-link img {
+	max-width: 115px;
+	padding: 3px 13px;
+	@include tablet {
+		max-width: 133px;
+		padding: 0px 13px;
+	}
+}
+
+//hamburger menu
+.nav-hamburger {
+	transition: .25s;
+	transition: .25s;
+	padding: 13px 19px;
+	position: absolute;
+	height: 100%;
+	width: 70px;
+	z-index: 50;
+}
+
+.hamburger-container {
+	position: relative;
 	display: block;
 }
 
-@media screen and (min-width: 768px) {
-	.menu-toggle {
-		display: none;
+.nav-bar-menu-container {
+	display: block;
+	background-color: green;
+}
+
+.nav-hamburger:hover {
+	cursor: pointer;
+}
+
+.hamburger-bar {
+	position: absolute;
+	width: 100%;
+	transition: .5s;
+}
+
+.menu-bar-top {
+	border: 4px solid black;
+	border-bottom: none;
+	top: 0;
+	width: 40px;
+}
+
+.menu-bar-middle {
+	height: 4px;
+	background-color: black;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	top: 4px;
+	width: 40px;
+}
+
+.menu-bar-bottom {
+	border: 4px solid black;
+	border-top: none;
+	top: 22px;
+	width: 40px;
+}
+
+.menu-main-menu-container {
+	background-color: #00305B;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 390px;
+	margin-left: -390px;
+	font-size: 25px;
+	font-weight: 500;
+	overflow: auto;
+	transition: .25s;
+	z-index: 20;
+	border-right: 1px solid white;
+}
+
+.menu-show {
+	margin-left: 0;
+}
+
+.button-open {
+	.menu-bar-top {
+		-webkit-transform: rotate(45deg) translate(8px, 8px);
+		-ms-transform: rotate(45deg) translate(8px, 8px);
+		-o-transform: rotate(45deg) translate(8px, 8px);
+		transform: rotate(45deg) translate(8px, 8px);
+		transition: .5s;
+		border: 2px solid black;
 	}
-	.main-navigation ul {
-		display: block;
+	.menu-bar-middle {
+		-webkit-transform: translate(230px);
+		-ms-transform: translate(230px);
+		-o-transform: translate(230px);
+		transform: translate(230px);
+		transition: .1s ease-in;
+		opacity: 0;
+		border: 2px solid white;
+	}
+	.menu-bar-bottom {
+		-webkit-transform: rotate(-45deg) translate(8px, -7px);
+		-ms-transform: rotate(-45deg) translate(8px, -7px);
+		-o-transform: rotate(-45deg) translate(8px, -7px);
+		transform: rotate(-45deg) translate(8px, -7px);
+		transition: .5s;
+		border: 2px solid black;
 	}
 }
 
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-	.site-main & {
-		margin: 0 0 $base__space-unit;
-		overflow: hidden;
+//slide out menu
+#primary-menu {
+	text-transform: uppercase;
+	margin: 81px 0 0 6px;
+	li {
+		border-bottom: 1px solid white;
+		width: 87%;
+		padding: 10px 0;
+		a {
+			color: white;
+		}
 	}
-
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
-
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
+	.menu-item-17 {
+		border-top: 1px solid white;
 	}
 }
 
+.header-search {
+	display: none;
+}

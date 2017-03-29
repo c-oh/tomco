@@ -1,12 +1,18 @@
 jQuery(function(){
-  var toggleButton = jQuery('.nav-hamburger');
-  var menuWrap = jQuery('.menu-main-menu-container');
+    var jQuerytogglebutton = jQuery('.nav-hamburger'),
+        jQuerymenuWrap = jQuery('.menu-main-menu-container');
 
-  toggleButton.on('click', function(){
-    jQuery(this).toggleClass('button-open');
-    menuWrap.toggleClass('menu-show');
-  });
-})
+        jQuerytogglebutton .on('click', function(){
+            jQuery(this).toggleClass('button-open');
+        jQuerymenuWrap.toggleClass('menu-show');
+        
+        });
+
+  jQuery('.readmore-button').click(function(){
+        jQuery(this).hide();
+        jQuery('.about-readmore').slideDown().addClass('.show');
+    })
+
 
 jQuery('.count').each(function () {
     jQuery(this).prop('Counter',0).animate({
@@ -20,14 +26,10 @@ jQuery('.count').each(function () {
     });
 }); 
 
-jQuery(document).ready(function(){
-    jQuery('.readmore-button').click(function(){
-        jQuery(this).hide();
-        jQuery('.about-readmore').slideDown().addClass('.show');
-    })
-})
 
-(function( jQuery ) {
+  
+
+jQuery(function( jQuery ) {
   //shows the search input field on click 
   jQuery('.icon-search').on('click', function(event){
     event.preventDefault();
@@ -38,4 +40,5 @@ jQuery(document).ready(function(){
     jQuery(this).removeClass('show');
   });
        
-})( jQuery );
+})
+});

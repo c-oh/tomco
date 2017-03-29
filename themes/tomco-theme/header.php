@@ -29,8 +29,6 @@
 
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/logos.jpg" alt= "Company logo"> </a>
 					<div class="nav-menu-mini">
 						<div class="nav-hamburger">
     				    <span class="hamburger-container">
@@ -40,10 +38,14 @@
         				</span>
      				 </div>
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-						<div class="header-search">
-							<?php get_search_form(); ?>
-						</div>
 					</div>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class= "home-nav-link">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/logo.jpg" alt= "Company logo"> 
+					</a>
+					<div class="header-search">
+							<?php get_search_form(); ?>
+					</div>
+
 		</nav>
 
 		
