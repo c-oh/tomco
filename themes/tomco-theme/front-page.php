@@ -10,7 +10,7 @@ get_header(); ?>
          <div class= "fullscreen-text">
     <h3 class= "title"> Creative Tomco</h3>
     <h4> Your gateway to <br>  worldwide trading</h4>
-    <a class= "text-button" id="explore-button">  explore</a>
+    <a class= "text-button" id="explore-button" href="#products-preview">  explore</a>
     </div>
     <img src= "<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/phone-bg.jpg" class= "fullscreen-img">
     <video loop muted autoplay poster="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/phone-bg.jpg" class="video-bg">
@@ -64,6 +64,14 @@ get_header(); ?>
    
 </div>
 
+ <div class= "about-banner" id= "about">   
+    <h3 class="title-header">About  <span class"smaller-text">us</span></h3> 
+      <p class= "about-p1"> <?php echo CFS()->get( 'about_us' ) ?> </p>
+      <h6 class="readmore-button"> read more</h6>
+      <p class= "about-readmore"> <?php echo CFS()->get( 'about_us_more' ) ?> </p>
+
+    </div>
+
 <div class= "skillsets">
     <div class= "skillsets-container"> 
         <div class= "square sq1"> 
@@ -90,13 +98,6 @@ get_header(); ?>
         </div>
     </div>
 
- <div class= "about-banner">   
-    <h3 class="title-header">About  <span class"smaller-text">us</span></h3> 
-      <p class= "about-p1"> <?php echo CFS()->get( 'about_us' ) ?> </p>
-      <h6 class="readmore-button"> read more</h6>
-      <p class= "about-readmore"> Established in 1986, Creative Tomco is a company that offers wide range of products with exceptional service. With head office in Hong Kong and a branch office in Shenzhen, this allows us to establish and maintain strong and convenient relationships with our product partners scattered throughout China.</p>
-
-    </div>
 
 <div class="information-counter" id= "counter">
          <div class= "title-header">    
@@ -121,6 +122,7 @@ get_header(); ?>
     
     
 <div class="journal">
+    <h3 class="title-header">our  <span class"smaller-text">Blog</span></h3> 
                 <?php
    $args = array( 'numberposts' => '4', 'order' => 'DESC','post_status' => 'publish'  );
    $recent_posts = get_posts( $args ); // returns an array of posts ?>
@@ -141,20 +143,20 @@ get_header(); ?>
                     <?php endforeach; wp_reset_postdata(); ?>
         </div>
    
-<div class="contact-section">
+<div class="contact-section" id = "contact">
     <div class= "contact-container"> 
  <div class= "title-header">    
     <h3 class="skill-description">contact  <span class"smaller-text">creative tomco</span></h3> 
     </div>
-    <p class="address"> <i class="fa fa-map-marker" aria-hidden="true"></i> Unit 601 - Po Lung Centre, 11 Wang Chiu Road, Kowloon Bay, Hong Kong</p>
-    <p class="phone"> <i class="fa fa-phone" aria-hidden="true"></i> +852 2755 0971</p>
-    <p class= "email"> <i class="fa fa-envelope" aria-hidden="true"></i> tomco@tomco.hk</p>
+    <p class="container-address"> <i class="fa fa-map-marker" aria-hidden="true"></i> Unit 601 - Po Lung Centre, 11 Wang Chiu Road, Kowloon Bay, Hong Kong</p>
+    <p class="container-phone"> <i class="fa fa-phone" aria-hidden="true"></i> +852 2755 0971</p>
+    <p class= "container-email"> <i class="fa fa-envelope" aria-hidden="true"></i> tomco@tomco.hk</p>
     <?php echo do_shortcode( '[contact-form-7 id="46" title="Contact form 1"]' ); ?>
 </div>
 
-<div id "map-section"> 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.757862129452!2d114.20686286414804!3d22.324995497641407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404013354eaabe1%3A0x4ef179fd625aef54!2sPo+Lung+Centre%2C+11+Wang+Chiu+Rd%2C+Kowloon+Bay%2C+Hong+Kong!5e0!3m2!1sen!2sca!4v1490783393503"  width="600" height="700" frameborder="0" style="border:0" allowfullscreen></iframe>
-</div>
+<section id "map-section"> 
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.757862129452!2d114.20686286414804!3d22.324995497641407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404013354eaabe1%3A0x4ef179fd625aef54!2sPo+Lung+Centre%2C+11+Wang+Chiu+Rd%2C+Kowloon+Bay%2C+Hong+Kong!5e0!3m2!1sen!2sca!4v1490783393503"  width="900" height="820px" frameborder="0" style="border:0" allowfullscreen></iframe>
+</section>
 
 </div>
 

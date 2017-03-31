@@ -36,24 +36,27 @@
         }
     }
     .fullscreen-text {
-        margin: 16vh 0;
+        margin: 17% 0;
         font-family: $font__m;
         position: absolute;
         text-align: center;
         color: white;
         width: 100%;
         text-transform: uppercase;
+        @include tablet {
+            margin: 11% 0;
+        }
         h3 {
             font-weight: 700;
             margin: 0;
             color: black;
-            font-size: 28px;
+            font-size: 36px;
             @include tablet {
-                font-size: 35px;
+                font-size: 44px;
                 color: white;
             }
             @include desktop {
-                font-size: 40px;
+                font-size: 50px;
                 font-weight: 700;
                 margin: 0;
                 text-shadow: 1px 3px black;
@@ -82,6 +85,10 @@
             margin: 15px auto 0;
             padding: 10px;
             font-weight: 600;
+            &:hover {
+                color: white;
+                background: lightskyblue;
+            }
         }
     }
     video {
@@ -208,13 +215,16 @@
 
 //skills
 .skillsets-container {
+    @include desktop{
+        margin: 60px auto;
+    }
     &:before,
     &:after {
         content: ' ';
         display: block;
         width: 100%;
         height: 3px;
-        background-color: #F2F2F2;
+        background-color: #333;
     }
     .sq1 {
         margin-top: 33px;
@@ -257,15 +267,37 @@
 
 //counter
 .information-counter {
-    @include desktopalign;
+    background-image: url("../../resources/graphics/parallax.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+    .title-header {
+        color: #00305b;
+    }
     .counter-container {
+        @include desktopalign;
         .count {
-            font-size: 30px;
+            font-size: 40px;
+            color: #00305b;
+            margin: 0 25px;
+            @include tablet {
+                font-size: 50px;
+            }
+            @include desktop {
+                font-size: 69px;
+            }
         }
         .count-description {
-            font-weight: 200;
+            font-weight: 300;
             font-size: 18px;
+            color: #00305b;
             margin: 0;
+            @include desktop {
+                font-size: 24px;
+                font-weight: 500;
+            }
         }
         @include tablet {
             @include flexrow;
@@ -349,10 +381,47 @@
     .email {
         font-weight: 200;
     }
-    .contact-container,
-    #map-section {
+    section {
+        display: none;
         @include desktop {
-            width: 48%;
+            display: block;
+            width:48%;
+        }
+    }
+    .contact-container {
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-between;
+            font-size: 18px;
+    font-weight: 100;
+     }
+     @include desktop{
+            width:48%;
+        }
+        .title-header,
+        .container-address {
+            @include tablet {
+                width: 100%;
+                margin:0;
+            }
+        }
+        .container-phone,
+        .container-email {
+            @include tablet {
+                width: 47%;
+                margin-top:0;
+            }
+        }
+        .container-phone {
+            @include tablet {
+                text-align: right;
+            }
+        }
+        .container-email {
+            @include tablet {
+                text-align: left;
+            }
         }
     }
 }

@@ -50,6 +50,7 @@
 }
 
 @mixin button{
+    font-family: $font__m;
      margin: 0;
         text-decoration: none;
         color: #00305B;

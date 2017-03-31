@@ -2,4 +2,46 @@
 # Page Templates
 --------------------------------------------------------------*/
 
-/* Front page */
+//single blog posts
+
+.blog-image-container,
+.blog-entry-content,
+.the-entry-title,
+.the-blog-info{
+    padding: 0 20px;
+    font-family: $font__m;
+}
+
+.the-entry-title{
+font-weight: 600;
+    line-height: 25px;
+    margin: 20px 0;
+    @include tablet{
+        font-size: 40px;
+        line-height:30px;
+    }
+    @include desktop{
+            margin-bottom: 14px;
+            font-size: 50px;
+    line-height: 39px;
+    }
+    
+}
+.the-blog-info{
+    margin: 0;
+    font-size: 15px;
+}
+
+.the-entry-content{
+        font-weight: 200;
+    font-size: 18px;
+    line-height: 27px;
+    @include tablet{
+            font-size: 20px;
+    line-height: 30px;
+    }
+    @include desktop{
+            font-size: 21px;
+    line-height: 31px;
+    }
+}

@@ -13,19 +13,18 @@ jQuery(function () {
         jQuery('.about-readmore').slideDown().addClass('.show');
     })
 
-    jQuery("#explore-button").click(function () {
-        jQuery('html, body').animate({
-            scrollTop: jQuery("#products-preview").offset().top
-        }, 2000);
-    });
-
 });
+
+jQuery('#explore-button').click(function(){
+    alert('HELLO');
+    
+})
 
 var a = 0;
 jQuery(window).scroll(function () {
 
     var oTop = jQuery('#counter').offset().top - window.innerHeight;
-    if (a == 0 && jQuery(window).scrollTop() > oTop) {
+    if (a === 0 && jQuery(window).scrollTop() > oTop) {
         jQuery('.counter-value').each(function () {
             var jQuerythis = jQuery(this),
                 countTo = jQuerythis.attr('data-count');
@@ -36,7 +35,7 @@ jQuery(window).scroll(function () {
                 },
 
                 {
-                    duration: 7000,
+                    duration: 2000,
                     easing: 'swing',
                     step: function () {
                         jQuerythis.text(Math.floor(this.countNum));
@@ -52,3 +51,4 @@ jQuery(window).scroll(function () {
     }
 
 });
+

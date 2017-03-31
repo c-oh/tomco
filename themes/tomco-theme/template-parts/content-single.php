@@ -7,20 +7,18 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>
+<div class= "title section the-title-section">
+	<?php the_title( '<h1 class="entry-title the-entry-title">', '</h1>' ); ?>
+	<p class= "info the-blog-info"> <?php red_starter_posted_on(); ?> <?php red_starter_posted_by(); ?> </p>
+	</div>
+	<div class= "blog-image-container the-image-container">
 		<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'large' ); ?>
 		<?php endif; ?>
+	</div>
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<div class="entry-meta">
-			<?php red_starter_posted_on(); ?> / <?php red_starter_comment_count(); ?> / <?php red_starter_posted_by(); ?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
+	<div class="blog-entry-content the-entry-content">
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
@@ -30,7 +28,4 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php red_starter_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
