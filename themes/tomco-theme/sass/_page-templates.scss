@@ -22,7 +22,7 @@ font-weight: 600;
     }
     @include desktop{
             margin-bottom: 14px;
-            font-size: 50px;
+            font-size: 42px;
     line-height: 39px;
     }
     
@@ -32,16 +32,58 @@ font-weight: 600;
     font-size: 15px;
 }
 
-.the-entry-content{
+.the-entry-content, .entry-summary{
+    font-family: $font__m;
         font-weight: 200;
     font-size: 18px;
     line-height: 27px;
     @include tablet{
             font-size: 20px;
     line-height: 30px;
+    @include desktopalign;
     }
     @include desktop{
             font-size: 21px;
     line-height: 31px;
     }
+}
+
+#the-entry-titles{
+        padding-left: 20px;
+}
+.page-title, .entry-header, .entry-content{
+    padding: 0 20px;
+    font-family: $font__m;
+    @include tablet{
+        padding:0;
+    }
+}
+
+.entry-title{
+        padding: 0px;
+    color: #666;
+    a{
+        text-decoration:none;
+    }
+    @include desktop{
+        margin: 10px 0;
+    }
+}
+
+.content-area{
+        max-width: 1180px;
+    margin: auto;
+}
+
+.entry-header img,
+.the-image-container{
+height:auto;
+width:14%;
+@include tablet{
+    @include desktopalign
+}
+}
+
+.hentry {
+    margin: 0 0 3.5rem !important;
 }

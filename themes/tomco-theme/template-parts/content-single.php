@@ -9,7 +9,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>
 <div class= "title section the-title-section">
-	<?php the_title( '<h1 class="entry-title the-entry-title">', '</h1>' ); ?>
+	<?php the_title( '<h1 class="entry-title the-entry-title" id="the-entry-titles">', '</h1>' ); ?>
 	<p class= "info the-blog-info"> <?php red_starter_posted_on(); ?> <?php red_starter_posted_by(); ?> </p>
 	</div>
 	<div class= "blog-image-container the-image-container">

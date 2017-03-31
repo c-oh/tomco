@@ -23,27 +23,26 @@
     }
     video {
         display: none;
-        @include tablet {
+        @include desktop{
             display: block;
             width: 100%;
         }
     }
     .fullscreen-img {
         object-fit: fill;
-        height: 60vh;
-        @include tablet {
+        width:1200px;
+        @include desktop{
             display: none;
         }
     }
-    .fullscreen-text {
-        margin: 17% 0;
+    .fullscreen-text-desktop,
+    .fullscreen-text-mobile {
         font-family: $font__m;
-        position: absolute;
         text-align: center;
         color: white;
         width: 100%;
         text-transform: uppercase;
-        @include tablet {
+        @include desktop {
             margin: 11% 0;
         }
         h3 {
@@ -51,7 +50,7 @@
             margin: 0;
             color: black;
             font-size: 36px;
-            @include tablet {
+            @include desktop {
                 font-size: 44px;
                 color: white;
             }
@@ -68,7 +67,7 @@
             font-weight: 500;
             color: $color__blue;
             text-shadow: 2px 2px white;
-            @include tablet {
+            @include desktop {
                 font-size: 30px;
                 text-shadow: none;
                 color: white;
@@ -95,9 +94,24 @@
         width: 100%;
         z-index: -100;
         overflow: hidden;
+              position: absolute;
     }
 }
 
+.fullscreen-text-mobile{
+    position:absolute;
+    margin: 80px 0;
+    @include desktop{
+        display:none;
+    }
+}
+.fullscreen-text-desktop{
+    display:none;
+    @include desktop{
+        display:block;
+        margin: 17% 0;
+    }
+}
 @media (min-aspect-ratio: 16/9) {
     video {
         height: 300%;
@@ -114,6 +128,7 @@
 
 //product-preview
 .product-preview {
+    background-color:white;
     .product-container {
         @include tablet {
             @include flexrow;

@@ -7,7 +7,12 @@
 get_header(); ?>
     
  <div class="fullscreen-video">
-         <div class= "fullscreen-text">
+     <div class= "fullscreen-text-mobile">
+    <h3 class= "title"> Creative Tomco</h3>
+    <h4> Your gateway to <br>  worldwide trading</h4>
+    <a class= "text-button" id="explore-button" href="#products-preview">  explore</a>
+    </div>
+         <div class= "fullscreen-text-desktop">
     <h3 class= "title"> Creative Tomco</h3>
     <h4> Your gateway to <br>  worldwide trading</h4>
     <a class= "text-button" id="explore-button" href="#products-preview">  explore</a>
@@ -55,7 +60,7 @@ get_header(); ?>
         </div>
         </a>
         
-           <a href=/household class="product-link paper">
+           <a href=/paper class="product-link paper">
         <div class="product-grid">
             <h6> paper</h6>
         </div>
@@ -72,7 +77,7 @@ get_header(); ?>
 
     </div>
 
-<div class= "skillsets">
+<div class= "skillsets" id= "facts">
     <div class= "skillsets-container"> 
         <div class= "square sq1"> 
             <div class="skillset-container"> 
@@ -121,7 +126,7 @@ get_header(); ?>
 
     
     
-<div class="journal">
+<div class="journal" id"blog">
     <h3 class="title-header">our  <span class"smaller-text">Blog</span></h3> 
                 <?php
    $args = array( 'numberposts' => '4', 'order' => 'DESC','post_status' => 'publish'  );

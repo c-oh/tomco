@@ -7,17 +7,18 @@ jQuery(function () {
         jQuerymenuWrap.toggleClass('menu-show');
 
     });
-
-    jQuery('.readmore-button').click(function () {
+   jQuery('.readmore-button').click(function () {
         jQuery(this).hide();
         jQuery('.about-readmore').slideDown().addClass('.show');
     })
 
 });
 
+
 jQuery('#explore-button').click(function(){
-    alert('HELLO');
-    
+    jQuery('html, body').animate({
+        scrollTop: jQuery('#products-preview').offset().top
+    }, 500);
 })
 
 var a = 0;
@@ -52,3 +53,13 @@ jQuery(window).scroll(function () {
 
 });
 
+
+
+
+
+function showSelectedValues(){
+   alert(jQuery("input[name=product]:checked").map(
+            function () {return this.value;}
+        ).get)().join("IT WORKS")}
+
+    jQuery('#inquire-link').click(showSelectedValues);

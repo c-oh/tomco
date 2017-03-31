@@ -15,12 +15,12 @@
 	<div class= "footer-nav-container">
 		<div class= "footer-nav">
 			<h4 class= "footer-title"> Information</h4>
-			<a class= "footer-links" href= "#"> <p class= "links">About Us</p></a>
-			<a class= "footer-links" href= "#"> <p class= "links">Services</p></a>
-			<a class= "footer-links" href= "#"> <p class= "links">Blog</p></a>
-			<a class= "footer-links" href= "#"> <p class= "links">Contact</p></a>
+			<a class= "footer-links" href= "#about"> <p class= "links">About Us</p></a>
+			<a class= "footer-links" href= "#services"> <p class= "links">Services</p></a>
+			<a class= "footer-links" href= "#blog"> <p class= "links">Blog</p></a>
+			<a class= "footer-links" href= "#contact"> <p class= "links">Contact</p></a>
 			<a class= "footer-links" href= "#"> <p class= "links">Search</p></a>
-			<a class= "footer-links" href= "#"> <p class= "links">Facts</p></a>
+			<a class= "footer-links" href= "#facts"> <p class= "links">Facts</p></a>
 		</div>
 
 		<div class= "footer-nav footer-2">

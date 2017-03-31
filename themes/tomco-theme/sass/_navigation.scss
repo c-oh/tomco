@@ -3,6 +3,7 @@
 	justify-content: space-between;
 	max-width: 1180px;
 	margin: 0 auto;
+	overflow: hidden;
 	ul {
 		list-style: none;
 		font-family: $font__m;
@@ -44,6 +45,9 @@
 	}
 }
 
+#masthead{
+	background-color:lightgray;
+}
 .hamburger-container {
 	position: relative;
 	display: block;
@@ -97,12 +101,13 @@
 	z-index: 20;
 	border-right: 1px solid white;
 	@include desktop {
-		background-color: white;
+		background-color: lightgray;
 		margin: 8px 0px 0px 87px;
 		font-size: 18px;
 		font-weight: 400;
 		position: initial;
 		width: auto;
+		border:none;
 	}
 	#primary-menu {
 		text-transform: uppercase;
@@ -183,7 +188,7 @@
 		}
 		.search-submit {
 			color: $color__fb;
-			background-color: white;
+			background-color: lightgray;
 			border: 1px solid white;
 			border-radius: 10px;
 			border: none;
@@ -201,7 +206,6 @@
 		}
 	}
 	input[type="search"]{
-		text-transform:lowercase;
 		font-family: $font__m;
 		border: 1px solid black;
 	}
