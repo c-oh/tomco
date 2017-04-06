@@ -1,10 +1,9 @@
 .product-preview,
 .skillsets,
 .about-banner,
-.information-counter,
 .contact-section,
-.journal {
-    padding: 20px;
+.journal,
+.information-counter {
     font-family: $font__m;
     text-align: center;
     .title-header {
@@ -12,210 +11,183 @@
     }
 }
 
-///video bg
-.fullscreen-video {
-    max-height: 60vh;
-    height: 60vh;
-    overflow: hidden;
-    @include tablet {
-        max-height: 90vh;
-        height: auto;
-    }
-    video {
+.home {
+    .breadcrumbs {
         display: none;
+    }
+    #content {
         @include desktop{
-            display: block;
-            width: 100%;
+        margin-top: -19px;
         }
     }
-    .fullscreen-img {
-        object-fit: fill;
-        width:1200px;
-        @include desktop{
-            display: none;
-        }
-    }
-    .fullscreen-text-desktop,
-    .fullscreen-text-mobile {
-        font-family: $font__m;
-        text-align: center;
-        color: white;
-        width: 100%;
+}
+
+
+.fullscreen-text {
+    font-family: $font__m;
+    color: white;
+    text-align:center;
+    padding: 60px 20px 0 20px;
+    .title {
+        font-size: 28px;
+        font-weight: 400;
+        margin: 0;
         text-transform: uppercase;
-        @include desktop {
-            margin: 11% 0;
-        }
-        h3 {
-            font-weight: 700;
-            margin: 0;
-            color: black;
-            font-size: 36px;
-            @include desktop {
-                font-size: 44px;
-                color: white;
-            }
-            @include desktop {
-                font-size: 50px;
-                font-weight: 700;
-                margin: 0;
-                text-shadow: 1px 3px black;
-            }
-        }
-        h4 {
-            margin: 0;
-            font-size: 22px;
-            font-weight: 500;
-            color: $color__blue;
-            text-shadow: 2px 2px white;
-            @include desktop {
-                font-size: 30px;
-                text-shadow: none;
-                color: white;
-                font-weight: 300;
-            }
-            @include desktop {
-                font-size: 35px;
-            }
-        }
-        a {
-            margin-top: 15px;
-            @include button;
-            width: 50%;
-            margin: 15px auto 0;
-            padding: 10px;
-            font-weight: 600;
-            &:hover {
-                color: white;
-                background: lightskyblue;
-            }
-        }
     }
-    video {
-        width: 100%;
-        z-index: -100;
-        overflow: hidden;
-              position: absolute;
+    .subtitle {
+        font-size: 25px;
+        font-weight: 200;
+        margin: 0;
+        line-height: 1.12;
+    }
+    .text-button{
+        @include button;
+        margin: 25px auto;
+        width:60%;
     }
 }
 
-.fullscreen-text-mobile{
-    position:absolute;
-    margin: 80px 0;
-    @include desktop{
-        display:none;
-    }
-}
-.fullscreen-text-desktop{
-    display:none;
-    @include desktop{
-        display:block;
-        margin: 17% 0;
-    }
-}
-@media (min-aspect-ratio: 16/9) {
-    video {
-        height: 300%;
-        top: -100%;
-    }
+.headerimage {
+    background-image: url("../../resources/graphics/backgrounds.jpg");
+    box-shadow: 0px 516px rgba(61, 96, 151, 0.6) inset;
+    height: 413px;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+    background-position-y: -6px;
 }
 
-@media (max-aspect-ratio: 16/9) {
-    video {
-        width: 300%;
-        left: -100%;
-    }
+#backshape .wrapper {
+    display: block;
+    float: left;
+    margin: 50px auto 60px;
+    width: 100%;
+    padding: 0 5%;
+    transform: skew(0deg, 13deg);
+    -ms-transform: skew(0deg, -10deg);
+    -webkit-transform: skew(0deg, -5deg);
+}
+
+
+.product {
+    float: left;
+    min-height: 200px;
+    background: transparent;
+    transform: skew(0deg, 13deg);
+    -ms-transform: skew(0deg, -10deg);
+    /* IE 9 */
+    -webkit-transform: skew(0deg, 0deg);
+    /* Safari and Chrome */
+}
+
+#backshape,
+#backshape-about {
+    z-index: 1;
+    display: block;
+    float: left;
+    margin-top: -100px;
+    width: 100%;
+    background: white;
+    transform: skew(0deg, 10deg);
+    -ms-transform: skew(0deg, 10deg);
+    /* IE 9 */
+    -webkit-transform: skew(0deg, -13deg);
+}
+
+.footer {
+    z-index: 2;
+    margin-top: -4em;
+    position: relative;
+    width: 100%;
+    display: block;
+    float: left;
+}
+
+.footer .wrapper {
+    height: 150px;
+    background: green;
 }
 
 //product-preview
 .product-preview {
-    background-color:white;
-    .product-container {
+    @include tablet {
+        padding: 0;
+    }
+    .title-header {
+        max-width: 850px;
+        margin: auto;
+        @include alt-header;
+    }
+    .product-tag {
+        border: 1px solid black;
+        padding: 10px;
+        text-transform: uppercase;
+        font-weight: 100;
+        margin: 0;
+        display: inline-block;
+        width: 47%;
+        margin-bottom: 10px;
+        margin-right: 4px;
+        font-size: 14px;
         @include tablet {
-            @include flexrow;
+            width: 25%;
         }
-        .household {
-            background-image: url("../../resources/graphics/household.jpg");
-            @include images;
+        @include desktop {
+            width: auto;
         }
-        .home-decor {
-            background-image: url("../../resources/graphics/homedecor.jpeg");
-            @include images;
+    }
+    .all {
+        width: 100%;
+        @include tablet {
+            width: 25%;
         }
-        .furniture {
-            background-image: url("../../resources/graphics/furniture.jpeg");
-            @include images;
+        @include desktop {
+            width: auto;
         }
-        .seasonal {
-            background-image: url("../../resources/graphics/seasonal.jpeg");
-            @include images;
-        }
-        .garden {
-            background-image: url("../../resources/graphics/garden.jpg");
-            @include images;
-        }
-        .paper {
-            background-image: url("../../resources/graphics/paper.jpeg");
-            @include images;
-        }
-        .product-link:hover {
-            opacity: 0.5;
-            filter: alpha(opacity=50);
-            /* For IE8 and earlier */
-        }
-        .product-link {
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 1.5em;
-            text-align: center;
-            display: block;
-            width: 100%;
-            height: 186px;
-            padding: 20px;
-            margin-top: 20px;
-            @include tablet {
-                width: 48%;
-                height: 250px;
-                margin-top: 40px;
-            }
-            @include desktop {
-                width: 31.33333%;
-                margin-top: 50px;
-            }
-            h6 {
-                font-size: 20px;
-                text-transform: uppercase;
-                font-weight: 400;
-                text-decoration: none;
-                background-color: #00305B;
-                color: white;
-                padding: 6px 0;
-                margin: 41px 0;
-                @include tablet {
-                    margin: 90px 0;
-                }
-                @include desktop {
-                    font-size: 25px;
-                }
+    }
+    .products-grid {
+        display: none;
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            img {
+                width: auto;
+                height: 153px;
             }
         }
     }
 }
 
 //about
+#backshape-about{
+    background-color: $color__blue;
+    margin-top:0px;
+}
 .about-banner {
+    padding: 20px;
+        transform: skew(0deg,13deg);
     color: white;
     font-family: $font__m;
-    padding: 20px 38px 50px;
-    background-color: $color__blue;
     @include tablet {
         margin: 20px auto 0;
+    }
+    .title-header {
+        @include alt-header;
+        .description {
+            font-weight: 300;
+            &:after {
+                background-color: white;
+            }
+        }
     }
     .readmore-button {
         @include button;
     }
     p {
         font-weight: 100;
-        font-size: 18px;
+        font-size: 17px;
         @include tablet {
             font-size: 20px;
         }
@@ -229,167 +201,92 @@
 }
 
 //skills
-.skillsets-container {
-    @include desktop{
-        margin: 60px auto;
+.information-counter {
+    background-color: white;
+    color: black;
+    max-width: 1200px;
+    margin: auto;
+    @include desktop {
+        position: relative;
     }
-    &:before,
-    &:after {
-        content: ' ';
-        display: block;
+    .title-header {
+        @include alt-header;
         width: 100%;
-        height: 3px;
-        background-color: #333;
+        max-width: 800px;
+        margin: auto;
     }
-    .sq1 {
-        margin-top: 33px;
-    }
-    .sq3 {
-        margin-bottom: 33px;
-    }
-    @include tablet {
-        @include flexrow;
-        .square {
-            width: 31.33333%;
-            .skill-img {
-                width: 70px;
+    .information-container {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+        .counter {
+            @include tablet {
+                width: 31.3333%;
             }
-            margin: 78px 0 33px;
-            .skillset-container {
-                padding: 0 40px;
+            @include desktop {
+                width: auto;
+            }
+            img {
+                height: 52px;
+                max-width: 61%;
+            }
+            .counter-text {
+                display: inline-block;
+                text-align: left;
+                margin-left: 10px;
+                @include tablet {
+                    text-align: center;
+                }
+                @include desktop {
+                    text-align: left;
+                }
+                .counter-value {
+                    font-size: 25px;
+                    font-weight: 400;
+                    margin-bottom: 0;
+                    @include desktop {
+                        font-size: 38px;
+                    }
+                }
+                .count-description {
+                    font-weight: 100;
+                    font-size: 20px;
+                    margin-top: 0;
+                    @include desktop {
+                        font-size: 20px;
+                    }
+                }
             }
         }
     }
-    @include desktopalign;
-    .title-container {
-        margin-bottom: 20px;
-    }
-    .skillset-container {
-        .skill-img {
-            width: 50px;
-        }
-        .skillset-title {
-            font-weight: 400;
-            margin: 0;
-            font-size: 20px;
-        }
-        .skillset-description {
-            font-weight: 200;
-            font-size: 18px;
-        }
+    &:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 35px solid transparent;
+        border-right: 35px solid transparent;
+        border-top: 25px solid white;
+        left: calc(52% - 40px);
+        z-index: 20;
+        margin-top: 18px;
     }
 }
 
 //counter
-.information-counter {
-    background-image: url("../../resources/graphics/parallax.jpeg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 60px 0;
-    .title-header {
-        color: #00305b;
-    }
-    .counter-container {
-        @include desktopalign;
-        .count {
-            font-size: 40px;
-            color: #00305b;
-            margin: 0 25px;
-            @include tablet {
-                font-size: 50px;
-            }
-            @include desktop {
-                font-size: 69px;
-            }
-        }
-        .count-description {
-            font-weight: 300;
-            font-size: 18px;
-            color: #00305b;
-            margin: 0;
-            @include desktop {
-                font-size: 24px;
-                font-weight: 500;
-            }
-        }
-        @include tablet {
-            @include flexrow;
-            .counter {
-                width: 31.3333%;
-            }
-        }
-    }
-}
-
-//blog
-.journal {
-    @include tablet {
-        padding: 0;
-    }
-    .post-list-info {
-        background-color: #F8F8F8;
-        @include tablet {
-            display: flex;
-            .img-container,
-            .info-area {
-                width: 49%;
-            }
-        }
-        .img-container {
-            background-color: white;
-            img {
-                @include desktop {
-                    max-width: 60%;
-                }
-            }
-        }
-        .info-area {
-            padding: 10px;
-            .title,
-            .read-entry-btn {
-                text-decoration: none;
-            }
-            .title {
-                font-size: 20px;
-                font-weight: 400;
-                text-transform: uppercase;
-                @include tablet {
-                    font-size: 25px;
-                }
-                @include desktop {
-                    font-size: 30px
-                }
-            }
-            .date {
-                margin: 0;
-            }
-            .content {
-                font-size: 18px;
-                font-weight: 100;
-                margin: 9px 0;
-                @include desktop {
-                    padding: 0 90px;
-                    font-size: 20px;
-                }
-            }
-            .read-entry-btn {
-                @include button;
-                background-color: $color__blue;
-                color: white;
-            }
-        }
-    }
-}
-
 .contact-section {
-    background-color: #00305b;
+    background-color: #3d6098;
     color: white;
     @include desktop {
-        display: flex;
-        justify-content: space-between;
-        padding: 50px 20px 50px;
+        padding: 0px 20px 50px;
+    }
+    .contact-large-container {
+        @include desktop {
+            @include desktopalign;
+            display: flex;
+            justify-content: space-between;
+        }
     }
     .address,
     .phone,
@@ -400,32 +297,36 @@
         display: none;
         @include desktop {
             display: block;
-            width:48%;
+            width: 48%;
         }
     }
     .contact-container {
         @include tablet {
             display: flex;
             flex-wrap: wrap;
-            justify-content:space-between;
+            justify-content: space-between;
             font-size: 18px;
-    font-weight: 100;
-     }
-     @include desktop{
-            width:48%;
+            font-weight: 100;
+        }
+        @include desktop {
+            width: 48%;
         }
         .title-header,
         .container-address {
+            font-weight: 200;
             @include tablet {
                 width: 100%;
-                margin:0;
             }
+        }
+        .title-header {
+            margin: 20px 0;
         }
         .container-phone,
         .container-email {
+            font-weight: 200;
             @include tablet {
                 width: 47%;
-                margin-top:0;
+                margin-top: 0;
             }
         }
         .container-phone {

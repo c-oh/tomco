@@ -5,166 +5,119 @@
  * @package Tomco_Theme
  */
 get_header(); ?>
+
+    <div class="headerimage">
+        <div class="fullscreen-text">
+            <h3 class="title"> Creative Tomco</h3>
+            <h4 class= "subtitle"> Your gateway to <br> worldwide trading</h4>
+            <a class="text-button" id="explore-button" href="#products-preview">  explore</a>
+        </div>
+    </div>
+    <div id="backshape">
+        <div class="wrapper product">
+            <div class="product-preview" id="products-preview">
+                <div class="title-header">
+                    <h3 class="description">Products </h3>
+                    <p class="subtitle"> We are a full service trading company from the heart of Hong Kong. We strive to establish strong relationships
+                        with our clients through our effective , dsjifasjod and aodifjads. </p>
+                </div>
+                <div class="products-selection product">
+                    <h3 class="product-tag all"> all</h3>
+                    <h3 class="product-tag paper"> paper</h3>
+                    <h3 class="product-tag" id="seasonal"> seasonal </h3>
+                    <h3 class="product-tag stuff"> stuff </h3>
+                    <h3 class="product-tag garden"> garden</h3>
+                    <h3 class="product-tag houseware"> houseware</h3>
+                    <h3 class="product-tag" id="dishware"> dishware</h3>
+                    <h3 class="product-tag phone">phone </h3>
+                    <h3 class="product-tag" id="socks">socks </h3>
+                </div>
+                <div class="products-grid">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/paper.png" class="products-image">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/seasonal.png" class="products-image">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/garden.png" class="products-image">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/houseware.png" class="products-image">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/kitchen.png" class="products-image">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/houseware.png" class="products-image">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/floral.png" class="products-image">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/kitchen.png" class="products-image">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/garden.png" class="products-image">
+                </div>
+            </div>
+        </div>
+    </div>
     
- <div class="fullscreen-video">
-     <div class= "fullscreen-text-mobile">
-    <h3 class= "title"> Creative Tomco</h3>
-    <h4> Your gateway to <br>  worldwide trading</h4>
-    <a class= "text-button" id="explore-button" href="#products-preview">  explore</a>
+<div id="backshape-about">
+    <div class="about-banner product wrapper">
+        <div class="title-header">
+            <h3 class="description">About</h3>
+        </div>
+        <?php echo CFS()->get( 'about_us' ) ?>
+        <h6 class="readmore-button"> read more</h6>
+        <p class="about-readmore">
+            <?php echo CFS()->get( 'about_us_more' ) ?> </p>
     </div>
-         <div class= "fullscreen-text-desktop">
-    <h3 class= "title"> Creative Tomco</h3>
-    <h4> Your gateway to <br>  worldwide trading</h4>
-    <a class= "text-button" id="explore-button" href="#products-preview">  explore</a>
-    </div>
-    <img src= "<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/phone-bg.jpg" class= "fullscreen-img">
-    <video loop muted autoplay poster="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/phone-bg.jpg" class="video-bg">
-        <source src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/vid_bg.mp4" type="video/mp4">
-    </video>
-</div>
-
-
- <div class= "product-preview" id="products-preview">
-        <div class= "title-header">    
-    <h3 class="product-description">products we <span class"smaller-text">carry</span> </h3> 
-    </div>
-        <div class= "product-container">
-
-            <a href=/household class="product-link household">
-        <div class="product-grid">
-            <h6> household</h6>
-        </div>
-        </a>
-        
-           <a href=/household class="product-link home-decor">
-        <div class="product-grid">
-            <h6> home decor</h6>
-        </div>
-        </a>
-        
-           <a href=/household class="product-link furniture">
-        <div class="product-grid">
-            <h6> furniture</h6>
-        </div>
-        </a>
-        
-           <a href=/household class="product-link seasonal">
-        <div class="product-grid">
-            <h6> seasonal</h6>
-        </div>
-        </a>
-
-           <a href=/household class="product-link garden">
-        <div class="product-grid">
-            <h6> garden</h6>
-        </div>
-        </a>
-        
-           <a href=/paper class="product-link paper">
-        <div class="product-grid">
-            <h6> paper</h6>
-        </div>
-        </a>
-    </div>
-   
-</div>
-
- <div class= "about-banner" id= "about">   
-    <h3 class="title-header">About  <span class"smaller-text">us</span></h3> 
-      <p class= "about-p1"> <?php echo CFS()->get( 'about_us' ) ?> </p>
-      <h6 class="readmore-button"> read more</h6>
-      <p class= "about-readmore"> <?php echo CFS()->get( 'about_us_more' ) ?> </p>
-
     </div>
 
-<div class= "skillsets" id= "facts">
-    <div class= "skillsets-container"> 
-        <div class= "square sq1"> 
-            <div class="skillset-container"> 
+
+    <div class="information-counter" id="counter">
+        <div class="title-header">
+            <h3 class="description">Facts</h3>
+            <p class="subtitle"> Just a little more about who we are and what we do. </p>
+        </div>
+        <div class="information-container">
+            <div class="counter">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/badge.png" class="skill-img">
-                <h5 class="skillset-title"><?php echo CFS()->get( 'skillset1' ) ?></h5>
-                <p class="skillset-description"><?php echo CFS()->get( 'description1' ) ?></p>
+                <div class="counter-text">
+                    <h2 class="count counter-value" data-count="31"> 0</span>
+                        <h5 class="count-description">years of experience</h5>
+                </div>
             </div>
-        </div>
-        <div class= "square sq2"> 
-            <div class="skillset-container"> 
+
+            <div class="counter">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/hand.png" class="skill-img">
-                <h5 class="skillset-title"><?php echo CFS()->get( 'skillset2' ) ?></h5>
-                <p class="skillset-description"><?php echo CFS()->get( 'description2' ) ?></p>
+                <div class="counter-text">
+                    <h2 class="count counter-value" data-count="500">0</h2>
+                    <h5 class="count-description"> and more products</h5>
+                </div>
+            </div>
+
+            <div class="counter">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/shipping.png" class="skill-img">
+                <div class="counter-text">
+                    <h2 class="count counter-value" data-count="32">0</h2>
+                    <h5 class="count-description">international ports</h5>
+                </div>
             </div>
         </div>
-        <div class= "square sq3"> 
-           <div class="skillset-container"> 
-               <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/shipping.png" class="skill-img">
-                <h5 class="skillset-title"><?php echo CFS()->get( 'skillset4' ) ?></h5>
-                <p class="skillset-description"><?php echo CFS()->get( 'description4' ) ?></p>
-        </div>
-        </div>
-        </div>
+
     </div>
 
-
-<div class="information-counter" id= "counter">
-         <div class= "title-header">    
-    <h3 class="skill-description">We can <span class"smaller-text">offer</span></h3> 
+<div class="footer">
+        <div class="wrapper"></div>
     </div>
-        <div class= "counter-container"> 
-        <div class="counter">
-           <h2 class="count counter-value" data-count= "31" > 0</span>
-            <h5 class="count-description">years of experience</h5>
-        </div>
-         <div class="counter">
-            <h2 class= "count counter-value" data-count= "500" >0</h2>
-            <h5 class="count-description">companies to chose from</h5>
-        </div>
-         <div class="counter">
-            <h2 class= "count counter-value" data-count= "32" >0</h2>
-            <h5 class="count-description">shipping ports worldwide</h5>
-        </div>
-        </div>
-    </div>
-
     
-    
-<div class="journal" id"blog">
-    <h3 class="title-header">our  <span class"smaller-text">Blog</span></h3> 
-                <?php
-   $args = array( 'numberposts' => '4', 'order' => 'DESC','post_status' => 'publish'  );
-   $recent_posts = get_posts( $args ); // returns an array of posts ?>
-                    <?php foreach ( $recent_posts as $post ) : setup_postdata( $post ); ?>
-                    <div class="post-list-info">
-                        <div class= "img-container">
-                        <?php the_post_thumbnail('category-thumb'); ?>
-                        </div>
-                        <div class="info-area">
-                            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class='title'>
-                                <?php the_title();?> </a>
+    <div class="contact-section" id="contact">
+        <div class="contact-large-container">
+            <div class="contact-container">
+                <div class="title-header">
+                    <h3 class="description">contact <span class "smaller-text">creative tomco</span></h3>
+                </div>
+                <div class="text-container">
+                    <p class="container-address"> <i class="fa fa-map-marker" aria-hidden="true"></i> Unit 601 - Po Lung Centre, 11 Wang Chiu Road, Kowloon
+                        Bay, Hong Kong</p>
+                    <p class="container-phone"> <i class="fa fa-phone" aria-hidden="true"></i> +852 2755 0971</p>
+                    <p class="container-email"> <i class="fa fa-envelope" aria-hidden="true"></i> tomco@tomco.hk</p>
+                    <p class="container-email"> <i class="fa fa-fax" aria-hidden="true"></i></i> +852 2091 8990</p>
+                    <?php echo do_shortcode( '[contact-form-7 id="46" title="Contact form 1"]' ); ?>
+                </div>
+            </div>
 
-                            <p class= "date"> <?php the_date(); ?> </p>
-                            <h6 class= "content"><?php the_excerpt();?> </h6>
-                            <a href="<?php the_permalink(); ?>" class='read-entry-btn'> Read More</a>
-                        </div>
-                    </div>
-                    <?php endforeach; wp_reset_postdata(); ?>
+            <section id "map-section">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.757862129452!2d114.20686286414804!3d22.324995497641407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404013354eaabe1%3A0x4ef179fd625aef54!2sPo+Lung+Centre%2C+11+Wang+Chiu+Rd%2C+Kowloon+Bay%2C+Hong+Kong!5e0!3m2!1sen!2sca!4v1490783393503"
+                    width="300px" height="820px" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </section>
         </div>
-   
-<div class="contact-section" id = "contact">
-    <div class= "contact-container"> 
- <div class= "title-header">    
-    <h3 class="skill-description">contact  <span class"smaller-text">creative tomco</span></h3> 
     </div>
-    <p class="container-address"> <i class="fa fa-map-marker" aria-hidden="true"></i> Unit 601 - Po Lung Centre, 11 Wang Chiu Road, Kowloon Bay, Hong Kong</p>
-    <p class="container-phone"> <i class="fa fa-phone" aria-hidden="true"></i> +852 2755 0971</p>
-    <p class= "container-email"> <i class="fa fa-envelope" aria-hidden="true"></i> tomco@tomco.hk</p>
-    <?php echo do_shortcode( '[contact-form-7 id="46" title="Contact form 1"]' ); ?>
-</div>
 
-<section id "map-section"> 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.757862129452!2d114.20686286414804!3d22.324995497641407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404013354eaabe1%3A0x4ef179fd625aef54!2sPo+Lung+Centre%2C+11+Wang+Chiu+Rd%2C+Kowloon+Bay%2C+Hong+Kong!5e0!3m2!1sen!2sca!4v1490783393503"  width="900" height="820px" frameborder="0" style="border:0" allowfullscreen></iframe>
-</section>
-
-</div>
-
-<?php get_footer();?>
-        
-     
+    <?php get_footer();?>

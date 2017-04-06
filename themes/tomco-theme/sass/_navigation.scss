@@ -11,8 +11,21 @@
 			text-decoration: none;
 		}
 	}
+	.nav-menu-mini{
+	@include desktop{
+		    width: 44%;
+    text-align: right;
+	}
+}
 }
 
+#masthead{
+	@include desktop{
+		border-top:4px solid $color__darkg;
+		border-bottom: 4px solid $color__blue;
+		background-color:white;
+	}
+}
 .home-nav-link {
 	@include desktop {
 		order: -1;
@@ -27,7 +40,7 @@
 		padding: 0px 13px;
 	}
 	@include desktop {
-		max-width: 142px;
+		max-width: 154px;
 	}
 }
 
@@ -45,9 +58,6 @@
 	}
 }
 
-#masthead{
-	background-color:lightgray;
-}
 .hamburger-container {
 	position: relative;
 	display: block;
@@ -101,17 +111,23 @@
 	z-index: 20;
 	border-right: 1px solid white;
 	@include desktop {
-		background-color: lightgray;
-		margin: 8px 0px 0px 87px;
-		font-size: 18px;
-		font-weight: 400;
+		background-color: white;
+		font-size: 14px;
+		font-weight: 500;
 		position: initial;
-		width: auto;
+		width: 888px;
 		border:none;
+		margin-left:0px;
 	}
 	#primary-menu {
 		text-transform: uppercase;
 		margin: 81px 0 0 6px;
+		@include desktop {
+			margin: 0;
+			padding: 0px;
+			width: auto;
+			margin-top:39px;
+		}
 		li {
 			border-bottom: 1px solid white;
 			width: 87%;
@@ -126,21 +142,18 @@
 				color: white;
 				@include desktop {
 					color: black;
-					padding-right: 10px;
+					padding-right: 52px;
 				}
 			}
+		}
+		.menu-item-53 a{
+			padding-right:0px;
 		}
 		.menu-item-17 {
 			border-top: 1px solid white;
 			@include desktop {
 				display: none;
 			}
-		}
-		@include desktop {
-			margin: 0;
-			padding: 0px;
-			width: auto;
-			margin-top:10px;
 		}
 	}
 }
@@ -180,16 +193,40 @@
 //slide out menu
 .header-search {
 	display: none;
+	&:before{
+        content: "";
+    top: 0;
+    right: 503px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 0 solid transparent;
+        border-bottom: 26px solid transparent;
+    border-right: 24px solid #666;
+	}
 	@include desktop {
 		display: block;
-		margin-top:10px;
+		color:white;
+		top:0;
+		background-color:$color__darkg;
+		position:relative;
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius: 13px;
+		height:30px;
+		width:1200px;
 		.search-form{
-			padding: 6px 13px 0 0px;
+			   padding: 1px 8px 0 6px;
+				   display:inline-block
+		}
+		.header-contact,
+		.header-phone,
+		.header-fax{
+			display:inline;
 		}
 		.search-submit {
-			color: $color__fb;
-			background-color: lightgray;
-			border: 1px solid white;
+			color: white;
+			background-color: $color__darkg;
+			border: 1px solid $color__darkg;
 			border-radius: 10px;
 			border: none;
 			box-shadow: none;
@@ -207,6 +244,12 @@
 	}
 	input[type="search"]{
 		font-family: $font__m;
-		border: 1px solid black;
+		border: 1px solid $color__darkg;
+		height:13px;
 	}
+}
+
+
+.sub-menu{
+	display:none;
 }

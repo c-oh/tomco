@@ -33,6 +33,15 @@
    }
 }
 
+@mixin bar{
+     content: '';
+    display: block;
+    width: 59px;
+    height: 9px;
+    background-color: $color__blue;
+    text-align: center;
+    margin: 10px auto;
+}
 @mixin desktopalign{
     max-width:1180px;
     margin:auto;
@@ -55,7 +64,7 @@
         text-decoration: none;
         color: #00305B;
         border: 1px white solid;
-        padding: 20px;
+        padding: 10px;
         width: 100%;
         display: block;
         background-color: white;
@@ -75,6 +84,30 @@
             display: inline-block;
             padding: 15px 68px;
         }
+}
+
+@mixin alt-header{
+    .description {
+        font-weight: 500;
+        font-size: 27px;
+        &:after {
+            @include bar;
+        }
+        @include tablet{
+            font-size: 30px;
+        }
+        @include desktop{
+            font-size:35px;
+        }
+    }
+    .subtitle {
+        text-transform: none;
+        font-size: 16px;
+        font-weight: 100;
+        @include tablet{
+            font-size: 20px;
+        }
+    }
 }
 
 @mixin larger{

@@ -43,7 +43,10 @@
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/logo.jpg" alt= "Company logo"> 
 					</a>
 					<div class="header-search">
-							<?php get_search_form(); ?>
+							<?php get_search_form(); ?>  |
+							<div class= "header-contact">
+								<p class="header-phone"> <i class="fa fa-phone" aria-hidden="true"></i> +123 456 7890 	</p> 
+								</div>
 					</div>
 
 		</nav>
@@ -51,6 +54,12 @@
 		
 
 				</div>
+					<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
+					</div>
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">

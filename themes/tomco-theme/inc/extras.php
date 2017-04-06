@@ -91,7 +91,7 @@ add_filter( 'get_the_excerpt', 'tomco_theme_wp_trim_excerpt' );
 */ 
 function display_custom_archive_title ($title) {
 	if (is_post_type_archive ('product' )) {
-		$title = "Shop Stuff";
+		$title = "Products";
 	}
 	elseif(is_tax() ) {
         $title = single_term_title( '', false );
