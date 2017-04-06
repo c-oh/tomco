@@ -14,7 +14,7 @@ get_header(); ?>
         </div>
     </div>
     <div id="backshape">
-        <div class="wrapper product">
+        <div class="wrapper product product-product">
             <div class="product-preview" id="products-preview">
                 <div class="title-header">
                     <h3 class="description">Products </h3>
@@ -59,8 +59,8 @@ get_header(); ?>
     </div>
     </div>
 
-
-    <div class="information-counter" id="counter">
+<div id="backshape-counter">
+    <div class="information-counter product wrapper" id="counter">
         <div class="title-header">
             <h3 class="description">Facts</h3>
             <p class="subtitle"> Just a little more about who we are and what we do. </p>
@@ -92,12 +92,11 @@ get_header(); ?>
         </div>
 
     </div>
-
-<div class="footer">
-        <div class="wrapper"></div>
     </div>
-    
-    <div class="contact-section" id="contact">
+
+
+<div id="backshape-contact">
+    <div class="contact-section product wrapper" id="contact">
         <div class="contact-large-container">
             <div class="contact-container">
                 <div class="title-header">
@@ -118,6 +117,13 @@ get_header(); ?>
                     width="300px" height="820px" frameborder="0" style="border:0" allowfullscreen></iframe>
             </section>
         </div>
+    </div>
+
+    </div>
+
+    
+    <div class="footer">
+        <div class="wrapper"></div>
     </div>
 
     <?php get_footer();?>

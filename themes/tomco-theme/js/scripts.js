@@ -8,7 +8,8 @@ jQuery(function () {
     });
    jQuery('.readmore-button').click(function () {
         jQuery(this).hide();
-        jQuery('.about-readmore').slideDown().addClass('.show');
+         jQuery('.about-banner').slideDown().addClass('shrink');
+        jQuery('.about-readmore').slideDown().addClass('show');
     })
 });
 
@@ -49,9 +50,9 @@ jQuery(window).scroll(function () {
 
 
 function showSelectedValues(){
-   alert(jQuery("input[name=product]:checked").map(
+   alert(jQuery('input[name=product]:checked').map(
             function () {return this.value;}
-        ).get)().join("IT WORKS")}
+        ).get)().join('IT WORKS')}
     jQuery('#inquire-link').click(showSelectedValues);
 
 
@@ -64,13 +65,15 @@ function plusDivs(n) {
 
 function showDivs(n) {
     var i;
-    var x = document.getElementsByClassName("mySlides");
+    var x = document.getElementsByClassName('mySlides');
     if (n > x.length) {slideIndex = 1} 
     if (n < 1) {slideIndex = x.length} 
     for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none"; 
+        x[i].style.display = 'none'; 
     }
-    x[slideIndex-1].style.display = "block"; 
+    x[slideIndex-1].style.display = 'block'; 
 }
 
 plusDivs;
+
+
