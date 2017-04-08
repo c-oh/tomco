@@ -48,32 +48,30 @@ jQuery(window).scroll(function () {
 });
 
 
+var countDownDate = new Date("May 5, 2017 15:37:25").getTime();
 
-function showSelectedValues(){
-   alert(jQuery('input[name=product]:checked').map(
-            function () {return this.value;}
-        ).get)().join('IT WORKS')}
-    jQuery('#inquire-link').click(showSelectedValues);
+// Update the count down every 1 second
+var x = setInterval(function() {
 
-
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName('mySlides');
-    if (n > x.length) {slideIndex = 1} 
-    if (n < 1) {slideIndex = x.length} 
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = 'none'; 
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "<span>d</span> " + hours + "<span>h</span> "
+    + minutes + "<span>m</span> " + seconds + "<span>s</span>";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
     }
-    x[slideIndex-1].style.display = 'block'; 
-}
-
-plusDivs;
-
-
+}, 1000);

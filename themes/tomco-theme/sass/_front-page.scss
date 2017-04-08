@@ -1,6 +1,7 @@
 .product-preview,
 .skillsets,
 .about-banner,
+.event-banner,
 .contact-section,
 .journal,
 .information-counter {
@@ -30,9 +31,9 @@
     @include tablet {
         padding-top: 114px;
     }
-    @include desktop{
+    @include desktop {
         padding-top: 140px;
-        text-align:left;
+        text-align: left;
         max-width: 1200px;
         margin: auto;
     }
@@ -71,12 +72,12 @@
     background-position-y: -6px;
     @include tablet {
         height: 488px;
-            background-position-y: 0px;
+        background-position-y: 0px;
     }
-    @include desktop{
+    @include desktop {
         height: 564px;
-    background-position-y: 17px;
-    box-shadow: 0px 562px rgba(61, 96, 151, 0.6) inset;
+        background-position-y: 17px;
+        box-shadow: 0px 562px rgba(61, 96, 151, 0.6) inset;
     }
 }
 
@@ -88,13 +89,13 @@
     padding: 0 5%;
     transform: skew(0deg, 8deg);
     -ms-transform: skew(0deg, -10deg);
-    -webkit-transform: skew(0deg, -5deg);
-    @include tablet{
+    -webkit-transform: skew(0deg, 8deg);
+    @include tablet {
         -webkit-transform: skew(0deg, 8deg);
     }
-    @include desktop{
-        margin:0;
-            -webkit-transform: skew(0deg, 8deg);
+    @include desktop {
+        margin: 0;
+        -webkit-transform: skew(0deg, 8deg);
     }
 }
 
@@ -105,12 +106,13 @@
     transform: skew(0deg, 8deg);
     -ms-transform: skew(0deg, -10deg);
     /* IE 9 */
-    -webkit-transform: skew(0deg, 0deg);
+    -webkit-transform: skew(0deg, 8deg);
     /* Safari and Chrome */
 }
 
 #backshape,
 #backshape-about,
+#backshape-events,
 #backshape-counter,
 #backshape-contact {
     z-index: 1;
@@ -125,14 +127,19 @@
     -webkit-transform: skew(0deg, -8deg);
 }
 
+.home-products {
+    margin-bottom: 90px;
+}
+
 //product-preview
-.product-product{
-    @include desktop{
-        float:none;
-        display:flex;
-        justify-content:space-between;
+.product-product {
+    @include desktop {
+        float: none;
+        display: flex;
+        justify-content: space-between;
     }
 }
+
 .product-preview {
     @include tablet {
         padding: 0;
@@ -141,12 +148,15 @@
         max-width: 850px;
         margin: auto;
         @include alt-header;
-        @include desktop{
-            text-align:right;
+        @include desktop {
+            text-align: right;
         }
     }
-    .products-selection{
-        @include tablet{
+    .products-selection {
+        transform: skew(0deg, 0deg);
+        -ms-transform: skew(0deg, 0deg);
+        -webkit-transform: skew(0deg, 0deg);
+        @include tablet {
             width: 100%;
         }
     }
@@ -195,12 +205,59 @@
     background-image: url("../../resources/graphics/paper.png");
 }
 
+//events
+#backshape-events {
+    background-color: #3d6098;
+    color: #e7e7e7;
+    text-align: center;
+    max-width: 1200px;
+    @include desktop {
+        transform: skew(0deg, 0deg);
+        -ms-transform: skew(0deg, 0deg);
+        -webkit-transform: skew(0deg, 0deg);
+    }
+    .event-banner {
+        margin: 50px auto;
+        width: 100%;
+         @include desktop {
+        transform: skew(0deg, 0deg);
+        -ms-transform: skew(0deg, 0deg);
+        -webkit-transform: skew(0deg, 0deg);
+    }
+        .description{
+            font-size:27px;
+            &:after {
+            @include bar;
+        }
+        }
+        .subtitle, 
+        .event-description-past,
+        .event-readmore {
+            text-transform: none;
+            font-size: 16px;
+        font-weight: 100;
+        }
+        #demo{
+            font-size:30px;
+            font-weight:500;
+        }
+        span{
+            font-weight:100;
+            font-size:19px;
+        }
+        .event-description-title{
+            font-weight:200;
+            font-size:18px;
+        }
+    }
+}
+
 //about
 #backshape-about {
     background-color: $color__blue;
     margin-top: 0px;
-    @include desktop{
-    transform: skew(0deg, 0deg);
+    @include desktop {
+        transform: skew(0deg, 0deg);
     }
 }
 
@@ -212,7 +269,7 @@
     @include tablet {
         margin: 20px auto 0;
     }
-    @include desktop{
+    @include desktop {
         transform: skew(0deg, 0deg);
     }
     .title-header {
@@ -249,6 +306,12 @@
 //skills
 #backshape-counter {
     margin-top: 0px;
+    @include desktop {
+        transform: skew(0deg, 0deg);
+        -ms-transform: skew(0deg, 0deg);
+        -webkit-transform: skew(0deg, 0deg);
+    }
+    
 }
 
 .information-counter {
@@ -264,12 +327,15 @@
         margin-left: 12%;
         margin-right: 12%;
     }
-    @include tablet{
+    @include tablet {
         margin-bottom: 55px;
-        margin-top:55px;
+        margin-top: 55px;
     }
     @include desktop {
         position: relative;
+        transform: skew(0deg, 0deg);
+        -ms-transform: skew(0deg, 0deg);
+        -webkit-transform: skew(0deg, 0deg);
     }
     .title-header {
         @include alt-header;
@@ -343,8 +409,11 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    @include desktop{
+    @include desktop {
         background-attachment: fixed;
+        transform: skew(0deg, 0deg);
+        -ms-transform: skew(0deg, 0deg);
+        -webkit-transform: skew(0deg, 0deg);
     }
 }
 
@@ -356,10 +425,12 @@
     margin-bottom: 58px;
     @include desktop {
         padding: 0px 20px 50px;
+        transform: skew(0deg, 0deg);
+        -ms-transform: skew(0deg, 0deg);
+        -webkit-transform: skew(0deg, 0deg);
     }
     .contact-large-container {
         @include desktop {
-            @include desktopalign;
             display: flex;
             justify-content: space-between;
         }
@@ -387,32 +458,37 @@
         @include desktop {
             width: 48%;
         }
-        .title-header,
-        .container-address {
-            font-weight: 200;
-            @include tablet {
-                width: 100%;
+        .text-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .title-header,
+            .container-address {
+                font-weight: 200;
+                @include tablet {
+                    width: 100%;
+                }
             }
-        }
-        .title-header {
-            margin: 20px 0;
-        }
-        .container-phone,
-        .container-email {
-            font-weight: 200;
-            @include tablet {
-                width: 47%;
-                margin-top: 0;
+            .title-header {
+                margin: 20px 0;
             }
-        }
-        .container-phone {
-            @include tablet {
-                text-align: right;
+            .container-phone,
+            .container-email {
+                font-weight: 200;
+                @include tablet {
+                    width: 47%;
+                    margin-top: 0;
+                }
             }
-        }
-        .container-email {
-            @include tablet {
-                text-align: left;
+            .container-phone {
+                @include tablet {
+                    text-align: right;
+                }
+            }
+            .container-email {
+                @include tablet {
+                    text-align: left;
+                }
             }
         }
     }

@@ -9,11 +9,11 @@ get_header(); ?>
     <div class="headerimage">
         <div class="fullscreen-text">
             <h3 class="title"> Creative Tomco</h3>
-            <h4 class= "subtitle"> Your gateway to <br> worldwide trading</h4>
+            <h4 class="subtitle"> Your gateway to <br> worldwide trading</h4>
             <a class="text-button" id="explore-button" href="#products-preview">  explore</a>
         </div>
     </div>
-    <div id="backshape">
+    <div id="backshape" class= "home-products">
         <div class="wrapper product product-product">
             <div class="product-preview" id="products-preview">
                 <div class="title-header">
@@ -46,82 +46,100 @@ get_header(); ?>
             </div>
         </div>
     </div>
-    
-<div id="backshape-about">
-    <div class="about-banner product wrapper">
-        <div class="title-header">
-            <h3 class="description">About</h3>
-        </div>
-        <?php echo CFS()->get( 'about_us' ) ?>
-        <h6 class="readmore-button"> read more</h6>
-        <p class="about-readmore">
-            <?php echo CFS()->get( 'about_us_more' ) ?> </p>
-    </div>
-    </div>
 
-<div id="backshape-counter">
-    <div class="information-counter product wrapper" id="counter">
-        <div class="title-header">
-            <h3 class="description">Facts</h3>
-            <p class="subtitle"> Just a little more about who we are and what we do. </p>
-        </div>
-        <div class="information-container">
-            <div class="counter">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/badge.png" class="skill-img">
-                <div class="counter-text">
-                    <h2 class="count counter-value" data-count="31"> 0</span>
-                        <h5 class="count-description">years of experience</h5>
-                </div>
+    <div id="backshape-events">
+        <div class="event-banner product wrapper">
+            <div class="title-header">
+                <h3 class="description">Events</h3>
+                <p class="subtitle"> Visit us at our booth at the latest event! </p>
             </div>
-
-            <div class="counter">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/hand.png" class="skill-img">
-                <div class="counter-text">
-                    <h2 class="count counter-value" data-count="500">0</h2>
-                    <h5 class="count-description"> and more products</h5>
-                </div>
+            <div class= "event-text"> 
+                <p class= "event-date"> ( May 5th 2017 )</p>
+                <h1 id="demo"> </h1>
+                <p class="event-readmore"> till the Shenzhen Household Expo Show</p>
             </div>
-
-            <div class="counter">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/shipping.png" class="skill-img">
-                <div class="counter-text">
-                    <h2 class="count counter-value" data-count="32">0</h2>
-                    <h5 class="count-description">international ports</h5>
-                </div>
+            <div class= "event-description"> 
+                <h1 class="event-description-title"> Past events include: </h1>
+                <p class= "event-description-past"> United Kingdom Charity fund, </p>
             </div>
         </div>
-
-    </div>
     </div>
 
-
-<div id="backshape-contact">
-    <div class="contact-section product wrapper" id="contact">
-        <div class="contact-large-container">
-            <div class="contact-container">
-                <div class="title-header">
-                    <h3 class="description">contact <span class "smaller-text">creative tomco</span></h3>
-                </div>
-                <div class="text-container">
-                    <p class="container-address"> <i class="fa fa-map-marker" aria-hidden="true"></i> Unit 601 - Po Lung Centre, 11 Wang Chiu Road, Kowloon
-                        Bay, Hong Kong</p>
-                    <p class="container-phone"> <i class="fa fa-phone" aria-hidden="true"></i> +852 2755 0971</p>
-                    <p class="container-email"> <i class="fa fa-envelope" aria-hidden="true"></i> tomco@tomco.hk</p>
-                    <p class="container-email"> <i class="fa fa-fax" aria-hidden="true"></i></i> +852 2091 8990</p>
-                    <?php echo do_shortcode( '[contact-form-7 id="46" title="Contact form 1"]' ); ?>
-                </div>
+    <div id="backshape-about">
+        <div class="about-banner product wrapper">
+            <div class="title-header">
+                <h3 class="description">About</h3>
             </div>
-
-            <section id "map-section">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.757862129452!2d114.20686286414804!3d22.324995497641407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404013354eaabe1%3A0x4ef179fd625aef54!2sPo+Lung+Centre%2C+11+Wang+Chiu+Rd%2C+Kowloon+Bay%2C+Hong+Kong!5e0!3m2!1sen!2sca!4v1490783393503"
-                    width="300px" height="820px" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </section>
+            <?php echo CFS()->get( 'about_us' ) ?>
+            <h6 class="readmore-button"> read more</h6>
+            <p class="about-readmore">
+                <?php echo CFS()->get( 'about_us_more' ) ?> </p>
         </div>
     </div>
 
+    <div id="backshape-counter">
+        <div class="information-counter product wrapper" id="counter">
+            <div class="title-header">
+                <h3 class="description">Facts</h3>
+                <p class="subtitle"> Just a little more about who we are and what we do. </p>
+            </div>
+            <div class="information-container">
+                <div class="counter">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/badge.png" class="skill-img">
+                    <div class="counter-text">
+                        <h2 class="count counter-value" data-count="31"> 0</span>
+                            <h5 class="count-description">years of experience</h5>
+                    </div>
+                </div>
+
+                <div class="counter">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/hand.png" class="skill-img">
+                    <div class="counter-text">
+                        <h2 class="count counter-value" data-count="500">0</h2>
+                        <h5 class="count-description"> and more products</h5>
+                    </div>
+                </div>
+
+                <div class="counter">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/shipping.png" class="skill-img">
+                    <div class="counter-text">
+                        <h2 class="count counter-value" data-count="32">0</h2>
+                        <h5 class="count-description">international ports</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
-    
+
+    <div id="backshape-contact">
+        <div class="contact-section product wrapper" id="contact">
+            <div class="contact-large-container">
+                <div class="contact-container">
+                    <div class="title-header">
+                        <h3 class="description">contact <span class "smaller-text">creative tomco</span></h3>
+                    </div>
+                    <div class="text-container">
+                        <p class="container-address"> <i class="fa fa-map-marker" aria-hidden="true"></i> Unit 601 - Po Lung Centre, 11 Wang Chiu Road,
+                            Kowloon Bay, Hong Kong</p>
+                        <p class="container-phone"> <i class="fa fa-phone" aria-hidden="true"></i> +852 2755 0971</p>
+                        <p class="container-email"> <i class="fa fa-envelope" aria-hidden="true"></i> tomco@tomco.hk</p>
+                        <p class="container-email"> <i class="fa fa-fax" aria-hidden="true"></i></i> +852 2091 8990</p>
+                        <?php echo do_shortcode( '[contact-form-7 id="46" title="Contact form 1"]' ); ?>
+                    </div>
+                </div>
+
+                <section id "map-section">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.757862129452!2d114.20686286414804!3d22.324995497641407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404013354eaabe1%3A0x4ef179fd625aef54!2sPo+Lung+Centre%2C+11+Wang+Chiu+Rd%2C+Kowloon+Bay%2C+Hong+Kong!5e0!3m2!1sen!2sca!4v1490783393503"
+                        width="300px" height="820px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </section>
+            </div>
+        </div>
+
+    </div>
+
+
     <div class="footer">
         <div class="wrapper"></div>
     </div>

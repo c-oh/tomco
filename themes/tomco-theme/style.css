@@ -971,6 +971,7 @@ object {
 .product-preview,
 .skillsets,
 .about-banner,
+.event-banner,
 .contact-section,
 .journal,
 .information-counter {
@@ -979,6 +980,7 @@ object {
   .product-preview .title-header,
   .skillsets .title-header,
   .about-banner .title-header,
+  .event-banner .title-header,
   .contact-section .title-header,
   .journal .title-header,
   .information-counter .title-header {
@@ -986,6 +988,7 @@ object {
     .product-preview .title-header h3,
     .skillsets .title-header h3,
     .about-banner .title-header h3,
+    .event-banner .title-header h3,
     .contact-section .title-header h3,
     .journal .title-header h3,
     .information-counter .title-header h3 {
@@ -996,6 +999,7 @@ object {
     .product-preview .title-header span,
     .skillsets .title-header span,
     .about-banner .title-header span,
+    .event-banner .title-header span,
     .contact-section .title-header span,
     .journal .title-header span,
     .information-counter .title-header span {
@@ -1005,6 +1009,7 @@ object {
       .product-preview .title-header h3,
       .skillsets .title-header h3,
       .about-banner .title-header h3,
+      .event-banner .title-header h3,
       .contact-section .title-header h3,
       .journal .title-header h3,
       .information-counter .title-header h3 {
@@ -1012,6 +1017,7 @@ object {
       .product-preview .title-header span,
       .skillsets .title-header span,
       .about-banner .title-header span,
+      .event-banner .title-header span,
       .contact-section .title-header span,
       .journal .title-header span,
       .information-counter .title-header span {
@@ -1110,7 +1116,7 @@ object {
   padding: 0 5%;
   transform: skew(0deg, 8deg);
   -ms-transform: skew(0deg, -10deg);
-  -webkit-transform: skew(0deg, -5deg); }
+  -webkit-transform: skew(0deg, 8deg); }
   @media (min-width: 600px) {
     #backshape .wrapper {
       -webkit-transform: skew(0deg, 8deg); } }
@@ -1126,11 +1132,12 @@ object {
   transform: skew(0deg, 8deg);
   -ms-transform: skew(0deg, -10deg);
   /* IE 9 */
-  -webkit-transform: skew(0deg, 0deg);
+  -webkit-transform: skew(0deg, 8deg);
   /* Safari and Chrome */ }
 
 #backshape,
 #backshape-about,
+#backshape-events,
 #backshape-counter,
 #backshape-contact {
   z-index: 1;
@@ -1143,6 +1150,9 @@ object {
   -ms-transform: skew(0deg, 10deg);
   /* IE 9 */
   -webkit-transform: skew(0deg, -8deg); }
+
+.home-products {
+  margin-bottom: 90px; }
 
 @media (min-width: 1000px) {
   .product-product {
@@ -1187,9 +1197,13 @@ object {
     .product-preview .title-header {
       text-align: right; } }
 
-@media (min-width: 600px) {
-  .product-preview .products-selection {
-    width: 100%; } }
+.product-preview .products-selection {
+  transform: skew(0deg, 0deg);
+  -ms-transform: skew(0deg, 0deg);
+  -webkit-transform: skew(0deg, 0deg); }
+  @media (min-width: 600px) {
+    .product-preview .products-selection {
+      width: 100%; } }
 
 .product-preview .product-tag {
   border: 1px solid black;
@@ -1234,6 +1248,50 @@ object {
 
 .paper {
   background-image: url("../../resources/graphics/paper.png"); }
+
+#backshape-events {
+  background-color: #3d6098;
+  color: #e7e7e7;
+  text-align: center;
+  max-width: 1200px; }
+  @media (min-width: 1000px) {
+    #backshape-events {
+      transform: skew(0deg, 0deg);
+      -ms-transform: skew(0deg, 0deg);
+      -webkit-transform: skew(0deg, 0deg); } }
+  #backshape-events .event-banner {
+    margin: 50px auto;
+    width: 100%; }
+    @media (min-width: 1000px) {
+      #backshape-events .event-banner {
+        transform: skew(0deg, 0deg);
+        -ms-transform: skew(0deg, 0deg);
+        -webkit-transform: skew(0deg, 0deg); } }
+    #backshape-events .event-banner .description {
+      font-size: 27px; }
+      #backshape-events .event-banner .description:after {
+        content: '';
+        display: block;
+        width: 59px;
+        height: 9px;
+        background-color: #213159;
+        text-align: center;
+        margin: 10px auto; }
+    #backshape-events .event-banner .subtitle,
+    #backshape-events .event-banner .event-description-past,
+    #backshape-events .event-banner .event-readmore {
+      text-transform: none;
+      font-size: 16px;
+      font-weight: 100; }
+    #backshape-events .event-banner #demo {
+      font-size: 30px;
+      font-weight: 500; }
+    #backshape-events .event-banner span {
+      font-weight: 100;
+      font-size: 19px; }
+    #backshape-events .event-banner .event-description-title {
+      font-weight: 200;
+      font-size: 18px; }
 
 #backshape-about {
   background-color: #213159;
@@ -1324,6 +1382,11 @@ object {
 
 #backshape-counter {
   margin-top: 0px; }
+  @media (min-width: 1000px) {
+    #backshape-counter {
+      transform: skew(0deg, 0deg);
+      -ms-transform: skew(0deg, 0deg);
+      -webkit-transform: skew(0deg, 0deg); } }
 
 .information-counter {
   padding: 0 20px;
@@ -1344,7 +1407,10 @@ object {
       margin-top: 55px; } }
   @media (min-width: 1000px) {
     .information-counter {
-      position: relative; } }
+      position: relative;
+      transform: skew(0deg, 0deg);
+      -ms-transform: skew(0deg, 0deg);
+      -webkit-transform: skew(0deg, 0deg); } }
   .information-counter .title-header {
     width: 100%;
     max-width: 800px;
@@ -1432,7 +1498,10 @@ object {
   background-size: cover; }
   @media (min-width: 1000px) {
     #backshape-contact {
-      background-attachment: fixed; } }
+      background-attachment: fixed;
+      transform: skew(0deg, 0deg);
+      -ms-transform: skew(0deg, 0deg);
+      -webkit-transform: skew(0deg, 0deg); } }
 
 .contact-section {
   margin-top: 17px;
@@ -1442,11 +1511,12 @@ object {
   margin-bottom: 58px; }
   @media (min-width: 1000px) {
     .contact-section {
-      padding: 0px 20px 50px; } }
+      padding: 0px 20px 50px;
+      transform: skew(0deg, 0deg);
+      -ms-transform: skew(0deg, 0deg);
+      -webkit-transform: skew(0deg, 0deg); } }
   @media (min-width: 1000px) {
     .contact-section .contact-large-container {
-      max-width: 1180px;
-      margin: auto;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: justify;
@@ -1474,29 +1544,36 @@ object {
   @media (min-width: 1000px) {
     .contact-section .contact-container {
       width: 48%; } }
-  .contact-section .contact-container .title-header,
-  .contact-section .contact-container .container-address {
-    font-weight: 200; }
+  .contact-section .contact-container .text-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .contact-section .contact-container .text-container .title-header,
+    .contact-section .contact-container .text-container .container-address {
+      font-weight: 200; }
+      @media (min-width: 600px) {
+        .contact-section .contact-container .text-container .title-header,
+        .contact-section .contact-container .text-container .container-address {
+          width: 100%; } }
+    .contact-section .contact-container .text-container .title-header {
+      margin: 20px 0; }
+    .contact-section .contact-container .text-container .container-phone,
+    .contact-section .contact-container .text-container .container-email {
+      font-weight: 200; }
+      @media (min-width: 600px) {
+        .contact-section .contact-container .text-container .container-phone,
+        .contact-section .contact-container .text-container .container-email {
+          width: 47%;
+          margin-top: 0; } }
     @media (min-width: 600px) {
-      .contact-section .contact-container .title-header,
-      .contact-section .contact-container .container-address {
-        width: 100%; } }
-  .contact-section .contact-container .title-header {
-    margin: 20px 0; }
-  .contact-section .contact-container .container-phone,
-  .contact-section .contact-container .container-email {
-    font-weight: 200; }
+      .contact-section .contact-container .text-container .container-phone {
+        text-align: right; } }
     @media (min-width: 600px) {
-      .contact-section .contact-container .container-phone,
-      .contact-section .contact-container .container-email {
-        width: 47%;
-        margin-top: 0; } }
-  @media (min-width: 600px) {
-    .contact-section .contact-container .container-phone {
-      text-align: right; } }
-  @media (min-width: 600px) {
-    .contact-section .contact-container .container-email {
-      text-align: left; } }
+      .contact-section .contact-container .text-container .container-email {
+        text-align: left; } }
 
 .site-footer {
   font-family: "montserrat", arial, sans-serif;
@@ -1576,7 +1653,7 @@ object {
       .site-footer .footer-larger-container .copyright:before {
         content: ' ';
         display: block;
-        width: 80%;
+        width: 100%;
         height: 1px;
         background-color: white;
         margin: auto; }
