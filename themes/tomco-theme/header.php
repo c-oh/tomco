@@ -39,13 +39,14 @@
      				 </div>
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					</div>
+				
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class= "home-nav-link">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/graphics/logo.jpg" alt= "Company logo"> 
 					</a>
 					<div class="header-search">
 							<?php get_search_form(); ?>  |
 							<div class= "header-contact">
-								<p class="header-phone"> <i class="fa fa-phone" aria-hidden="true"></i> +123 456 7890 	</p> 
+								<p class="header-phone"> <i class="fa fa-phone" aria-hidden="true"></i> +852 2755 O971 	</p> 
 								</div>
 					</div>
 

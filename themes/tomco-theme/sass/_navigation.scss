@@ -1,7 +1,7 @@
 #site-navigation {
 	display: flex;
 	justify-content: space-between;
-	max-width: 1180px;
+	max-width: 1200px;
 	margin: 0 auto;
 	overflow: hidden;
 	ul {
@@ -11,21 +11,25 @@
 			text-decoration: none;
 		}
 	}
-	.nav-menu-mini{
-	@include desktop{
-		    width: 44%;
-    text-align: right;
+	.nav-menu-mini {
+		@include desktop {
+			margin-left: 0;
+			padding--top: 43px;
+			position: absolute;
+			text-align: left;
+			margin-left: 757px;
+		}
 	}
-}
 }
 
-#masthead{
-	@include desktop{
-		border-top:4px solid $color__darkg;
+#masthead {
+	@include desktop {
+		border-top: 4px solid $color__darkg;
 		border-bottom: 4px solid $color__blue;
-		background-color:white;
+		background-color: white;
 	}
 }
+
 .home-nav-link {
 	@include desktop {
 		order: -1;
@@ -111,13 +115,13 @@
 	z-index: 20;
 	border-right: 1px solid white;
 	@include desktop {
-		background-color: white;
+		background-color: transparent;
 		font-size: 14px;
 		font-weight: 500;
 		position: initial;
-		width: 888px;
-		border:none;
-		margin-left:0px;
+		width: 484px;
+		border: none;
+		margin-left: 0px;
 	}
 	#primary-menu {
 		text-transform: uppercase;
@@ -126,12 +130,15 @@
 			margin: 0;
 			padding: 0px;
 			width: auto;
-			margin-top:39px;
+			margin-top: 39px;
+			display: flex;
+			flex-direction: row;
 		}
 		li {
 			border-bottom: 1px solid white;
 			width: 87%;
 			padding: 10px 0;
+			cursor:pointer;
 			@include desktop {
 				border: none;
 				width: 100%;
@@ -146,8 +153,34 @@
 				}
 			}
 		}
-		.menu-item-53 a{
-			padding-right:0px;
+		.menu-item-53 a {
+			padding-right: 0px;
+		}
+		.menu-item-167 {
+			@include desktop {
+				background-color: white;
+				.sub-menu {
+					display: none;
+					padding-left: 4px;
+					width: 143px;
+					li{
+							display:block;
+							a{
+							padding: 0px !important;
+						}
+						}
+					.sub-menu{
+						padding-left:8px;
+						cursor:pointer;
+						&:hover{
+							color: blue;
+						}
+					}
+				}
+				&:hover .sub-menu {
+					display: block;
+				}
+			}
 		}
 		.menu-item-17 {
 			border-top: 1px solid white;
@@ -193,35 +226,24 @@
 //slide out menu
 .header-search {
 	display: none;
-	&:before{
-        content: "";
-    top: 0;
-    right: 503px;
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-top: 0 solid transparent;
-        border-bottom: 26px solid transparent;
-    border-right: 24px solid #666;
-	}
 	@include desktop {
 		display: block;
-		color:white;
-		top:0;
-		background-color:$color__darkg;
-		position:relative;
+		color: white;
+		top: 0;
+		background-color: $color__darkg;
+		position: relative;
 		border-bottom-right-radius: 10px;
 		border-bottom-left-radius: 13px;
-		height:30px;
-		width:1200px;
-		.search-form{
-			   padding: 1px 8px 0 6px;
-				   display:inline-block
+		height: 30px;
+		width: 401px;
+		.search-form {
+			padding: 1px 8px 0 6px;
+			display: inline-block
 		}
 		.header-contact,
 		.header-phone,
-		.header-fax{
-			display:inline;
+		.header-fax {
+			display: inline;
 		}
 		.search-submit {
 			color: white;
@@ -233,23 +255,28 @@
 			text-shadow: none;
 			font-size: 19px;
 			padding: 0px;
-			&:hover{
+			&:hover {
 				color: $color__sb;
 			}
 		}
 		fieldset {
 			border: none;
-			padding:0px;
+			padding: 0px;
 		}
 	}
-	input[type="search"]{
+	input[type="search"] {
 		font-family: $font__m;
 		border: 1px solid $color__darkg;
-		height:13px;
+		height: 13px;
 	}
 }
 
+.sub-menu {
+	margin: 0px;
+	width: 200px;
+}
 
-.sub-menu{
-	display:none;
+.sub-menu li {
+	border-bottom: none;
+	font-size: 16px;
 }

@@ -37,7 +37,7 @@
 		<div class="site-info">
 
 			<p class="address"> <i class="fa fa-map-marker" aria-hidden="true"></i> 601 Po Lung Centre, 11 Wang Chiu Road <br> Kowloon Bay, Hong Kong</p>
-			<p class="phone"> <i class="fa fa-phone" aria-hidden="true"></i> +852 2755 0971</p>
+			<p class="phone"> <i class="fa fa-phone" aria-hidden="true"></i> +852 2755 O971</p>
 			<p class="email"> <i class="fa fa-envelope" aria-hidden="true"></i> tomco@tomco.hk</p>
 		</div>
 		<!-- .site-info -->
