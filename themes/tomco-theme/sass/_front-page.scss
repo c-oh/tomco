@@ -28,6 +28,7 @@
     color: white;
     text-align: center;
     padding: 60px 20px 0 20px;
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 1);
     @include tablet {
         padding-top: 114px;
     }
@@ -43,6 +44,9 @@
         text-transform: uppercase;
         @include tablet {
             font-size: 32px;
+        }
+        @include desktop{
+            font-size:50px;
         }
     }
     .subtitle {
@@ -62,7 +66,7 @@
 
 .headerimage {
     background-image: url("../../resources/graphics/backgrounds.jpg");
-    box-shadow: 0px 516px rgba(61, 96, 151, 0.6) inset;
+    box-shadow: 0px 516px rgba(61, 96, 151, 0.4) inset;
     height: 413px;
     width: 100%;
     background-size: cover;
@@ -76,7 +80,7 @@
     @include desktop {
         height: 564px;
         background-position-y: -176px;
-        box-shadow: 0px 562px rgba(61, 96, 151, 0.6) inset;
+        box-shadow: 0px 562px rgba(61, 96, 151, 0.4) inset;
     }
 }
 
@@ -94,6 +98,8 @@
     @include desktop {
         margin: 0;
         -webkit-transform: skew(0deg, 0deg);
+        transform: skew(0deg, 0deg);
+    -ms-transform: skew(0deg, 0deg);
            padding: 100px 5%;
     }
 }
@@ -246,12 +252,14 @@
     .event-banner {
         margin: 50px auto;
         width: 100%;
+        padding: 0 20px;
          @include desktop {
         transform: skew(0deg, 0deg);
         -ms-transform: skew(0deg, 0deg);
         -webkit-transform: skew(0deg, 0deg);
         float:none;
         max-width:1200px;
+        padding: 0px;
     }
         .description{
             font-size:27px;
@@ -287,25 +295,44 @@
     }
 }
 
+#backshape-events::after{
+            position:absolute;
+            content: "";
+            width:0;
+            height:0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-top: 50px solid #3d6098;
+            left: calc(49% - 40px);
+            bottom: -39px;
+            overflow:visible;
+        }
 //about
 #backshape-about {
     background-color: $color__blue;
     margin-top: 0px;
     @include desktop {
+         -webkit-transform: skew(0deg, 0deg);
         transform: skew(0deg, 0deg);
+    -ms-transform: skew(0deg, 0deg);
     }
 }
 
 .about-banner {
     padding: 23px 20px 15px;
     transform: skew(0deg, 8deg);
+    -ms-transform: skew(0deg, -10deg);
+    -webkit-transform: skew(0deg, 8deg);
     color: white;
     font-family: $font__m;
     @include tablet {
         margin: 20px auto 0;
     }
     @include desktop {
-        transform: skew(0deg, 0deg);
+         transform: skew(0deg, 0deg);
+    -ms-transform: skew(0deg, 0deg);
+    /* IE 9 */
+    -webkit-transform: skew(0deg, 0deg);
         float: none;
         max-width:1200px;
         margin:auto;
@@ -445,6 +472,13 @@
     }
 }
 
+.counter-value{
+    display:inline;
+}
+.plus{
+    display:inline-block;
+    font-size:39px;
+}
 //counter
 #backshape-contact {
     margin-top: 0px;
@@ -476,6 +510,8 @@
     margin-top: 17px;
     padding: 27px 20px;
     transform: skew(0deg, 8deg);
+    -ms-transform: skew(0deg, -10deg);
+    -webkit-transform: skew(0deg, 8deg);
     color: white;
     margin-bottom: 58px;
     @include desktop {
@@ -532,4 +568,10 @@
             }
         }
     }
+}
+
+
+.contact-large-container,
+.contact-container{
+    max-width:1200px; 
 }

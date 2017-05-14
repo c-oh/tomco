@@ -48,7 +48,7 @@ jQuery(window).scroll(function () {
 });
 
 
-var countDownDate = new Date("May 5, 2017 15:37:25").getTime();
+var countDownDate = new Date("June 26, 2017 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {

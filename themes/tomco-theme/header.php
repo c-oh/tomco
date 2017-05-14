@@ -46,7 +46,7 @@
 					<div class="header-search">
 							<?php get_search_form(); ?>  |
 							<div class= "header-contact">
-								<p class="header-phone"> <i class="fa fa-phone" aria-hidden="true"></i> +852 2755 O971 	</p> 
+								<p class="header-phone"> <i class="fa fa-phone" aria-hidden="true"></i> +852 2755 0971 	</p> 
 								</div>
 					</div>
 
