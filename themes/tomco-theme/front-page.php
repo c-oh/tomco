@@ -40,10 +40,16 @@ get_header(); ?>
                 <p class="subtitle"> Visit us at our stand #23-24 at the Exhibition Hall! </p>
             </div>
             <div class= "event-text"> 
-                <p class= "event-date"> ( June 26-27 2017 )</p>
+                <p class= "event-date"> (June 26 - 27, 2017)</p>
                 <h1 id="demo"> </h1>
                 <p class="event-readmore"> till the Charity Retail Conference Sponsorship & Exhibition 2017</p>
                 <p class= "event-readmore"> East Midlands Conference Centre, Nottingham, UK <p>
+            </div>
+            <h3 class="description"></h3>
+            <div class= "event-text"> 
+            <p class="subtitle"> Visit us at booth #5B67 on </p>
+                <p class= "event-date"> (February 4 - 8, 2018 )</p>
+                <p class="event-readmore"> at the Spring Fair, NEC Birmingham, UK</p>
             </div>
         </div>
     </div>

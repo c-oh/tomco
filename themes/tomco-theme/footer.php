@@ -40,10 +40,10 @@
 		</div>
 		<!-- .site-info -->
 		<div class="social">
-			<a class= "social-link" href= "https://www.facebook.com/creativetomco/"> <i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-			<a class= "social-link" href= "https://www.twitter.com/creativetomco"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-			<a class= "social-link" href= "https://www.instagram.com/creativetomco/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-			<a class= "social-link" href= "https://www.linkedin.com/in/creative-tomco-997401141/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+			<a class= "social-link" target="_blank" href= "https://www.facebook.com/creativetomco/"> <i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+			<a class= "social-link" target="_blank" href= "https://www.twitter.com/creativetomco"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+			<a class= "social-link" target="_blank" href= "https://www.instagram.com/creativetomco/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+			<a class= "social-link" target="_blank" href= "https://www.linkedin.com/in/creative-tomco-997401141/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
 		</div>
 		</div>
 		<div class="copyright">
