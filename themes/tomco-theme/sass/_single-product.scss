@@ -1,0 +1,130 @@
+.single-product{
+    .entry-title{
+        font-size: 37px;
+    }
+    .the-image-container{
+        width: 32%;
+    }
+    .product-info{
+        padding: 20px;
+        font-size: 18px;
+    }
+    .nav-links{
+        display: none;
+    }
+    .breadcrumbs{
+        padding: 20px;
+    }
+}
+
+
+.upcp-cf-label{
+    display: none !important;
+}
+.prod-cat-addt-details{
+    display: block;
+}
+.upcp-product-page-mobile{
+    display: none;
+}
+@media(max-width: 670px){
+    .upcp-standard-product-page, .upcp-custom-large-product-page{
+        display: block !important;
+    }
+    .prod-cat-addt-details{
+        display: none;
+    }
+    .prod-cat-addt-details-desc-div{
+        float: none !important;
+        width: 100% !important;
+    }
+    .upcp-product-page-mobile img{
+        display: none;
+    }
+    .upcp-standard-product-page-mobile  .upcp-product-page-breadcrumbs{
+        display: none;
+    }
+}
+
+#prod-cat-category-label-2{
+    display: none;
+}
+
+.upcp-prod-desc-custom-fields{
+    font-size: 12px;
+    letter-spacing: -1px;
+}
+
+.catalogue-nav{
+    text-align: center;
+    font-size: 30px;
+}
+
+.prod-cat-thumb-image-div .upcp-catalogue-link{
+    display: inline-block;
+}  
+.prod-cat-thumb-title {
+    text-align: left;
+    .upcp-thumb-title{
+    font-size: 13px;
+} 
+}
+
+.prod-cat-price{
+    display: none;
+}
+
+.prod-cat-details-link{
+    width: 68%;
+    margin: 0px;
+}
+
+@media(max-width: 670px){
+  .upcp-prod-desc-custom-fields{
+    font-size: 13px;
+    letter-spacing: -1px;
+}
+
+.catalogue-nav{
+    text-align: center;
+    font-size: 20px;
+}
+
+.prod-cat-thumb-image-div .upcp-catalogue-link{
+    display: block; 
+}  
+.prod-cat-thumb-title {
+    text-align: center;
+    .upcp-catalogue-link{
+    font-size: 20px;
+} 
+}
+.upcp-thumb-title{
+    text-align: center;
+    a{
+    font-size: 20px;
+    }
+}
+.prod-cat-details-link{
+    width: 100px;
+    margin: 0 36%;
+}
+.upcp-cf-value{
+    font-size: 15px;
+}
+.pagination-links a{
+    font-size: 21px;
+}
+}
+
+.pagination-links a{
+    font-size: 38px;
+}
+
+.Blue-list-icon{
+    display: none;
+}
+
+.hidden-field .upcp-custom-field-details{
+    display: none;
+}

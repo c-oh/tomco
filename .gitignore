@@ -16,6 +16,8 @@ themes/*
 
 # Ignore packages #
 themes/tomco-theme/node_modules/
+themes/tomco-theme/.vscode/
+themes/tomco-theme/.eslintrc
 
 # Ignore OS files #
 .DS_Store
@@ -27,6 +29,7 @@ themes/tomco-theme/node_modules/
 ehthumbs.db
 *[Tt]humbs.db
 *.Trashes
+index.php
 
 # Ignore logs and databases #
 *.log

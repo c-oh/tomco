@@ -47,7 +47,7 @@
 		</div>
 		</div>
 		<div class="copyright">
-			<p class="copytext"> &#169; Creative Tomco 2017 </p>
+			<p class="copytext"> &#169; Creative Tomco 2017</p>
 		</div>
 		</div>
 	</footer>

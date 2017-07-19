@@ -48,11 +48,11 @@ jQuery(window).scroll(function () {
 });
 
 
-var countDownDate = new Date("June 26, 2017 00:00:00").getTime();
+var countDownDate = new Date("February 04, 2018 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
-
+ 
     // Get todays date and time
     var now = new Date().getTime();
     

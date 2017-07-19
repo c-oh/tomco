@@ -74,3 +74,18 @@ span a{
 	cursor:pointer;
 }
 }
+
+.prod-cat-addt-details-desc-div{
+	display: flex !important;
+	flex-direction: column !important;
+}
+
+.upcp-social-links{
+	order: 1 !important;
+}  
+
+@media(min-width: 600px){
+.prod-cat-container{
+	margin-top: 50px !important
+}
+}
